@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      StAX Parser Example &middot; DGStack
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css?_c=20160501.1">
+  <link rel="stylesheet" href="/public/css/syntax.css?_c=20160501.1">
+  <link rel="stylesheet" href="/public/css/hyde.css?_c=20160501.1">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          DGStack
+        </a>
+      </h1>
+      <p class="lead">This blog is about computer programming tips, trick and some short tutorials</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item dontshow" target="_blank" href="https://github.com/dgstack//archive/v2.1.0.zip">Download</a>
+      <a class="sidebar-nav-item" target="_blank" href="https://github.com/dgstack/">GitHub project</a>
+      <span class="sidebar-nav-item">Currently v2.1.0</span>
+    </nav>
+
+    <p>&copy; 2016. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">StAX Parser Example</h1>
+  <span class="post-date">01 Aug 2015</span>
+  <h2>Using StAX Parser</h2>
+
+<p>Parsing an XML Document with <strong>StAX parser</strong> which is one of the fastest way to parser document in current days. Having very <strong>less memory footprint</strong>, easy to implement then previous generation of parser like <a href="https://docs.oracle.com/javase/tutorial/jaxp/dom/readingXML.html" target="_blank"><strong><em>DOM</em></strong></a> (Document Object Model) parse and others. This make StAX must use API for modern day application it is fast and lightweight. So,  below we have a easy program to parse down an XML document using StAX.</p>
+
+<p><img src="https://docs.google.com/drawings/d/1PtvXEfkpLIX-oBpnX5l0UrA1IETes-lG5VDrlp1afAY/pub?w=480&amp;h=360" alt="Overview StAX Pull Model"></p>
+
+<blockquote>
+<p><a href="http://stax.codehaus.org/" target="_blank"><strong>StAX<strong></a> (Streaming API for XML) is an application programming interface (API) to read and write XML documents, originating from the Java programming language community. 
+ It is one most fastest API to parse an XML document and very lightweight too. StAX work&#39;s on <strong>pull</strong> style of parsing unlike to SAX parser which is <strong>push</strong> style parsing.</p>
+</blockquote>
+
+<h3>Feature of StAX</h3>
+
+<blockquote>
+<ul>
+<li>Use <strong>Pull Model</strong> approach to parser a document.</li>
+<li>Memory footprint is very small</li>
+<li>Available in <strong>JDK 1.6</strong> onward. No need of any addition jar</li>
+<li>Most <strong>efficiently access XML</strong> (especially with cursor API).</li>
+<li>Very easy to use. </li>
+</ul>
+</blockquote>
+
+<p>In the following example  an XML document contain list of user information.  And we are going to parser that XML document list of user object java.  <em>&quot;Let&#39;s Stack Up The Code&quot;</em></p>
+
+<h4>user.xml</h4>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;users&gt;</span>
+    <span class="nt">&lt;user</span> <span class="na">id=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Digvijay Bhakuni<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;username&gt;</span>digvijayb<span class="nt">&lt;/username&gt;</span>
+        <span class="nt">&lt;password&gt;</span>password1<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;gender&gt;</span>Male<span class="nt">&lt;/gender&gt;</span>
+        <span class="nt">&lt;age&gt;</span>22<span class="nt">&lt;/age&gt;</span>
+        <span class="nt">&lt;location&gt;</span>Gurgaon, India<span class="nt">&lt;/location&gt;</span>
+    <span class="nt">&lt;/user&gt;</span>
+    <span class="nt">&lt;user</span> <span class="na">id=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Rahul Sharma<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;username&gt;</span>rahuls<span class="nt">&lt;/username&gt;</span>
+        <span class="nt">&lt;password&gt;</span>password2<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;gender&gt;</span>Male<span class="nt">&lt;/gender&gt;</span>
+        <span class="nt">&lt;age&gt;</span>22<span class="nt">&lt;/age&gt;</span>
+        <span class="nt">&lt;location&gt;</span>New Delhi, India<span class="nt">&lt;/location&gt;</span>
+    <span class="nt">&lt;/user&gt;</span>
+    <span class="nt">&lt;user</span> <span class="na">id=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Pankaj Bhakser<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;username&gt;</span>pbhakser<span class="nt">&lt;/username&gt;</span>
+        <span class="nt">&lt;password&gt;</span>password3<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;gender&gt;</span>Male<span class="nt">&lt;/gender&gt;</span>
+        <span class="nt">&lt;age&gt;</span>29<span class="nt">&lt;/age&gt;</span>
+        <span class="nt">&lt;location&gt;</span>Gurgaon, India<span class="nt">&lt;/location&gt;</span>
+    <span class="nt">&lt;/user&gt;</span>
+    <span class="nt">&lt;user</span> <span class="na">id=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Pankaj Mishar<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;username&gt;</span>pankajm<span class="nt">&lt;/username&gt;</span>
+        <span class="nt">&lt;password&gt;</span>password4<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;gender&gt;</span>Male<span class="nt">&lt;/gender&gt;</span>
+        <span class="nt">&lt;age&gt;</span>23<span class="nt">&lt;/age&gt;</span>
+        <span class="nt">&lt;location&gt;</span>Nodia, India<span class="nt">&lt;/location&gt;</span>
+    <span class="nt">&lt;/user&gt;</span>
+        <span class="nt">&lt;user</span> <span class="na">id=</span><span class="s">"5"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Ajay Garg<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;username&gt;</span>ajayg<span class="nt">&lt;/username&gt;</span>
+        <span class="nt">&lt;password&gt;</span>password5<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;gender&gt;</span>Male<span class="nt">&lt;/gender&gt;</span>
+        <span class="nt">&lt;age&gt;</span>25<span class="nt">&lt;/age&gt;</span>
+        <span class="nt">&lt;location&gt;</span>Gurgaon, India<span class="nt">&lt;/location&gt;</span>
+    <span class="nt">&lt;/user&gt;</span>
+<span class="nt">&lt;/users&gt;</span>
+</code></pre></div>
+<p>Now creating POJO <em>UserVO.java</em> this object will hole the value of user.</p>
+
+<h4>UserVO.java</h4>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">vo</span><span class="o">;</span>
+
+<span class="cm">/**
+ * @author digvijayb
+ *
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserVO</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="n">UserVO</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">userid</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">gender</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">location</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">getId</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setId</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">getUserid</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">userid</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setUserid</span><span class="o">(</span><span class="n">String</span> <span class="n">userid</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">userid</span> <span class="o">=</span> <span class="n">userid</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">getPassword</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">password</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setPassword</span><span class="o">(</span><span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="n">password</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">getGender</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">gender</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setGender</span><span class="o">(</span><span class="n">String</span> <span class="n">gender</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">gender</span> <span class="o">=</span> <span class="n">gender</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">getAge</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">getLocation</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">location</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setLocation</span><span class="o">(</span><span class="n">String</span> <span class="n">location</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">location</span> <span class="o">=</span> <span class="n">location</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">toString</span><span class="o">(){</span>
+        <span class="n">StringBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">(</span><span class="s">"{ "</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"id : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"name : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">name</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"userid : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">userid</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"password : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">password</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"gender : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">gender</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"age : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">age</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"location : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">location</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">" }"</span><span class="o">);</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"\n"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Using StAX API to read Xml <em>StAXReader.java</em></p>
+
+<h4>StAXReader.java</h4>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.FileNotFoundException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.FileReader</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.xml.namespace.QName</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.stream.XMLEventReader</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.stream.XMLInputFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.stream.XMLStreamException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.stream.events.Attribute</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.stream.events.EndElement</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.stream.events.StartElement</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.stream.events.XMLEvent</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.dgstack.dev.vo.UserVO</span><span class="o">;</span>
+
+<span class="cm">/**
+ * @author digvijayb
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StAXReader</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">UserVO</span><span class="o">&gt;</span> <span class="n">getUserList</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">FileNotFoundException</span><span class="o">,</span> <span class="n">XMLStreamException</span><span class="o">{</span>
+        <span class="n">StartElement</span> <span class="n">startElement</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">EndElement</span> <span class="n">endElement</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">Attribute</span> <span class="n">attribute</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">QName</span> <span class="n">idAttr</span> <span class="o">=</span><span class="k">new</span> <span class="n">QName</span><span class="o">(</span><span class="s">"id"</span><span class="o">);</span> 
+        <span class="n">XMLEvent</span> <span class="n">event</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">UserVO</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">UserVO</span> <span class="n">userVO</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">currentValue</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="n">XMLInputFactory</span> <span class="n">inputFactory</span> <span class="o">=</span> <span class="n">XMLInputFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">();</span>
+        <span class="n">XMLEventReader</span> <span class="n">reader</span>  <span class="o">=</span> <span class="n">inputFactory</span><span class="o">.</span><span class="na">createXMLEventReader</span><span class="o">(</span><span class="k">new</span>  <span class="n">FileReader</span><span class="o">(</span><span class="n">path</span><span class="o">));</span>
+
+        <span class="k">while</span><span class="o">(</span><span class="n">reader</span><span class="o">.</span><span class="na">hasNext</span><span class="o">()){</span>
+            <span class="n">event</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">nextEvent</span><span class="o">();</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">isStartElement</span><span class="o">()){</span>
+                <span class="n">startElement</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">asStartElement</span><span class="o">();</span>
+                <span class="k">if</span><span class="o">(</span><span class="s">"users"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">startElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">UserVO</span><span class="o">&gt;();</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"user"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">startElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span> 
+                    <span class="n">userVO</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UserVO</span><span class="o">();</span>
+                    <span class="n">attribute</span> <span class="o">=</span> <span class="n">startElement</span><span class="o">.</span><span class="na">getAttributeByName</span><span class="o">(</span><span class="n">idAttr</span><span class="o">);</span>
+                    <span class="n">userVO</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">attribute</span><span class="o">.</span><span class="na">getValue</span><span class="o">()));</span>
+                <span class="o">}</span>
+            <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">isEndElement</span><span class="o">()){</span>
+                <span class="n">endElement</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">asEndElement</span><span class="o">();</span>
+                <span class="k">if</span><span class="o">(</span><span class="s">"users"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="k">break</span><span class="o">;</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"user"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span> 
+                    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">userVO</span><span class="o">);</span>
+                    <span class="n">userVO</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"name"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="n">userVO</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">currentValue</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"username"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="n">userVO</span><span class="o">.</span><span class="na">setUserid</span><span class="o">(</span><span class="n">currentValue</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"password"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="n">userVO</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="n">currentValue</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"gender"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="n">userVO</span><span class="o">.</span><span class="na">setGender</span><span class="o">(</span><span class="n">currentValue</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"age"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="k">if</span><span class="o">(!</span><span class="n">currentValue</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">isEmpty</span><span class="o">())</span>
+                    <span class="n">userVO</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">currentValue</span><span class="o">.</span><span class="na">trim</span><span class="o">()));</span>
+                <span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="s">"location"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">endElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">())){</span>
+                    <span class="n">userVO</span><span class="o">.</span><span class="na">setLocation</span><span class="o">(</span><span class="n">currentValue</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+                <span class="o">}</span>
+            <span class="o">}</span><span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">isCharacters</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">userVO</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">startElement</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">asCharacters</span><span class="o">().</span><span class="na">getData</span><span class="o">()</span> <span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="n">startElement</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">getLocalPart</span><span class="o">()</span> <span class="o">);</span>
+                <span class="n">currentValue</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">asCharacters</span><span class="o">().</span><span class="na">getData</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>   
+</code></pre></div>
+<p>Call StAXReader Class from main method</p>
+
+<h4>StAXReaderExce.java</h4>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.FileNotFoundException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.xml.stream.XMLStreamException</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.dgstack.dev.vo.UserVO</span><span class="o">;</span>
+
+<span class="cm">/**
+ * @author digvijayb
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StAXReaderExce</span> <span class="o">{</span>
+
+    <span class="cm">/**
+     * @param args
+     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="s">"/home/digvijayb/App/test/user.xml"</span><span class="o">;</span>
+            <span class="n">StAXReader</span> <span class="n">stAXReader</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StAXReader</span><span class="o">();</span>
+            <span class="n">List</span><span class="o">&lt;</span><span class="n">UserVO</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">stAXReader</span><span class="o">.</span><span class="na">getUserList</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="o">|</span> <span class="n">XMLStreamException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div>
+<hr>
+
+<h4>OUTPUT</h4>
+<div class="highlight"><pre><code class="language-" data-lang="">[
+  { id : 1, name : Digvijay Bhakuni, userid : digvijayb, password : password1, gender : Male, age : 22, location : Gurgaon, India }, 
+  { id : 2, name : Rahul Sharma, userid : rahuls, password : password2, gender : Male, age : 22, location : New Delhi, India },
+  { id : 3, name : Pankaj Bhakser, userid : pbhakser, password : password3, gender : Male, age : 29, location : Gurgaon, India },
+  { id : 4, name : Pankaj Mishar, userid : pankajm, password : password4, gender : Male, age : 23, location : Nodia, India },
+  { id : 5, name : Ajay Garg, userid : ajayg, password : password5, gender : Male, age : 25, location : Gurgaon, India }
+]
+</code></pre></div>
+<p>Please do comment and follow us for more interesting programming trick and tutorial. </p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/">
+            RESTful Web Service With Jersey And Spring
+            <small>21 Sep 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/08/05/Struts-Login-With-Internationalization-and-Localization-Demo/">
+            Struts Login With Internationalization and Localization Demo
+            <small>05 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2013/12/28/introducing-hyde/">
+            Introducing Hyde
+            <small>28 Dec 2013</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+<div class="comment-dgstack">
+  
+  <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+      
+        var disqus_config = function () {
+            this.page.url = "http://dgstack.com/2015/08/01/StAx-Parser-Example/";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "/2015/08/01/StAx-Parser-Example" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            
+            s.src = '//dgstack.disqus.com/embed.js';
+            
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+  </body>
+</html>

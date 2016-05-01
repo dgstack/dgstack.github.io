@@ -1,0 +1,33 @@
+# Dependencies
+markdown:         redcarpet
+#highlighter:      pygments
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+#relative_permalinks: true
+
+# Setup
+title:            'DGStack'
+tagline:          'Stack Up the Code'
+desc:             'This blog is about computer programming tips, trick and some short tutorials'
+description:      'DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc'
+url:              http://dgstack.com
+baseurl:          /
+sitecache:        20160501.2
+
+author:
+  name:           'Digvijay'
+  url:            https://twitter.com/dgstack
+
+paginate:         5
+paginate_path: "page:num"
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/dgstack/
+  
+  
+gems: [jekyll-paginate]
