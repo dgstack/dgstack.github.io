@@ -2,7 +2,7 @@
 layout: post
 title: RESTful Web Service With Jersey And Spring
 author: digvijayb
-tags: Java, REST, Spring, Jersey, JAX-RS
+tags: ['Java', 'REST', 'Spring', 'Jersey', 'JAX-RS']
 ---
 
 Two of the coolest framework in java Jersey and Spring. we are going to integrate together to get best of the both for our restful web service. Jersey provides the JAX-RS API's implementation to get web service structure ready. And spring logical support to our web service by it unique feature inversion of control (IoC) 

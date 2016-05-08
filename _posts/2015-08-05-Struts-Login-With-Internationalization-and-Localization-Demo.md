@@ -2,7 +2,7 @@
 layout: post
 title: Struts Login With Internationalization and Localization Demo
 author: digvijayb
-tags: Java, StAX, XML
+tags: ['Java', 'Struts', '118n']
 ---
 
 This is a very simple login demo web-app in struts 1.3 which support Internationalization and Localization (or a multilingual application which in *English, Hindi, German, French and Spanish* ). So before going any forward I have something share few day before writing this post I attended an interview for Struts 1x I have around 2+ year of experience in struts 1 and then ask me how to handle [Internationalization and Localization](https://en.wikipedia.org/wiki/Internationalization_and_localization) in struts. And I have never worked with multilingual application before but have some idea about multiple resource file ending with a locale so as I came back got some time wrote and demo for the multilingual app.

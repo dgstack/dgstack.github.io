@@ -2,7 +2,7 @@
 layout: post
 title: StAX Parser Example
 author: digvijayb
-tags: Java, StAX, XML
+tags: ['Java', 'StAX', 'XML']
 ---
 ##Using StAX Parser
 Parsing an XML Document with **StAX parser** which is one of the fastest way to parser document in current days. Having very **less memory footprint**, easy to implement then previous generation of parser like <a href="https://docs.oracle.com/javase/tutorial/jaxp/dom/readingXML.html" target="_blank"><strong><em>DOM</em></strong></a> (Document Object Model) parse and others. This make StAX must use API for modern day application it is fast and lightweight. So,  below we have a easy program to parse down an XML document using StAX.

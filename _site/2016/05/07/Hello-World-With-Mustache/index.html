@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Hello World With Mustache.java &middot; DGStack
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css?_c=20160501.2">
+  <link rel="stylesheet" href="/public/css/syntax.css?_c=20160501.2">
+  <link rel="stylesheet" href="/public/css/hyde.css?_c=20160501.2">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          DGStack
+        </a>
+      </h1>
+      <p class="lead">This blog is about computer programming tips, trick and some short tutorials</p>
+      <div>
+        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdgstack&width=450&layout=standard&action=like&show_faces=true&share=true&height=80&appId=978779875510857" width="180" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item dontshow" target="_blank" href="https://github.com/dgstack//archive/v2.1.0.zip">Download</a>
+      <a class="sidebar-nav-item" target="_blank" href="https://github.com/dgstack/">GitHub project</a>
+      <span class="sidebar-nav-item">Currently v2.1.0</span>
+    </nav>
+
+    <p>&copy; 2016. All rights reserved.</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Hello World With Mustache.java</h1>
+  <span class="post-date">
+    On 07 May 2016 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a>
+    | 
+      
+        <span class="tagdgs">Java</span>
+      
+        <span class="tagdgs">Mustache</span>
+      
+  </span>
+  <h2>Simple of Templating by mustache.java</h2>
+
+<p>Mustache.js is very popular templating js for web. Today we going to look at java version of mustache.</p>
+
+<p>So for getting started we need a file which will act like a template for our program. 
+For this we a file <strong>template.mustache</strong> which is simple text for a mail with some place holder in mustache syntax.</p>
+
+<h3>template.mustache</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">Hi {{name}},
+
+Your Account number {{accountNo}} mapped with your aardhar card no. {{ uuid}}
+Is {{status}}. Thank you for your assistance.
+}}
+Congrat!!! Now Enjoy the benefits...
+{{/isPassed}}
+{{#isFailed}}
+Sorry !!! Please try agian
+{{/isFailed}}
+
+Thank You
+{{sender}}
+</code></pre></div>
+<p>Now when we have our template file ready. we going to use this file a template publish mail to a person in java. And just for now it is going to print it in console because this example is just to give an idea about mustache.java more comprehensive mustache will be covered in later post.</p>
+
+<h3>TestMushache.java</h3>
+<div class="highlight"><pre><code class="language-java" data-lang="java">
+<span class="kd">class</span> <span class="nc">TestMushache</span><span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">...</span> <span class="n">args</span><span class="o">){</span>
+
+                 <span class="n">MustacheFactory</span> <span class="n">mf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DefaultMustacheFactory</span><span class="o">();</span>
+         <span class="n">Mustache</span> <span class="n">mustache</span> <span class="o">=</span> <span class="n">mf</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"template.mustache"</span><span class="o">);</span>
+         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+         <span class="n">Map</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">(){</span>
+             <span class="o">{</span>
+                 <span class="n">put</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"TestName"</span><span class="o">);</span>
+                 <span class="n">put</span><span class="o">(</span><span class="s">"accountNo"</span><span class="o">,</span> <span class="mi">123679</span><span class="o">);</span>
+                 <span class="n">put</span><span class="o">(</span><span class="s">"uuid"</span><span class="o">,</span><span class="s">"101010-101010-10101-0420"</span><span class="o">);</span>
+                 <span class="n">put</span><span class="o">(</span><span class="s">"status"</span><span class="o">,</span> <span class="s">"Failed because invalid information"</span><span class="o">);</span>
+                 <span class="n">put</span><span class="o">(</span><span class="s">"isPassed"</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+                 <span class="n">put</span><span class="o">(</span><span class="s">"isFailed"</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+                 <span class="n">put</span><span class="o">(</span><span class="s">"sender"</span><span class="o">,</span> <span class="s">"Test Sender"</span><span class="o">);</span>
+             <span class="o">}</span>
+         <span class="o">};</span>
+                <span class="n">mustache</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">new</span> <span class="n">PrintWriter</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">),</span> <span class="n">map</span><span class="o">).</span><span class="na">flush</span><span class="o">();</span>
+     <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/">
+            RESTful Web Service With Jersey And Spring
+            <small>21 Sep 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/08/05/Struts-Login-With-Internationalization-and-Localization-Demo/">
+            Struts Login With Internationalization and Localization Demo
+            <small>05 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2015/08/01/StAx-Parser-Example/">
+            StAX Parser Example
+            <small>01 Aug 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+<div class="comment-dgstack">
+  
+  <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+      
+        var disqus_config = function () {
+            this.page.url = "http://dgstack.com/2016/05/07/Hello-World-With-Mustache/";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "/2016/05/07/Hello-World-With-Mustache" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            
+            s.src = '//dgstack.disqus.com/embed.js';
+            
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+    </div>
+
+  </body>
+</html>
