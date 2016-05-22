@@ -4,13 +4,234 @@
  <title>DGStack</title>
  <link href="http://dgstack.com/atom.xml" rel="self"/>
  <link href="http://dgstack.com/"/>
- <updated>2016-05-08T06:35:17+00:00</updated>
+ <updated>2016-05-22T18:17:27+00:00</updated>
  <id>http://dgstack.com</id>
  <author>
    <name>Digvijay</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Era of JVM language</title>
+   <link href="http://dgstack.com/2016/05/22/JVM-Lang-era/"/>
+   <updated>2016-05-22T00:00:00+00:00</updated>
+   <id>http://dgstack.com/2016/05/22/JVM-Lang-era</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;Java&lt;/strong&gt; is computer programming language with multi-paradigm of programming
+&lt;em&gt;Object-oriented, structured, imperative,  concurrent and others&lt;/em&gt; desgined and 
+created by James Glosling and his team at Sun microsystems. Released in 1995
+with its promised &lt;em&gt;&amp;quot;Write Once, Run Anywhere&amp;quot;&lt;/em&gt; now after 21 years of initial 
+reslease in 2016 Java is one of the most popular programming languages in use
+particularly for client-server web applications, with a reported 9 million developers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Index is an indicator of the popularity of programming language for May 2016&lt;/strong&gt;
+&lt;img src=&quot;https://docs.google.com/drawings/d/11df4bNfMyxqwLgu0GEYgN-0LmgChS5cPNvmMzRrth6A/pub?w=1415&amp;amp;h=620&quot; alt=&quot;Programming Community index is an indicator of the popularity of programming language for May 2016&quot;&gt;
+source : tiobe.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--
+&lt;div class=&quot;image-section&quot;&gt;
+    &lt;img src=&quot;https://docs.google.com/drawings/d/11df4bNfMyxqwLgu0GEYgN-0LmgChS5cPNvmMzRrth6A/pub?w=1415&amp;h=620&quot; 
+    alt=&quot;Programming Community index is an indicator of the popularity of programming language for May 2016&quot;&gt;
+    &lt;em class=&quot;cation&quot;&gt;source : tiobe.com&lt;/em&gt;
+&lt;/div&gt;
+--&gt;
+
+&lt;h2&gt;Java to run on JVM&lt;/h2&gt;
+
+&lt;p&gt;The language java run on vitual machine not on OS directly which is called the JVM (Java Vitual Machine)
+and that make the java so reliable, robus, platform independent language.
+For a long time java has be only language which run on JVM because the jvm was 
+desgined to work java not the other way around. So any computer programming language
+that complie a program or a pieces of code that can run on JVM (Java Vitual Machine) is 
+a JVM language.&lt;/p&gt;
+
+&lt;h2&gt;Alternative Languages for the JVM&lt;/h2&gt;
+
+&lt;p&gt;Java is the primary programming language for JVM. So how these are alternative 
+languages for jvm work some of them are interpreted by java program and some are
+complie to Java bytecode and JIT during execution as regular java programs to impove 
+performance. Some jvm language are Clojure, Groovy, Scala, Kotin, Xtend, Ceylon, 
+JRuby, Jython and many more. for this we talk JRuby and Jython as they are implements
+for Ruby and Python. These language has there own benefits and feature over java 
+and even different programming paradigm then java. And these language are even large 
+scala in production apps Like Linkedin and twitter. These language has very lucrative 
+turnaround time as per productivity and performance. Scala is one of the heavily use 
+language in concurrent apps as it boost huge performance impact then java and also 
+considerable very small code base for the same app in java.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A Month of JVM languages: Groovy, Ceylon, Kotlin and Scala&lt;/strong&gt; &lt;br/&gt;
+&lt;em&gt;Post at zeroturnaround.com [https://goo.gl/PvwzJ4]&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docs.google.com/drawings/d/1_O6FsmWLlU3Dv49GnZsdsWe2_G4__dci6wBnTYJCS7A/pub?w=957&amp;amp;h=676&quot; alt=&quot;The next JVM Language to learn&quot;&gt;
+Image Source : zeroturnaround.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Scala&lt;/h3&gt;
+
+&lt;p&gt;Scala is a statically typed programming language that fuses the object-oriented model and functional programming ideas.
+It is desgined by Martin Odersky around 2001 released 2003. &lt;/br&gt;
+&lt;strong&gt;Compilation :&lt;/strong&gt; Bytecode, and JIT compiled&lt;/br&gt;
+&lt;strong&gt;Language type system :&lt;/strong&gt; Strong&lt;/br&gt;
+&lt;strong&gt;Binding :&lt;/strong&gt; Late, reflective&lt;/br&gt;
+&lt;strong&gt;Feature focus :&lt;/strong&gt; pattern matching &lt;/br&gt;
+ &lt;strong&gt;Support by :&lt;/strong&gt; Lightbend Inc. (formerly Typesafe Inc.) / Scala Solutions&lt;/br&gt;&lt;/p&gt;
+
+&lt;h3&gt;Groovy&lt;/h3&gt;
+
+&lt;p&gt;Groovy is an object-oriented programming language much like Java, but meant to be used as scripting language to the Java platform with a dynamic-language feature set.
+It is designed by James Strachan in 2003 &lt;/br&gt;
+&lt;strong&gt;Compilation :&lt;/strong&gt; Bytecode, and JIT compiled &lt;/br&gt;
+&lt;strong&gt;Language type system :&lt;/strong&gt; Strong, supports both static and dynamic typing &lt;/br&gt;
+&lt;strong&gt;Binding :&lt;/strong&gt; Late, reflective &lt;/br&gt;
+&lt;strong&gt;Feature focus :&lt;/strong&gt; safe navigation &lt;/br&gt;
+&lt;strong&gt;Support by :&lt;/strong&gt; Community-based &lt;/br&gt;&lt;/p&gt;
+
+&lt;h3&gt;Clojure&lt;/h3&gt;
+
+&lt;p&gt;Clojure is a dynamically typed programming language that can be seen as a modern take on Lisp. It is radically different from what object-oriented programmers might be used to
+It is created by Rich Hickey in 2007&lt;/br&gt;
+&lt;strong&gt;Compilation :&lt;/strong&gt; Bytecode, and JIT compiled&lt;/br&gt;
+&lt;strong&gt;Language type system :&lt;/strong&gt; Strong, dynamic&lt;/br&gt;
+&lt;strong&gt;Binding :&lt;/strong&gt; Late, reflective&lt;/br&gt;
+&lt;strong&gt;Feature focus :&lt;/strong&gt; homoiconicity&lt;/br&gt;
+&lt;strong&gt;Support by :&lt;/strong&gt; Community-based&lt;/br&gt;&lt;/p&gt;
+
+&lt;h3&gt;Kotlin&lt;/h3&gt;
+
+&lt;p&gt;Kotlin is a statically typed object-oriented language. Its main design goals are to be compatible with Java’s API, have a type system that catches more errors at compile time, and be less verbose than Java. Kotlin’s designers say that Scala is a close choice to match its design goals, but they dislike Scala’s complexity and long compilation time compared to Java. Kotlin aims to tackle these issues.
+It is desgined by JetBrains, developed JetBrains and open source contributors and created in 2011. &lt;/br&gt;
+&lt;strong&gt;Compilation :&lt;/strong&gt; Compiles to JavaScript or Java bytecode, JIT compiled &lt;/br&gt;
+&lt;strong&gt;Language type system :&lt;/strong&gt; Strong, static &lt;/br&gt;
+&lt;strong&gt;Binding :&lt;/strong&gt; Early &lt;/br&gt;
+&lt;strong&gt;Feature focus :&lt;/strong&gt; smart casts &lt;/br&gt;
+&lt;strong&gt;Support by :&lt;/strong&gt; JetBrains Inc. &lt;/br&gt;&lt;/p&gt;
+
+&lt;h3&gt;Ceylon&lt;/h3&gt;
+
+&lt;p&gt;Ceylon, a statically typed object-oriented language, to give Java programmers a language that’s easy to learn and understand (because of syntax that’s similar to Java) but less verbose. Ceylon includes more type system features than Java.
+It is desgined by Gavin King, Red Hat in 2011. &lt;/br&gt;
+&lt;strong&gt;Compilation :&lt;/strong&gt; Compiles to JavaScript or Java bytecode, JIT compiled &lt;/br&gt;
+&lt;strong&gt;Language type system :&lt;/strong&gt; Static, strong &lt;/br&gt;
+&lt;strong&gt;Binding :&lt;/strong&gt; Early &lt;/br&gt;
+&lt;strong&gt;Feature focus :&lt;/strong&gt; for comprehensions. &lt;/br&gt;
+&lt;strong&gt;Support by :&lt;/strong&gt; Red Hat &lt;/br&gt;&lt;/p&gt;
+
+&lt;h3&gt;Xtend&lt;/h3&gt;
+
+&lt;p&gt;Xtend is a statically typed object-oriented language. One way it differs from other languages is that it compiles to pretty-printed Java code rather than bytecode. As a result, you can also work with the generated code.
+It is desgined by Sven Efftinge, Sebastian Zarnekow in 2011. &lt;/br&gt;
+&lt;strong&gt;Compilation :&lt;/strong&gt; Bytecode, and JIT compiled &lt;/br&gt;
+&lt;strong&gt;Language type system :&lt;/strong&gt; Static, strong, inferred &lt;/br&gt;
+&lt;strong&gt;Binding :&lt;/strong&gt; Early &lt;/br&gt;
+&lt;strong&gt;Feature focus :&lt;/strong&gt; active annotations &lt;/br&gt;
+&lt;strong&gt;Support by :&lt;/strong&gt; itemis &lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;There more languages which very high productivity and performance There &lt;strong&gt;Gosu&lt;/strong&gt; by Guidewire Software Inc. / Community and &lt;strong&gt;Rhino&lt;/strong&gt; Mozilla Foundation in 1997 now support by mozilla / oracle / community&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Gosu&lt;/strong&gt; borrows concepts from other languages, such as Ruby, Java, and C#, and is mainly used as a scripting language within other JVM software systems. However, Gosu has some innovative, very interesting features such as the Open Type System, which allows it to be easily extended for compile-time type checking, and its use of XML and XSL as native types. Its syntax is compact and concise, lending to its simplicity&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rhino&lt;/strong&gt; is a JavaScript engine, bundled as part of Java SE, which executes JavaScript code and allows for interoperability with Java code. The engine works in either interpreted or compiled mode, and is meant to execute server-side JavaScript code as part of an enterprise application solution.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Other information and references links&lt;/strong&gt; &lt;/br&gt;
+- &lt;a href=&quot;https://goo.gl/eOrx01&quot; target=&quot;_blank&quot;&gt;Why Should I Learn Scala?&lt;/a&gt; &lt;/br&gt;
+- &lt;a href=&quot;https://goo.gl/PvwzJ4&quot; target=&quot;_blank&quot;&gt;A Month of JVM languages: Groovy, Ceylon, Kotlin and Scala&lt;/a&gt; &lt;/br&gt;
+- &lt;a href=&quot;http://goo.gl/IeWOB3&quot; target=&quot;_blank&quot;&gt;Alternative Languages for the JVM&lt;/a&gt; &lt;/br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Please do comment and share.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Creating Immutable Class</title>
+   <link href="http://dgstack.com/2016/05/16/Creating-Immutable-class/"/>
+   <updated>2016-05-16T00:00:00+00:00</updated>
+   <id>http://dgstack.com/2016/05/16/Creating-Immutable-class</id>
+   <content type="html">&lt;h2&gt;How to create immutable class&lt;/h2&gt;
+
+&lt;p&gt;Immutable Classes are those who’s object once created it can’t be change (or value can’t change).
+So to create Immutable Class in java there are some simple that are listed below.&lt;/p&gt;
+
+&lt;h3&gt;Rules for immutable class:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No setter should provide for the field.&lt;/li&gt;
+&lt;li&gt;All field should be final and private.&lt;/li&gt;
+&lt;li&gt;Make the class final as an immutable class should not be inherited or an another for this could be to make the constructor private and construct instances in factory methods.&lt;/li&gt;
+&lt;li&gt;If there is any field which is a references to mutable objects make sure that it should not be modified : 
+
+&lt;ul&gt;
+&lt;li&gt;Don’t provide methods that modify the mutable objects. &lt;/li&gt;
+&lt;li&gt;Don’t share references to the mutable objects. Always create a copy of the object and provide that for any operation.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Sample of Immutable Class&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Date&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ImmutableSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Is value type &lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stringField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Is Immutable&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dateField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Is mutable&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ImmutableSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stringField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dateField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;intField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stringField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stringField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dateField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dateField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ImmutableSample&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stringField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dateField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ImmutableSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fld1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fld2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//Provide no setter methods&lt;/span&gt;
+
+    &lt;span class=&quot;cm&quot;&gt;/**
+    * int is value type variable, So the value in intField going change every 
+    * */&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getIntField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;cm&quot;&gt;/**
+    * String class is also immutable so we can return the instance variable as it is
+    * */&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getStringField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stringField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;cm&quot;&gt;/**
+    * As Date field is mutable so we create a copy of dateField. So that modification will not effect dateField.
+    * */&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getDateField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dateField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; - &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stringField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; - &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dateField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Some advantage of Immutable Object&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;They are thread-safe so don’t have and synchronization issues.&lt;/li&gt;
+&lt;li&gt;They can be best use in Map’s key and Set’s element.&lt;/li&gt;
+&lt;li&gt;It easier to parallelize your program as there are no conflicts among immutable objects.&lt;/li&gt;
+&lt;li&gt;They have their class invariant established once upon construction, and it never needs to be checked again&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please do comment and suggest&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Hello World With Mustache.java</title>
@@ -22,22 +243,22 @@
 &lt;p&gt;Mustache.js is very popular templating js for web. Today we going to look at java version of mustache.&lt;/p&gt;
 
 &lt;p&gt;So for getting started we need a file which will act like a template for our program. 
-For this we a file &lt;em&gt;template.mustache&lt;/em&gt; which is simple text for a mail with some place holder in mustache syntax.&lt;/p&gt;
+For this we a file &lt;strong&gt;template.mustache&lt;/strong&gt; which is simple text for a mail with some place holder in mustache syntax.&lt;/p&gt;
 
 &lt;h3&gt;template.mustache&lt;/h3&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Hi ,
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;Hi {{name}},
 
-Your Account number  mapped with your aardhar card no. 
-Is . Thank you for your assistance.
-
+Your Account number {{accountNo}} mapped with your aardhar card no. {{ uuid}}
+Is {{status}}. Thank you for your assistance.
+}}
 Congrat!!! Now Enjoy the benefits...
-
-
+{{/isPassed}}
+{{#isFailed}}
 Sorry !!! Please try agian
-
+{{/isFailed}}
 
 Thank You
-
+{{sender}}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now when we have our template file ready. we going to use this file a template publish mail to a person in java. And just for now it is going to print it in console because this example is just to give an idea about mustache.java more comprehensive mustache will be covered in later post.&lt;/p&gt;
 
