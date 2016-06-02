@@ -4,7 +4,7 @@
  <title>DGStack</title>
  <link href="http://dgstack.com/atom.xml" rel="self"/>
  <link href="http://dgstack.com/"/>
- <updated>2016-05-22T18:17:27+00:00</updated>
+ <updated>2016-05-30T17:27:35+00:00</updated>
  <id>http://dgstack.com</id>
  <author>
    <name>Digvijay</name>
@@ -637,6 +637,26 @@ Thank You
 &lt;blockquote&gt;
 &lt;p&gt;Please Do Comment and click here to get &lt;a href=&quot;https://github.com/dgstack/WebServiceProj/archive/master.zip&quot; title=&quot;Get Code Zip&quot;&gt;code&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Why Iterator interface provides remove() method but no add() method?</title>
+   <link href="http://dgstack.com/2015/09/08/Why-Iterator-interface-provides-remove-method-but-no-add/"/>
+   <updated>2015-09-08T00:00:00+00:00</updated>
+   <id>http://dgstack.com/2015/09/08/Why-Iterator-interface-provides-remove-method-but-no-add</id>
+   <content type="html">&lt;p&gt;The Interface Iterator provider as three method that are &lt;code&gt;hasNext()&lt;/code&gt;, &lt;code&gt;next()&lt;/code&gt; and &lt;code&gt;remove()&lt;/code&gt;. 
+This means that we can remove any element from a collection while iterating over it. so why we cannot add element to the collection. Why they don&amp;#39;t provide &lt;code&gt;add()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;p&gt;Answer is, that they can&amp;#39;t allow you to concurrently read and add element to a collection. The Iterator work on any collection whether it Set, List or Map. So it does know very much the on which underlying it&amp;#39;s going to work and we know all the collection implementation maintain ordering of elements based on some algorithm. &lt;em&gt;For example&lt;/em&gt;  &lt;code&gt;TreeSet&lt;/code&gt; maintains the order of elements in by implementation Red-Black Tree data structure. Therefore if we tried to add an element to &lt;code&gt;TreeSet&lt;/code&gt; using the iterator at given index or position of iterator. it might corrupt the state of the underlying data structure. So, the &lt;code&gt;add()&lt;/code&gt;     method could change structural state of a data structure. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docs.google.com/drawings/d/1q96NuP_ani_Hy8O2mnYCt4N8OlBat-opVIrDT0f_YiA/pub?w=1016&amp;amp;h=719&quot; alt=&quot;Iterator is at this position we try add ‘0’ value at this position then it will break the logic of sorted tree and be no long sorted &quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;While &lt;code&gt;remove()&lt;/code&gt; method doesn&amp;#39;t change or violate  any state and rule of data structure or of the algorithm.&lt;/p&gt;
+
+&lt;p&gt;ListIterator provide the &lt;code&gt;add()&lt;/code&gt; methods because it know the location where it needs to add the newly created element as List preserves the order of its element in order of their insertion.&lt;/p&gt;
+
+&lt;p&gt;Please do comment...&lt;/p&gt;
 </content>
  </entry>
  

@@ -303,3 +303,7 @@ a.sidebar-nav-item:focus {
 .tagdgs:hover::after {
    border-left-color: crimson; 
 }
+
+.content{
+  text-align: justify;
+}

@@ -300,3 +300,8 @@ a.sidebar-nav-item:focus {
 .tagdgs:hover::after {
    border-left-color: #6a9fb5; 
 }
+
+
+.content{
+  text-align: justify;
+}
