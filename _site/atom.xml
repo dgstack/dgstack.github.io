@@ -4,13 +4,26 @@
  <title>DGStack</title>
  <link href="http://dgstack.com/atom.xml" rel="self"/>
  <link href="http://dgstack.com/"/>
- <updated>2016-06-19T14:59:00+00:00</updated>
+ <updated>2016-08-01T15:09:48+00:00</updated>
  <id>http://dgstack.com</id>
  <author>
    <name>Digvijay</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Python3 vs Python2</title>
+   <link href="http://dgstack.com/2016/07/15/Python3-Vs-Python2/"/>
+   <updated>2016-07-15T00:00:00+00:00</updated>
+   <id>http://dgstack.com/2016/07/15/Python3-Vs-Python2</id>
+   <content type="html">&lt;p&gt;Python is general-purpose dynamic programming language desgined by Guido van Rossum. 
+Which support multiple programming paradigm like object oriented, imperative, functional and others but it considered as one of the main stream functional programming language as it extensive use in functional world.
+If you are new to python you find people working of different version of python which parallely maintanied.
+As now 15 july 2016 there are two different stable vision of python are avaliable. 3.5.2 and 2.7.12. 
+3.5.2 is not at all compatible with 2.7.12 there are even minor syntax differences. So this we will focus on find the differences between the two favour of python.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Era of JVM language</title>
@@ -392,6 +405,17 @@ Thank You
 &lt;li&gt;Design Patterns: Elements of Reusable Object-Oriented Software aka Gang of Four (GOF).&lt;/li&gt;
 &lt;li&gt;Effective Java by Joshua Bloch&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Zen of Python (PEP 20)</title>
+   <link href="http://dgstack.com/2015/12/23/Zen-Of-Python/"/>
+   <updated>2015-12-23T00:00:00+00:00</updated>
+   <id>http://dgstack.com/2015/12/23/Zen-Of-Python</id>
+   <content type="html">&lt;p&gt;The Zen of Python &lt;/p&gt;
+
+&lt;p&gt;What is PEP?&lt;/p&gt;
 </content>
  </entry>
  

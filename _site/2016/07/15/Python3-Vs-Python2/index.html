@@ -11,7 +11,7 @@
 
   <title>
     
-      Why Iterator interface provides remove() method but no add() method? &middot; DGStack
+      Python3 vs Python2 &middot; DGStack
     
   </title>
 
@@ -79,45 +79,77 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title" style="text-align: left;">Why Iterator interface provides remove() method but no add() method?</h1>
+  <h1 class="post-title" style="text-align: left;">Python3 vs Python2</h1>
   <span class="post-date">
-    On 08 Sep 2015 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a>
+    On 15 Jul 2016 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a>
     | 
       
-        <span class="tagdgs">Java</span>
+        <span class="tagdgs">Python2</span>
       
-        <span class="tagdgs">Map</span>
-      
-        <span class="tagdgs">Collection</span>
+        <span class="tagdgs">Python3</span>
       
   </span>
-  <p>The Interface Iterator provider as three method that are <code>hasNext()</code>, <code>next()</code> and <code>remove()</code>. 
-This means that we can remove any element from a collection while iterating over it. so why we cannot add element to the collection. Why they don&#39;t provide <code>add()</code> method.</p>
+  <p>Python is general-purpose dynamic programming language desgined by Guido van Rossum. 
+Which support multiple programming paradigm like object oriented, imperative, functional and others but it considered as one of the main stream functional programming language as it extensive use in functional world.
+If you are new to python you find people working of different version of python which parallely maintanied.
+As now 15 july 2016 there are two different stable vision of python are avaliable. 3.5.2 and 2.7.12. 
+3.5.2 is not at all compatible with 2.7.12 there are even minor syntax differences. So this we will focus on find the differences between the two favour of python.</p>
 
-<p>Answer is, that they can&#39;t allow you to concurrently read and add element to a collection. The Iterator work on any collection whether it Set, List or Map. So it does know very much the on which underlying it&#39;s going to work and we know all the collection implementation maintain ordering of elements based on some algorithm. <em>For example</em>  <code>TreeSet</code> maintains the order of elements in by implementation Red-Black Tree data structure. Therefore if we tried to add an element to <code>TreeSet</code> using the iterator at given index or position of iterator. it might corrupt the state of the underlying data structure. So, the <code>add()</code>     method could change structural state of a data structure. </p>
+<h2 id="python-2-x-vs-python-3-x">Python 2.x vs. Python 3.x</h2>
 
-<p><img src="https://docs.google.com/drawings/d/1q96NuP_ani_Hy8O2mnYCt4N8OlBat-opVIrDT0f_YiA/pub?w=1016&amp;h=719" alt="Iterator is at this position we try add ‘0’ value at this position then it will break the logic of sorted tree and be no long sorted "></p>
+<p>Python comes in two basic flavors these days – Python 2.x (currently
+2.7) and Python 3.x (currently 3.3). This is an important difference –
+some code written for one won’t run on the other. However, most code is
+interchangeable. Here are some of the key differences:</p>
 
-<p>While <code>remove()</code> method doesn&#39;t change or violate  any state and rule of data structure or of the algorithm.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Python 2.x</th>
+            <th>Python 3.x</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>print “hello” (print is a keyword)</td>
+            <td>print(“hello”) (print is a function)</td>
+        </tr>
+        <tr>
+            <td>except Exception, e: # OR except Exception as e </td>
+            <td>except Exception as e: # ONLY</td>
+        </tr>
+        <tr>
+            <td>Naming of Libraries and APIs are frequently inconsistent with PEP 8</td>
+            <td>Improved (but still imperfect) consistency with PEP 8 guidelines</td>
+        </tr>
+        <tr>
+            <td>Strings and unicode</td>
+            <td>Strings are all unicode and bytes type is for unencoded 8 bit values</td>
+        </tr>
+    </tbody>
+</table>
 
-<p>ListIterator provide the <code>add()</code> methods because it know the location where it needs to add the newly created element as List preserves the order of its element in order of their insertion.</p>
+<p>There is a utility called 2to3.py that you can use to convert Python 2.x
+code to 3.x, while the ‘-3’ command line switch in 2.x enables additional
+deprecation warnings for cases the automated converter cannot handle.
+Third party tools like python-modernize and the ‘six’ support package
+make it easy to target the large common subset of the two variants for
+libraries and applications which support both 2.x and 3.x.</p>
 
-<p>Please do comment...</p>
+<p>Below are the few which show comprehensive review difference between Python2 and Python3</p>
+
+<ul>
+<li><a href="https://goo.gl/9nJWPY" target="_blank">Python2orPython3 - Python Wiki</a></li>
+<li><a href="http://goo.gl/tI1dfd" target="_blank">Python 2 vs Python 3: Which Should I Learn?</a></li>
+<li><a href="http://goo.gl/sqDvNw" target="_blank">The key differences between Python 2.7.x and Python 3.x with examples</a></li>
+<li><a href="https://goo.gl/7B7Wop" target="_blank">Python 2 vs. Python 3: How to Choose</a></li>
+</ul>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2016/07/15/Python3-Vs-Python2/">
-            Python3 vs Python2
-            <small>15 Jul 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -137,6 +169,15 @@ This means that we can remove any element from a collection while iterating over
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/2016/05/07/Hello-World-With-Mustache/">
+            Hello World With Mustache.java
+            <small>07 May 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 <div class="comment-dgstack">
@@ -148,8 +189,8 @@ This means that we can remove any element from a collection while iterating over
          */
       
         var disqus_config = function () {
-            this.page.url = "http://dgstack.com/2015/09/08/Why-Iterator-interface-provides-remove-method-but-no-add/";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = "/2015/09/08/Why-Iterator-interface-provides-remove-method-but-no-add" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.url = "http://dgstack.com/2016/07/15/Python3-Vs-Python2/";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "/2016/07/15/Python3-Vs-Python2" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function() {  // DON'T EDIT BELOW THIS LINE
