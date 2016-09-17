@@ -4,7 +4,7 @@
  <title>DGStack</title>
  <link href="http://dgstack.com/atom.xml" rel="self"/>
  <link href="http://dgstack.com/"/>
- <updated>2016-09-17T17:21:41+00:00</updated>
+ <updated>2016-09-17T17:50:10+00:00</updated>
  <id>http://dgstack.com</id>
  <author>
    <name>Digvijay</name>
@@ -13,11 +13,13 @@
 
  
  <entry>
-   <title>Spring Annotations</title>
+   <title>Spring Annotation Ref</title>
    <link href="http://dgstack.com/2016/08/15/Spring-Annotation-Ref/"/>
    <updated>2016-08-15T00:00:00+00:00</updated>
    <id>http://dgstack.com/2016/08/15/Spring-Annotation-Ref</id>
-   <content type="html">&lt;p&gt;The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the &amp;quot;plumbing&amp;quot; of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.&lt;/p&gt;
+   <content type="html">&lt;h1 id=&quot;spring-annotations&quot;&gt;Spring Annotations&lt;/h1&gt;
+
+&lt;p&gt;The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the &amp;quot;plumbing&amp;quot; of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.&lt;/p&gt;
 
 &lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
 
@@ -28,7 +30,7 @@
 &lt;li&gt;Foundational support for JDBC, JPA, JMS&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Spring app is generally configured by XML based file but with release of spring 2.5 we saw the introduction of annotation in spring framework. Now spring app can be configured by annotation no need to have a spring-context.xml (the XML file used bean factory to initialisation of beans). &lt;/p&gt;
+&lt;p&gt;Spring app is generally configured by XML based file but with release of spring 2.5 we saw the introduction of annotation in spring framework. Now spring app can be configured by annotation, no need to have a spring-context.xml (the XML file used by bean factory for initialisation of beans). &lt;/p&gt;
 
 &lt;p&gt;These spring annotations is category as follows&lt;/p&gt;
 
@@ -49,23 +51,22 @@
 
 &lt;h3 id=&quot;core-spring-annotations&quot;&gt;Core Spring Annotations&lt;/h3&gt;
 
-&lt;p&gt;These annotations are used by Spring to guide creation and injection of beans, stereotype classes with regard to the application tier that they belong to. Spring 2.5 to make it easier to create Spring MVC applications with minimal XML configuration and without extending one of the many implementations of the Controller interface.&lt;/p&gt;
+&lt;p&gt;These annotations are used by Spring to guide creation and injection of beans, stereotype classes with regard to the application tier that they belong to. Spring 2.5 makes it easier to create Spring MVC applications with minimal XML configuration and without extending one of the many implementations of the Controller interface.&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;@Transactional&lt;/strong&gt; annotation is used along with the &lt;code&gt;&amp;lt;tx:annotation-driven&amp;gt;&lt;/code&gt; element to declare transactional boundaries and rules as class and method metadata in Java. Declaring bean methods and properties as MBean operations and attributes is supported under JMX Annotations.&lt;/p&gt;
 
 &lt;h3 id=&quot;aspect-annotations&quot;&gt;Aspect Annotations&lt;/h3&gt;
 
-&lt;p&gt;AOP (Aspect Oriented Programming) in spring leverages the set of annotations provided by AspectJ. AspectJ annotations to define Spring aspects, those aspects will be defined in the context of Spring AOP and will not be handled by the AspectJ runtime.&lt;/p&gt;
+&lt;p&gt;AOP (Aspect Oriented Programming) in spring leverages the set of annotations provided by AspectJ. 
+AspectJ annotations defined for Spring aspects will be defined in the context of Spring AOP and will not be handled by the AspectJ runtime, rather they get bound by byte code weaving at compile time.&lt;/p&gt;
 
 &lt;h3 id=&quot;jsr-250-annotations&quot;&gt;JSR-250 Annotations&lt;/h3&gt;
 
-&lt;p&gt;Spring&amp;#39;s own set of annotations, Spring also supports a few of the annotations defined by JSR-250, which is the basis for the annotations used in EJB 3&lt;/p&gt;
+&lt;p&gt;Spring&amp;#39;s own set of annotations, Spring also supports a few of the annotations defined by JSR-250, which is the basis for the annotations used in EJB 3`&lt;/p&gt;
 
 &lt;h4 id=&quot;testing-annotations&quot;&gt;Testing Annotations&lt;/h4&gt;
 
 &lt;p&gt;These annotations are useful for creating unit tests in the JUnit 4 style that depend on Spring beans and/or require a transactional context.&lt;/p&gt;
-
-&lt;p&gt;Do Comment and Share the post.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;** content of this post are inspired for DZone Refcardz spring annotation this blog hold no owner ship of this post content&lt;/sub&gt;.&lt;/p&gt;
 </content>
