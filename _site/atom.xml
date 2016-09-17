@@ -4,13 +4,72 @@
  <title>DGStack</title>
  <link href="http://dgstack.com/atom.xml" rel="self"/>
  <link href="http://dgstack.com/"/>
- <updated>2016-08-01T15:09:48+00:00</updated>
+ <updated>2016-09-17T17:21:41+00:00</updated>
  <id>http://dgstack.com</id>
  <author>
    <name>Digvijay</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Spring Annotations</title>
+   <link href="http://dgstack.com/2016/08/15/Spring-Annotation-Ref/"/>
+   <updated>2016-08-15T00:00:00+00:00</updated>
+   <id>http://dgstack.com/2016/08/15/Spring-Annotation-Ref</id>
+   <content type="html">&lt;p&gt;The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the &amp;quot;plumbing&amp;quot; of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.&lt;/p&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dependency Injection&lt;/li&gt;
+&lt;li&gt;Aspect-Oriented Programming including Spring&amp;#39;s declarative transaction management&lt;/li&gt;
+&lt;li&gt;Spring MVC web application and RESTful web service framework- &lt;/li&gt;
+&lt;li&gt;Foundational support for JDBC, JPA, JMS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Spring app is generally configured by XML based file but with release of spring 2.5 we saw the introduction of annotation in spring framework. Now spring app can be configured by annotation no need to have a spring-context.xml (the XML file used bean factory to initialisation of beans). &lt;/p&gt;
+
+&lt;p&gt;These spring annotations is category as follows&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Core Spring Annotations
+
+&lt;ul&gt;
+&lt;li&gt;Context Configuration Annotations&lt;/li&gt;
+&lt;li&gt;Stereotyping Annotations&lt;/li&gt;
+&lt;li&gt;Spring MVC Annotations&lt;/li&gt;
+&lt;li&gt;Transaction Annotations&lt;/li&gt;
+&lt;li&gt;JMX Annotations&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Aspect Annotations&lt;/li&gt;
+&lt;li&gt;JSR-250 Annotations&lt;/li&gt;
+&lt;li&gt;Testing Annotations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;core-spring-annotations&quot;&gt;Core Spring Annotations&lt;/h3&gt;
+
+&lt;p&gt;These annotations are used by Spring to guide creation and injection of beans, stereotype classes with regard to the application tier that they belong to. Spring 2.5 to make it easier to create Spring MVC applications with minimal XML configuration and without extending one of the many implementations of the Controller interface.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;@Transactional&lt;/strong&gt; annotation is used along with the &lt;code&gt;&amp;lt;tx:annotation-driven&amp;gt;&lt;/code&gt; element to declare transactional boundaries and rules as class and method metadata in Java. Declaring bean methods and properties as MBean operations and attributes is supported under JMX Annotations.&lt;/p&gt;
+
+&lt;h3 id=&quot;aspect-annotations&quot;&gt;Aspect Annotations&lt;/h3&gt;
+
+&lt;p&gt;AOP (Aspect Oriented Programming) in spring leverages the set of annotations provided by AspectJ. AspectJ annotations to define Spring aspects, those aspects will be defined in the context of Spring AOP and will not be handled by the AspectJ runtime.&lt;/p&gt;
+
+&lt;h3 id=&quot;jsr-250-annotations&quot;&gt;JSR-250 Annotations&lt;/h3&gt;
+
+&lt;p&gt;Spring&amp;#39;s own set of annotations, Spring also supports a few of the annotations defined by JSR-250, which is the basis for the annotations used in EJB 3&lt;/p&gt;
+
+&lt;h4 id=&quot;testing-annotations&quot;&gt;Testing Annotations&lt;/h4&gt;
+
+&lt;p&gt;These annotations are useful for creating unit tests in the JUnit 4 style that depend on Spring beans and/or require a transactional context.&lt;/p&gt;
+
+&lt;p&gt;Do Comment and Share the post.&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;** content of this post are inspired for DZone Refcardz spring annotation this blog hold no owner ship of this post content&lt;/sub&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Python3 vs Python2</title>
@@ -22,6 +81,56 @@ Which support multiple programming paradigm like object oriented, imperative, fu
 If you are new to python you find people working of different version of python which parallely maintanied.
 As now 15 july 2016 there are two different stable vision of python are avaliable. 3.5.2 and 2.7.12. 
 3.5.2 is not at all compatible with 2.7.12 there are even minor syntax differences. So this we will focus on find the differences between the two favour of python.&lt;/p&gt;
+
+&lt;h2 id=&quot;python-2-x-vs-python-3-x&quot;&gt;Python 2.x vs. Python 3.x&lt;/h2&gt;
+
+&lt;p&gt;Python comes in two basic flavors these days – Python 2.x (currently
+2.7) and Python 3.x (currently 3.3). This is an important difference –
+some code written for one won’t run on the other. However, most code is
+interchangeable. Here are some of the key differences:&lt;/p&gt;
+
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Python 2.x&lt;/th&gt;
+            &lt;th&gt;Python 3.x&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;print “hello” (print is a keyword)&lt;/td&gt;
+            &lt;td&gt;print(“hello”) (print is a function)&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;except Exception, e: # OR except Exception as e &lt;/td&gt;
+            &lt;td&gt;except Exception as e: # ONLY&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Naming of Libraries and APIs are frequently inconsistent with PEP 8&lt;/td&gt;
+            &lt;td&gt;Improved (but still imperfect) consistency with PEP 8 guidelines&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Strings and unicode&lt;/td&gt;
+            &lt;td&gt;Strings are all unicode and bytes type is for unencoded 8 bit values&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;There is a utility called 2to3.py that you can use to convert Python 2.x
+code to 3.x, while the ‘-3’ command line switch in 2.x enables additional
+deprecation warnings for cases the automated converter cannot handle.
+Third party tools like python-modernize and the ‘six’ support package
+make it easy to target the large common subset of the two variants for
+libraries and applications which support both 2.x and 3.x.&lt;/p&gt;
+
+&lt;p&gt;Below are the few which show comprehensive review difference between Python2 and Python3&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://goo.gl/9nJWPY&quot; target=&quot;_blank&quot;&gt;Python2orPython3 - Python Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://goo.gl/tI1dfd&quot; target=&quot;_blank&quot;&gt;Python 2 vs Python 3: Which Should I Learn?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://goo.gl/sqDvNw&quot; target=&quot;_blank&quot;&gt;The key differences between Python 2.7.x and Python 3.x with examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://goo.gl/7B7Wop&quot; target=&quot;_blank&quot;&gt;Python 2 vs. Python 3: How to Choose&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  
@@ -51,7 +160,7 @@ source : tiobe.com&lt;/p&gt;
 &lt;/div&gt;
 --&gt;
 
-&lt;h2&gt;Java to run on JVM&lt;/h2&gt;
+&lt;h2 id=&quot;java-to-run-on-jvm&quot;&gt;Java to run on JVM&lt;/h2&gt;
 
 &lt;p&gt;The language java run on vitual machine not on OS directly which is called the JVM (Java Vitual Machine)
 and that make the java so reliable, robus, platform independent language.
@@ -60,7 +169,7 @@ desgined to work java not the other way around. So any computer programming lang
 that complie a program or a pieces of code that can run on JVM (Java Vitual Machine) is 
 a JVM language.&lt;/p&gt;
 
-&lt;h2&gt;Alternative Languages for the JVM&lt;/h2&gt;
+&lt;h2 id=&quot;alternative-languages-for-the-jvm&quot;&gt;Alternative Languages for the JVM&lt;/h2&gt;
 
 &lt;p&gt;Java is the primary programming language for JVM. So how these are alternative 
 languages for jvm work some of them are interpreted by java program and some are
@@ -82,7 +191,7 @@ considerable very small code base for the same app in java.&lt;/p&gt;
 Image Source : zeroturnaround.com&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3&gt;Scala&lt;/h3&gt;
+&lt;h3 id=&quot;scala&quot;&gt;Scala&lt;/h3&gt;
 
 &lt;p&gt;Scala is a statically typed programming language that fuses the object-oriented model and functional programming ideas.
 It is desgined by Martin Odersky around 2001 released 2003. &lt;/br&gt;
@@ -92,7 +201,7 @@ It is desgined by Martin Odersky around 2001 released 2003. &lt;/br&gt;
 &lt;strong&gt;Feature focus :&lt;/strong&gt; pattern matching &lt;/br&gt;
  &lt;strong&gt;Support by :&lt;/strong&gt; Lightbend Inc. (formerly Typesafe Inc.) / Scala Solutions&lt;/br&gt;&lt;/p&gt;
 
-&lt;h3&gt;Groovy&lt;/h3&gt;
+&lt;h3 id=&quot;groovy&quot;&gt;Groovy&lt;/h3&gt;
 
 &lt;p&gt;Groovy is an object-oriented programming language much like Java, but meant to be used as scripting language to the Java platform with a dynamic-language feature set.
 It is designed by James Strachan in 2003 &lt;/br&gt;
@@ -102,7 +211,7 @@ It is designed by James Strachan in 2003 &lt;/br&gt;
 &lt;strong&gt;Feature focus :&lt;/strong&gt; safe navigation &lt;/br&gt;
 &lt;strong&gt;Support by :&lt;/strong&gt; Community-based &lt;/br&gt;&lt;/p&gt;
 
-&lt;h3&gt;Clojure&lt;/h3&gt;
+&lt;h3 id=&quot;clojure&quot;&gt;Clojure&lt;/h3&gt;
 
 &lt;p&gt;Clojure is a dynamically typed programming language that can be seen as a modern take on Lisp. It is radically different from what object-oriented programmers might be used to
 It is created by Rich Hickey in 2007&lt;/br&gt;
@@ -112,7 +221,7 @@ It is created by Rich Hickey in 2007&lt;/br&gt;
 &lt;strong&gt;Feature focus :&lt;/strong&gt; homoiconicity&lt;/br&gt;
 &lt;strong&gt;Support by :&lt;/strong&gt; Community-based&lt;/br&gt;&lt;/p&gt;
 
-&lt;h3&gt;Kotlin&lt;/h3&gt;
+&lt;h3 id=&quot;kotlin&quot;&gt;Kotlin&lt;/h3&gt;
 
 &lt;p&gt;Kotlin is a statically typed object-oriented language. Its main design goals are to be compatible with Java’s API, have a type system that catches more errors at compile time, and be less verbose than Java. Kotlin’s designers say that Scala is a close choice to match its design goals, but they dislike Scala’s complexity and long compilation time compared to Java. Kotlin aims to tackle these issues.
 It is desgined by JetBrains, developed JetBrains and open source contributors and created in 2011. &lt;/br&gt;
@@ -122,7 +231,7 @@ It is desgined by JetBrains, developed JetBrains and open source contributors an
 &lt;strong&gt;Feature focus :&lt;/strong&gt; smart casts &lt;/br&gt;
 &lt;strong&gt;Support by :&lt;/strong&gt; JetBrains Inc. &lt;/br&gt;&lt;/p&gt;
 
-&lt;h3&gt;Ceylon&lt;/h3&gt;
+&lt;h3 id=&quot;ceylon&quot;&gt;Ceylon&lt;/h3&gt;
 
 &lt;p&gt;Ceylon, a statically typed object-oriented language, to give Java programmers a language that’s easy to learn and understand (because of syntax that’s similar to Java) but less verbose. Ceylon includes more type system features than Java.
 It is desgined by Gavin King, Red Hat in 2011. &lt;/br&gt;
@@ -132,7 +241,7 @@ It is desgined by Gavin King, Red Hat in 2011. &lt;/br&gt;
 &lt;strong&gt;Feature focus :&lt;/strong&gt; for comprehensions. &lt;/br&gt;
 &lt;strong&gt;Support by :&lt;/strong&gt; Red Hat &lt;/br&gt;&lt;/p&gt;
 
-&lt;h3&gt;Xtend&lt;/h3&gt;
+&lt;h3 id=&quot;xtend&quot;&gt;Xtend&lt;/h3&gt;
 
 &lt;p&gt;Xtend is a statically typed object-oriented language. One way it differs from other languages is that it compiles to pretty-printed Java code rather than bytecode. As a result, you can also work with the generated code.
 It is desgined by Sven Efftinge, Sebastian Zarnekow in 2011. &lt;/br&gt;
@@ -164,12 +273,12 @@ It is desgined by Sven Efftinge, Sebastian Zarnekow in 2011. &lt;/br&gt;
    <link href="http://dgstack.com/2016/05/16/Creating-Immutable-class/"/>
    <updated>2016-05-16T00:00:00+00:00</updated>
    <id>http://dgstack.com/2016/05/16/Creating-Immutable-class</id>
-   <content type="html">&lt;h2&gt;How to create immutable class&lt;/h2&gt;
+   <content type="html">&lt;h2 id=&quot;how-to-create-immutable-class&quot;&gt;How to create immutable class&lt;/h2&gt;
 
 &lt;p&gt;Immutable Classes are those who’s object once created it can’t be change (or value can’t change).
 So to create Immutable Class in java there are some simple that are listed below.&lt;/p&gt;
 
-&lt;h3&gt;Rules for immutable class:&lt;/h3&gt;
+&lt;h3 id=&quot;rules-for-immutable-class&quot;&gt;Rules for immutable class:&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;No setter should provide for the field.&lt;/li&gt;
@@ -183,7 +292,7 @@ So to create Immutable Class in java there are some simple that are listed below
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Sample of Immutable Class&lt;/h3&gt;
+&lt;h3 id=&quot;sample-of-immutable-class&quot;&gt;Sample of Immutable Class&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Date&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ImmutableSample&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -233,7 +342,7 @@ So to create Immutable Class in java there are some simple that are listed below
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Some advantage of Immutable Object&lt;/h2&gt;
+&lt;h2 id=&quot;some-advantage-of-immutable-object&quot;&gt;Some advantage of Immutable Object&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;They are thread-safe so don’t have and synchronization issues.&lt;/li&gt;
@@ -251,14 +360,14 @@ So to create Immutable Class in java there are some simple that are listed below
    <link href="http://dgstack.com/2016/05/07/Hello-World-With-Mustache/"/>
    <updated>2016-05-07T00:00:00+00:00</updated>
    <id>http://dgstack.com/2016/05/07/Hello-World-With-Mustache</id>
-   <content type="html">&lt;h2&gt;Simple of Templating by mustache.java&lt;/h2&gt;
+   <content type="html">&lt;h2 id=&quot;simple-of-templating-by-mustache-java&quot;&gt;Simple of Templating by mustache.java&lt;/h2&gt;
 
 &lt;p&gt;Mustache.js is very popular templating js for web. Today we going to look at java version of mustache.&lt;/p&gt;
 
 &lt;p&gt;So for getting started we need a file which will act like a template for our program. 
 For this we a file &lt;strong&gt;template.mustache&lt;/strong&gt; which is simple text for a mail with some place holder in mustache syntax.&lt;/p&gt;
 
-&lt;h3&gt;template.mustache&lt;/h3&gt;
+&lt;h3 id=&quot;template-mustache&quot;&gt;template.mustache&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;Hi {{name}},
 
 Your Account number {{accountNo}} mapped with your aardhar card no. {{ uuid}}
@@ -275,7 +384,7 @@ Thank You
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now when we have our template file ready. we going to use this file a template publish mail to a person in java. And just for now it is going to print it in console because this example is just to give an idea about mustache.java more comprehensive mustache will be covered in later post.&lt;/p&gt;
 
-&lt;h3&gt;TestMushache.java&lt;/h3&gt;
+&lt;h3 id=&quot;testmushache-java&quot;&gt;TestMushache.java&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;
 &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TestMushache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
@@ -413,9 +522,46 @@ Thank You
    <link href="http://dgstack.com/2015/12/23/Zen-Of-Python/"/>
    <updated>2015-12-23T00:00:00+00:00</updated>
    <id>http://dgstack.com/2015/12/23/Zen-Of-Python</id>
-   <content type="html">&lt;p&gt;The Zen of Python &lt;/p&gt;
+   <content type="html">&lt;p&gt;PEP(Python Enhancement Proposal)-20 is the Zen of Python. Written by
+long time Python developer Tim Peters, the Zen is acknowledged as the
+core philosophy of Python. In fact, it is always accessible in any Python
+environment by using import this:&lt;/p&gt;
 
-&lt;p&gt;What is PEP?&lt;/p&gt;
+&lt;p&gt;&lt;center style=&quot;font-weight: bold; font-style: italic;font-family: &#39;Abril Fatface, serif;&quot;&gt;
+Beautiful is better than ugly.&lt;br/&gt;
+Explicit is better than implicit.&lt;br/&gt;
+Simple is better than complex.&lt;br/&gt;
+Complex is better than complicated.&lt;br/&gt;
+Flat is better than nested.&lt;br/&gt;
+Sparse is better than dense.&lt;br/&gt;
+Readability counts.&lt;br/&gt;
+Special cases aren’t special enough to break the rules.&lt;br/&gt;
+Although practicality beats purity.&lt;br/&gt;
+Errors should never pass silently.&lt;br/&gt;
+Unless explicitly silenced.&lt;br/&gt;
+In the face of ambiguity, refuse the temptation to guess.&lt;br/&gt;
+There should be one -and preferably only&lt;br/&gt;
+one -obvious way to do it.&lt;br/&gt;
+Although that way may not be obvious at first&lt;br/&gt;
+unless you’re Dutch.&lt;br/&gt;
+Now is better than never.&lt;br/&gt;
+Although never is often better than &lt;em&gt;right&lt;/em&gt; now.&lt;br/&gt;
+If the implementation is hard to explain, it’s a bad idea.&lt;br/&gt;
+If the implementation is easy to explain, it may be a good idea.&lt;br/&gt;
+Namespaces are one honking great idea -- let’s do more of those!
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-pep&quot;&gt;What is PEP?&lt;/h2&gt;
+
+&lt;p&gt;Python&amp;#39;s development is conducted largely through the Python Enhancement Proposal (PEP) process. The PEP process is the primary mechanism for proposing major new features, for collecting community input on an issue, and for documenting the design decisions that have gone into Python. Outstanding PEPs are reviewed and commented upon by the Python community and by Van Rossum, the Python project&amp;#39;s benevolent dictator for life.&lt;/p&gt;
+
+&lt;h2 id=&quot;pep-8-the-python-style-guide&quot;&gt;PEP-8 - the Python style guide&lt;/h2&gt;
+
+&lt;p&gt;Python has its own style guide known as PEP8 that outlines various
+guidelines that are good to follow. In fact, you must follow them if you plan
+to contribute to Python Core. PEP 8 specifies such things as indentation
+amount, maximum line length, docstrings, whitespace, naming
+conventions, etc.&lt;/p&gt;
 </content>
  </entry>
  
@@ -440,7 +586,7 @@ Thank You
 
 &lt;p&gt;&lt;img src=&quot;https://docs.google.com/drawings/d/1soNcbVH52UpqIV2MPS5P8rfz6C8RCisFYPLcBuEvY_M/pub?w=478&amp;amp;h=314&quot; alt=&quot;Flow Diagram Of Web Service Using Jersey And Spring&quot;&gt;&lt;/p&gt;
 
-&lt;h4&gt;pom.xml&lt;/h4&gt;
+&lt;h4 id=&quot;pom-xml&quot;&gt;pom.xml&lt;/h4&gt;
 
 &lt;p&gt;This pom xml we have mentioned all the dependencies.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://maven.apache.org/POM/4.0.0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&lt;/span&gt;
@@ -494,7 +640,7 @@ Thank You
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;web.xml&lt;/h4&gt;
+&lt;h4 id=&quot;web-xml&quot;&gt;web.xml&lt;/h4&gt;
 
 &lt;p&gt;This is the web xml where make instance of &lt;code&gt;com.sun.jersey.spi.spring.container.servlet.SpringServlet&lt;/code&gt;  jersey-serlvet and map it with &lt;code&gt;*/api/**&lt;/code&gt;  and set init-param &lt;code&gt;&amp;lt;param-name&amp;gt;com.sun.jersey.config.property.packages&amp;lt;/param-name&amp;gt;&lt;/code&gt; as the package where we the all the resource class &lt;code&gt;&amp;lt;param-value&amp;gt;com.dgstack.dev.ws&amp;lt;/param-value&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
@@ -532,7 +678,7 @@ Thank You
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/servlet-mapping&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/web-app&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;AppContext.xml&lt;/h4&gt;
+&lt;h4 id=&quot;appcontext-xml&quot;&gt;AppContext.xml&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;beans&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.springframework.org/schema/beans&quot;&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&lt;/span&gt;
@@ -547,7 +693,7 @@ Thank You
 
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/beans&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;MoviesWS.java&lt;/h4&gt;
+&lt;h4 id=&quot;moviesws-java&quot;&gt;MoviesWS.java&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dgstack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ws&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -607,7 +753,7 @@ Thank You
 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;MovieVO.java&lt;/h4&gt;
+&lt;h4 id=&quot;movievo-java&quot;&gt;MovieVO.java&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dgstack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.Serializable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -689,7 +835,7 @@ Thank You
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;MovieRepo.java&lt;/h4&gt;
+&lt;h4 id=&quot;movierepo-java&quot;&gt;MovieRepo.java&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dgstack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -712,7 +858,7 @@ Thank You
     &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MovieVO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MovieVO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;MovieRepoImpl.java&lt;/h4&gt;
+&lt;h4 id=&quot;movierepoimpl-java&quot;&gt;MovieRepoImpl.java&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dgstack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -803,7 +949,7 @@ This means that we can remove any element from a collection while iterating over
 
 &lt;p&gt;&lt;img src=&quot;https://docs.google.com/drawings/d/1VxfqC68z_qd7uU3bXVDQd_oC8LzCc0tfFvF3UXg_NUM/pub?w=500&amp;amp;h=350&quot; alt=&quot;Struts Internationalization Screenshot by DGStack.com&quot;&gt;&lt;/p&gt;
 
-&lt;h4&gt;Project Structure&lt;/h4&gt;
+&lt;h4 id=&quot;project-structure&quot;&gt;Project Structure&lt;/h4&gt;
 
 &lt;p&gt;This project structure is maven-archetype-webapp. And depencencies use are listed below. &lt;/p&gt;
 
@@ -817,7 +963,7 @@ This means that we can remove any element from a collection while iterating over
 
 &lt;p&gt;&lt;img src=&quot;https://docs.google.com/drawings/d/1sCpy0y4qApPRj_7rSMAsFzhT3NHq9Ca47cNQs1XWcBU/pub?w=449&amp;amp;h=589&quot; alt=&quot;Project Structure multilingual DGStack.com&quot;&gt;&lt;/p&gt;
 
-&lt;h4&gt;pom.xml&lt;/h4&gt;
+&lt;h4 id=&quot;pom-xml&quot;&gt;pom.xml&lt;/h4&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
@@ -854,7 +1000,7 @@ This means that we can remove any element from a collection while iterating over
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;h4&gt;ApplicationResource_de.properties&lt;/h4&gt;
+&lt;h4 id=&quot;applicationresource_de-properties&quot;&gt;ApplicationResource_de.properties&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-properties&quot; data-lang=&quot;properties&quot;&gt;
 &lt;span class=&quot;py&quot;&gt;dgstack.header.login&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Melde dich an, um Anwendungs&lt;/span&gt;
 
@@ -882,7 +1028,7 @@ This means that we can remove any element from a collection while iterating over
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Similar to above properties file. We have all the other properties files.&lt;/p&gt;
 
-&lt;h4&gt;index.jsp&lt;/h4&gt;
+&lt;h4 id=&quot;index-jsp&quot;&gt;index.jsp&lt;/h4&gt;
 
 &lt;p&gt;This jsp is the first thing to appear on the screen here one can login or can language from the bottom. To show all the label as per our selected language we have used &lt;strong&gt;bean:message&lt;/strong&gt; tag to display text from properties file corresponding to there key.&lt;/p&gt;
 
@@ -919,7 +1065,7 @@ This means that we can remove any element from a collection while iterating over
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html:form&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4&gt;ChangeLanguageAction.java&lt;/h4&gt;
+&lt;h4 id=&quot;changelanguageaction-java&quot;&gt;ChangeLanguageAction.java&lt;/h4&gt;
 
 &lt;p&gt;This Action class is use to change Locale of the current session context. As you can see in the following code we setting a &lt;strong&gt;Globals.LOCALE_KEY&lt;/strong&gt; in session to as per our selected language. Whatever parameter value you set in &lt;em&gt;message-resources&lt;/em&gt; in &lt;strong&gt;struts-config.xml&lt;/strong&gt; it will now pick the value and append &amp;#39;&lt;em&gt;&amp;#39; and your locale, then it will look for that properties file. If that files is not founded it will load default file (means file without locale). 
 In our case if we have selected french it will look for  &amp;quot;*ApplicationResource&lt;/em&gt;fr.properties*&amp;quot; file.&lt;/p&gt;
@@ -942,7 +1088,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInputForward&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4&gt;struts-config.xml&lt;/h4&gt;
+&lt;h4 id=&quot;struts-config-xml&quot;&gt;struts-config.xml&lt;/h4&gt;
 
 &lt;p&gt;This is very simple struts configuration file nothing much in it. we just have on form bean &lt;strong&gt;loginform&lt;/strong&gt; , a &lt;strong&gt;LoginAction&lt;/strong&gt; and  &lt;strong&gt;ChangeLanguageAction&lt;/strong&gt; that is used to change the language.&lt;/p&gt;
 
@@ -972,7 +1118,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/struts-config&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;blockquote&gt;
-&lt;h4&gt;If you have any question can write it down in comment below.&lt;/h4&gt;
+&lt;h4 id=&quot;if-you-have-any-question-can-write-it-down-in-comment-below&quot;&gt;If you have any question can write it down in comment below.&lt;/h4&gt;
 
 &lt;p&gt;You and find the source on &lt;a href=&quot;https://github.com/digvijaybhakuni/demo-struts1x/tree/multiligual-done&quot;&gt;github&lt;/a&gt; or you can download it from &lt;a href=&quot;https://github.com/digvijaybhakuni/demo-struts1x/archive/multiligual-done.zip&quot;&gt;here&lt;/a&gt;. I am sure any one can under this by just take look at complate source code.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -984,7 +1130,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
    <link href="http://dgstack.com/2015/08/01/StAx-Parser-Example/"/>
    <updated>2015-08-01T00:00:00+00:00</updated>
    <id>http://dgstack.com/2015/08/01/StAx-Parser-Example</id>
-   <content type="html">&lt;h2&gt;Using StAX Parser&lt;/h2&gt;
+   <content type="html">&lt;h2 id=&quot;using-stax-parser&quot;&gt;Using StAX Parser&lt;/h2&gt;
 
 &lt;p&gt;Parsing an XML Document with &lt;strong&gt;StAX parser&lt;/strong&gt; which is one of the fastest way to parser document in current days. Having very &lt;strong&gt;less memory footprint&lt;/strong&gt;, easy to implement then previous generation of parser like &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/jaxp/dom/readingXML.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;&lt;em&gt;DOM&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; (Document Object Model) parse and others. This make StAX must use API for modern day application it is fast and lightweight. So,  below we have a easy program to parse down an XML document using StAX.&lt;/p&gt;
 
@@ -995,7 +1141,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
  It is one most fastest API to parse an XML document and very lightweight too. StAX work&amp;#39;s on &lt;strong&gt;pull&lt;/strong&gt; style of parsing unlike to SAX parser which is &lt;strong&gt;push&lt;/strong&gt; style parsing.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3&gt;Feature of StAX&lt;/h3&gt;
+&lt;h3 id=&quot;feature-of-stax&quot;&gt;Feature of StAX&lt;/h3&gt;
 
 &lt;blockquote&gt;
 &lt;ul&gt;
@@ -1009,7 +1155,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
 
 &lt;p&gt;In the following example  an XML document contain list of user information.  And we are going to parser that XML document list of user object java.  &lt;em&gt;&amp;quot;Let&amp;#39;s Stack Up The Code&amp;quot;&lt;/em&gt;&lt;/p&gt;
 
-&lt;h4&gt;user.xml&lt;/h4&gt;
+&lt;h4 id=&quot;user-xml&quot;&gt;user.xml&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;users&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;user&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -1056,7 +1202,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now creating POJO &lt;em&gt;UserVO.java&lt;/em&gt; this object will hole the value of user.&lt;/p&gt;
 
-&lt;h4&gt;UserVO.java&lt;/h4&gt;
+&lt;h4 id=&quot;uservo-java&quot;&gt;UserVO.java&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dgstack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;vo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;cm&quot;&gt;/**
@@ -1135,7 +1281,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Using StAX API to read Xml &lt;em&gt;StAXReader.java&lt;/em&gt;&lt;/p&gt;
 
-&lt;h4&gt;StAXReader.java&lt;/h4&gt;
+&lt;h4 id=&quot;staxreader-java&quot;&gt;StAXReader.java&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dgstack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.FileNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -1215,7 +1361,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Call StAXReader Class from main method&lt;/p&gt;
 
-&lt;h4&gt;StAXReaderExce.java&lt;/h4&gt;
+&lt;h4 id=&quot;staxreaderexce-java&quot;&gt;StAXReaderExce.java&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dgstack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.FileNotFoundException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -1249,7 +1395,7 @@ In our case if we have selected french it will look for  &amp;quot;*ApplicationR
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 
-&lt;h4&gt;OUTPUT&lt;/h4&gt;
+&lt;h4 id=&quot;output&quot;&gt;OUTPUT&lt;/h4&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;[
   { id : 1, name : Digvijay Bhakuni, userid : digvijayb, password : password1, gender : Male, age : 22, location : Gurgaon, India }, 
   { id : 2, name : Rahul Sharma, userid : rahuls, password : password2, gender : Male, age : 22, location : New Delhi, India },

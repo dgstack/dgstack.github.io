@@ -11,7 +11,7 @@
 
   <title>
     
-      Python3 vs Python2 &middot; DGStack
+      Spring Annotations &middot; DGStack
     
   </title>
 
@@ -83,71 +83,67 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title" style="text-align: left;">Python3 vs Python2</h1>
+  <h1 class="post-title" style="text-align: left;">Spring Annotations</h1>
   <span class="post-date">
-    On 15 Jul 2016 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a>
+    On 24 Jul 2016 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a>
     | 
       
-        <span class="tagdgs">Python2</span>
+        <span class="tagdgs">Spring</span>
       
-        <span class="tagdgs">Python3</span>
+        <span class="tagdgs">Annotation</span>
       
   </span>
-  <p>Python is general-purpose dynamic programming language desgined by Guido van Rossum. 
-Which support multiple programming paradigm like object oriented, imperative, functional and others but it considered as one of the main stream functional programming language as it extensive use in functional world.
-If you are new to python you find people working of different version of python which parallely maintanied.
-As now 15 july 2016 there are two different stable vision of python are avaliable. 3.5.2 and 2.7.12. 
-3.5.2 is not at all compatible with 2.7.12 there are even minor syntax differences. So this we will focus on find the differences between the two favour of python.</p>
+  <p>The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the &quot;plumbing&quot; of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.</p>
 
-<h2 id="python-2-x-vs-python-3-x">Python 2.x vs. Python 3.x</h2>
-
-<p>Python comes in two basic flavors these days – Python 2.x (currently
-2.7) and Python 3.x (currently 3.3). This is an important difference –
-some code written for one won’t run on the other. However, most code is
-interchangeable. Here are some of the key differences:</p>
-
-<table>
-    <thead>
-        <tr>
-            <th>Python 2.x</th>
-            <th>Python 3.x</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>print “hello” (print is a keyword)</td>
-            <td>print(“hello”) (print is a function)</td>
-        </tr>
-        <tr>
-            <td>except Exception, e: # OR except Exception as e </td>
-            <td>except Exception as e: # ONLY</td>
-        </tr>
-        <tr>
-            <td>Naming of Libraries and APIs are frequently inconsistent with PEP 8</td>
-            <td>Improved (but still imperfect) consistency with PEP 8 guidelines</td>
-        </tr>
-        <tr>
-            <td>Strings and unicode</td>
-            <td>Strings are all unicode and bytes type is for unencoded 8 bit values</td>
-        </tr>
-    </tbody>
-</table>
-
-<p>There is a utility called 2to3.py that you can use to convert Python 2.x
-code to 3.x, while the ‘-3’ command line switch in 2.x enables additional
-deprecation warnings for cases the automated converter cannot handle.
-Third party tools like python-modernize and the ‘six’ support package
-make it easy to target the large common subset of the two variants for
-libraries and applications which support both 2.x and 3.x.</p>
-
-<p>Below are the few which show comprehensive review difference between Python2 and Python3</p>
+<h2 id="features">Features</h2>
 
 <ul>
-<li><a href="https://goo.gl/9nJWPY" target="_blank">Python2orPython3 - Python Wiki</a></li>
-<li><a href="http://goo.gl/tI1dfd" target="_blank">Python 2 vs Python 3: Which Should I Learn?</a></li>
-<li><a href="http://goo.gl/sqDvNw" target="_blank">The key differences between Python 2.7.x and Python 3.x with examples</a></li>
-<li><a href="https://goo.gl/7B7Wop" target="_blank">Python 2 vs. Python 3: How to Choose</a></li>
+<li>Dependency Injection</li>
+<li>Aspect-Oriented Programming including Spring&#39;s declarative transaction management</li>
+<li>Spring MVC web application and RESTful web service framework- </li>
+<li>Foundational support for JDBC, JPA, JMS</li>
 </ul>
+
+<p>Spring app is generally configured by XML based file but with release of spring 2.5 we saw the introduction of annotation in spring framework. Now spring app can be configured by annotation no need to have a spring-context.xml (the XML file used bean factory to initialisation of beans). </p>
+
+<p>These spring annotations is category as follows</p>
+
+<ul>
+<li>Core Spring Annotations
+
+<ul>
+<li>Context Configuration Annotations</li>
+<li>Stereotyping Annotations</li>
+<li>Spring MVC Annotations</li>
+<li>Transaction Annotations</li>
+<li>JMX Annotations</li>
+</ul></li>
+<li>Aspect Annotations</li>
+<li>JSR-250 Annotations</li>
+<li>Testing Annotations</li>
+</ul>
+
+<h3 id="core-spring-annotations">Core Spring Annotations</h3>
+
+<p>These annotations are used by Spring to guide creation and injection of beans, stereotype classes with regard to the application tier that they belong to. Spring 2.5 to make it easier to create Spring MVC applications with minimal XML configuration and without extending one of the many implementations of the Controller interface.</p>
+
+<p>The <strong>@Transactional</strong> annotation is used along with the <code>&lt;tx:annotation-driven&gt;</code> element to declare transactional boundaries and rules as class and method metadata in Java. Declaring bean methods and properties as MBean operations and attributes is supported under JMX Annotations.</p>
+
+<h3 id="aspect-annotations">Aspect Annotations</h3>
+
+<p>AOP (Aspect Oriented Programming) in spring leverages the set of annotations provided by AspectJ. AspectJ annotations to define Spring aspects, those aspects will be defined in the context of Spring AOP and will not be handled by the AspectJ runtime.</p>
+
+<h3 id="jsr-250-annotations">JSR-250 Annotations</h3>
+
+<p>Spring&#39;s own set of annotations, Spring also supports a few of the annotations defined by JSR-250, which is the basis for the annotations used in EJB 3</p>
+
+<h4 id="testing-annotations">Testing Annotations</h4>
+
+<p>These annotations are useful for creating unit tests in the JUnit 4 style that depend on Spring beans and/or require a transactional context.</p>
+
+<p>Do Comment and Share the post.</p>
+
+<p><sub>** content of this post are inspired for DZone Refcardz spring annotation this blog hold no owner ship of this post content</sub>.</p>
 
 </div>
 
@@ -157,9 +153,9 @@ libraries and applications which support both 2.x and 3.x.</p>
     
       <li>
         <h3>
-          <a href="/2016/08/15/Spring-Annotation-Ref/">
-            Spring Annotations
-            <small>15 Aug 2016</small>
+          <a href="/2016/07/15/Python3-Vs-Python2/">
+            Python3 vs Python2
+            <small>15 Jul 2016</small>
           </a>
         </h3>
       </li>
@@ -193,8 +189,8 @@ libraries and applications which support both 2.x and 3.x.</p>
          */
       
         var disqus_config = function () {
-            this.page.url = "http://dgstack.com/2016/07/15/Python3-Vs-Python2/";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = "/2016/07/15/Python3-Vs-Python2" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.url = "http://dgstack.com/2016/07/24/Spring-Annotation-Ref/";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "/2016/07/24/Spring-Annotation-Ref" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function() {  // DON'T EDIT BELOW THIS LINE
