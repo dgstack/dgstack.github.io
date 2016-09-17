@@ -4,7 +4,7 @@
  <title>DGStack</title>
  <link href="http://dgstack.com/atom.xml" rel="self"/>
  <link href="http://dgstack.com/"/>
- <updated>2016-09-17T17:50:10+00:00</updated>
+ <updated>2016-09-17T17:53:23+00:00</updated>
  <id>http://dgstack.com</id>
  <author>
    <name>Digvijay</name>
@@ -13,13 +13,11 @@
 
  
  <entry>
-   <title>Spring Annotation Ref</title>
+   <title>Spring Annotations</title>
    <link href="http://dgstack.com/2016/08/15/Spring-Annotation-Ref/"/>
    <updated>2016-08-15T00:00:00+00:00</updated>
    <id>http://dgstack.com/2016/08/15/Spring-Annotation-Ref</id>
-   <content type="html">&lt;h1 id=&quot;spring-annotations&quot;&gt;Spring Annotations&lt;/h1&gt;
-
-&lt;p&gt;The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the &amp;quot;plumbing&amp;quot; of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.&lt;/p&gt;
+   <content type="html">&lt;p&gt;The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the &amp;quot;plumbing&amp;quot; of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.&lt;/p&gt;
 
 &lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
 
