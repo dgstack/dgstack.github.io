@@ -127,20 +127,288 @@
 
 <p>These annotations are used by Spring to guide creation and injection of beans, stereotype classes with regard to the application tier that they belong to. Spring 2.5 makes it easier to create Spring MVC applications with minimal XML configuration and without extending one of the many implementations of the Controller interface.</p>
 
+<h4 id="context-configuration-annotations-table">Context Configuration Annotations [Table]</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@Autowired</td>
+<td>Marks a constructor, field, setter method or config method as to be autowired by Spring&#39;s dependency injection facilities.</td>
+</tr>
+<tr>
+<td>@Configurable</td>
+<td>Marks a class as being eligible for Spring-driven configuration.</td>
+</tr>
+<tr>
+<td>@Order</td>
+<td>Defines ordering, as an alternative to implementing the <code>org.springframework.core.Ordered</code> interface.</td>
+</tr>
+<tr>
+<td>@Qualifier</td>
+<td>Guides autowiring to be performed by means other than by type.</td>
+</tr>
+<tr>
+<td>@Required</td>
+<td>Marks a method (typically a JavaBean setter method) as being &#39;required&#39;: that is, the setter method must be configured to be dependency-injected with a value.</td>
+</tr>
+<tr>
+<td>@Scope</td>
+<td>When used as a type-level annotation in conjunction with @Component, @Scope indicates the name of a scope to use for instances of the annotated type. When used as a method-level annotation in conjunction with @Bean, @Scope indicates the name of a scope to use for the instance returned from the method.</td>
+</tr>
+</tbody></table>
+
+<h4 id="stereotyping-annotations-table">Stereotyping Annotations [Table]</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@Component</td>
+<td>Indicates that an annotated class is a &quot;component&quot;. Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.</td>
+</tr>
+<tr>
+<td>@Controller</td>
+<td>Stereotypes a component as a Spring MVC controller. Indicates that an annotated class is a &quot;Controller&quot; is like web controller. Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.</td>
+</tr>
+<tr>
+<td>@Repository</td>
+<td>Indicates that an annotated class is a &quot;Repository&quot;, originally defined by Domain-Driven Design (Evans, 2003) as &quot;a mechanism for encapsulating storage, retrieval, and search behavior which emulates a collection of objects&quot;.</td>
+</tr>
+<tr>
+<td>@Service</td>
+<td>Stereotypes a component as a service. Indicates that an annotated class is a &quot;Service&quot;, originally defined by Domain-Driven Design (Evans, 2003) as &quot;an operation offered as an interface that stands alone in the model, with no encapsulated state.&quot;</td>
+</tr>
+</tbody></table>
+
+<h4 id="spring-mvc-annotations">Spring MVC Annotations</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@Controller</td>
+<td>Stereotypes a component as a Spring MVC controller. Indicates that an annotated class is a &quot;Controller&quot; is like web controller. Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.</td>
+</tr>
+<tr>
+<td>@InitBinder</td>
+<td>Annotation that identifies methods which initialize the WebDataBinder which will be used for populating command and form object arguments of annotated handler methods.</td>
+</tr>
+<tr>
+<td>@ModelAttribute</td>
+<td>When applied to a method, used to preload the model with the value returned from the method. When applied to a parameter, binds a model attribute to the parameter.</td>
+</tr>
+<tr>
+<td>@RequestMapping</td>
+<td>Maps a URL pattern and/or HTTP method to a method or controller type.</td>
+</tr>
+<tr>
+<td>@RequestParam</td>
+<td>Binds a request parameter to a method parameter.</td>
+</tr>
+<tr>
+<td>@SessionAttributes</td>
+<td>Specifies that a model attribute should be stored in the session.</td>
+</tr>
+</tbody></table>
+
+<h4 id="transaction-annotations">Transaction Annotations</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@Transactional</td>
+<td>Declares transactional boundaries and rules on a bean and/or its methods.</td>
+</tr>
+</tbody></table>
+
 <p>The <strong>@Transactional</strong> annotation is used along with the <code>&lt;tx:annotation-driven&gt;</code> element to declare transactional boundaries and rules as class and method metadata in Java. Declaring bean methods and properties as MBean operations and attributes is supported under JMX Annotations.</p>
+
+<h4 id="jmx-annotations">JMX Annotations</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@ManagedAttribute</td>
+<td>Used on a setter or getter method to indicate that the bean&#39;s property should be exposed as a MBean attribute.</td>
+</tr>
+<tr>
+<td>@ManagedNotification</td>
+<td>Indicates a JMX notification emitted by a bean.</td>
+</tr>
+<tr>
+<td>@ManagedNotifications</td>
+<td>Indicates the JMX notifications emitted by a bean.</td>
+</tr>
+<tr>
+<td>@ManagedOperation</td>
+<td>Specifies that a method should be exposed as a MBean operation.</td>
+</tr>
+<tr>
+<td>@ManagedOperationParameter</td>
+<td>Used to provide a description for an operation parameter.</td>
+</tr>
+<tr>
+<td>@ManagedOperationParameters</td>
+<td>Provides descriptions for one or more operation parameters.</td>
+</tr>
+<tr>
+<td>@ManagedResource</td>
+<td>Specifies that all instances of a class should be exposed a MBeans.</td>
+</tr>
+</tbody></table>
+
+<p>These annotations, used with the <a href="context:mbean-export">context:mbean-export</a> element, declare bean methods and properties as MBean operations and attributes.</p>
 
 <h3 id="aspect-annotations">Aspect Annotations</h3>
 
 <p>AOP (Aspect Oriented Programming) in spring leverages the set of annotations provided by AspectJ. 
 AspectJ annotations defined for Spring aspects will be defined in the context of Spring AOP and will not be handled by the AspectJ runtime, rather they get bound by byte code weaving at compile time.</p>
 
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@Aspect</td>
+<td>Declares a class to be an aspect.</td>
+</tr>
+<tr>
+<td>@After</td>
+<td>Declares a method to be called after a pointcut completes.</td>
+</tr>
+<tr>
+<td>@AfterReturning</td>
+<td>Declares a method to be called after a pointcut returns successfully.</td>
+</tr>
+<tr>
+<td>@AfterThrowing</td>
+<td>Declares a method to be called after a pointcut throws an exception.</td>
+</tr>
+<tr>
+<td>@Around</td>
+<td>Declares a method that will wrap the pointcut.</td>
+</tr>
+<tr>
+<td>@Before</td>
+<td>Declares a method to be called before proceeding to the pointcut.</td>
+</tr>
+<tr>
+<td>@DeclareParents</td>
+<td>Declares that matching types should be given new parents,that is, it introduces new functionality into matching types.</td>
+</tr>
+<tr>
+<td>@Pointcut</td>
+<td>Declares an empty method as a pointcut placeholder method.</td>
+</tr>
+</tbody></table>
+
 <h3 id="jsr-250-annotations">JSR-250 Annotations</h3>
 
 <p>Spring&#39;s own set of annotations, Spring also supports a few of the annotations defined by JSR-250, which is the basis for the annotations used in EJB 3`</p>
 
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@PostConstruct</td>
+<td>Indicates a method to be invoked after a bean has been created and dependency injection is complete. Used to perform any initialization work necessary.</td>
+</tr>
+<tr>
+<td>@PreDestroy</td>
+<td>Indicates a method to be invoked just before a bean is removed from the Spring context. Used to perform any cleanup work necessary.</td>
+</tr>
+<tr>
+<td>@Resource</td>
+<td>Indicates that a method or field should be injected with a named resource (by default, another bean).</td>
+</tr>
+</tbody></table>
+
 <h4 id="testing-annotations">Testing Annotations</h4>
 
 <p>These annotations are useful for creating unit tests in the JUnit 4 style that depend on Spring beans and/or require a transactional context.</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Application</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>@AfterTransaction</td>
+<td>Used to identify a method to be invoked after a transaction has completed.</td>
+</tr>
+<tr>
+<td>@BeforeTransaction</td>
+<td>Used to identify a method to be invoked before a transaction starts.</td>
+</tr>
+<tr>
+<td>@ContextConfiguration</td>
+<td>Configures a Spring application context for a test.</td>
+</tr>
+<tr>
+<td>@DirtiesContext</td>
+<td>Indicates that a method dirties the Spring container and thus it must be rebuilt after the test completes.</td>
+</tr>
+<tr>
+<td>@ExpectedException</td>
+<td>Indicates that the test method is expected to throw a specific exception. The test will fail if the exception is not thrown.</td>
+</tr>
+<tr>
+<td>@IfProfileValue</td>
+<td>Indicates that the test class or method is enabled for a specific profile configuration.</td>
+</tr>
+<tr>
+<td>@NotTransactional</td>
+<td>Indicates that a test method must not execute in a transactional context.</td>
+</tr>
+<tr>
+<td>@ProfileValueSourceConfiguration</td>
+<td>Identifies an implementation of a profile value source. The absence of this annotation will cause profile values to be loaded from system properties.</td>
+</tr>
+<tr>
+<td>@Repeat</td>
+<td>Indicates that the test method must be repeated a specific number of times.</td>
+</tr>
+<tr>
+<td>@Rollback</td>
+<td>Specifies whether or not the transaction for the annotated method should be rolled back or not.</td>
+</tr>
+<tr>
+<td>@TestExecutionListeners</td>
+<td>Identifies zero or more test execution listeners for a test class.</td>
+</tr>
+<tr>
+<td>@Timed</td>
+<td>Specifies a time limit for the test method. If the test does not complete before the time has expired, the test will fail.</td>
+</tr>
+<tr>
+<td>@TransactionConfiguration</td>
+<td>Configures test classes for transactions, specifying the transaction manager and/or the default rollback rule for all test methods in a test class.</td>
+</tr>
+</tbody></table>
 
 </div>
 <div class="share-page">
