@@ -3,6 +3,7 @@ layout: post
 title: Spring Annotations
 author: digvijayb
 tags: ['Spring', 'Annotation']
+post_disclaimmer : content of this post are inspired for DZone Refcardz spring annotation this blog hold no owner ship of this post content
 ---
 The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.
 
@@ -42,5 +43,3 @@ Spring's own set of annotations, Spring also supports a few of the annotations d
 
 These annotations are useful for creating unit tests in the JUnit 4 style that depend on Spring beans and/or require a transactional context.
 
-
-<sub>** content of this post are inspired for DZone Refcardz spring annotation this blog hold no owner ship of this post content</sub>.
