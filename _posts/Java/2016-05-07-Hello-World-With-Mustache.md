@@ -58,3 +58,41 @@ class TestMushache{
 
 }
 ```
+
+### Output 
+
+The following is output on the console
+
+```
+Hi TestName,
+
+Your Account number 123679 mapped with your aardhar card no. 101010-101010-10101-0420
+Is Failed because invalid information. Thank you for your assistance.
+
+
+Sorry !!! Please try agian
+
+
+Thank You
+Test Sender
+```
+
+### Maven
+
+To download jar for the mustache you vist this link.
+
+<a href="https://mvnrepository.com/artifact/com.github.spullara.mustache.java/compiler/0.9.2" target="_blank">
+    https://mvnrepository.com/artifact/com.github.spullara.mustache.java/compiler/0.9.2
+</a>
+
+And the maven dependency is followed below.
+
+```xml
+    <dependency>
+		<groupId>com.github.spullara.mustache.java</groupId>
+		<artifactId>compiler</artifactId>
+		<version>0.9.2</version>
+	</dependency>
+```
+
+Please do comment and share the post.

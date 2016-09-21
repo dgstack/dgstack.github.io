@@ -15,6 +15,7 @@ description:      'DGStack is web blog by digvijay bhakuni. This blog is about c
 url:              http://dgstack.com
 baseurl:          /
 sitecache:        20160501.2
+twitter_username: dgstack
 
 author:
   name:           'Digvijay'
