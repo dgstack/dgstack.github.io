@@ -56,6 +56,10 @@ html {
   html {
     font-size: 16px;
   }
+  
+  img.dg-pic{
+    max-width: 35%;
+  }
 }
 
 body {
@@ -231,7 +235,14 @@ img {
   display: block;
   max-width: 100%;
   margin: 0 0 1rem;
-  border-radius: 5px;
+  border-radius: 15px;
+}
+
+img.dg-pic {
+  display: block;
+  max-width: 75%;
+  margin: 0 auto 1rem;
+  border-radius: 115px;
 }
 
 /* Tables */
