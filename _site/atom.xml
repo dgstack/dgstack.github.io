@@ -4,7 +4,7 @@
  <title>DGStack</title>
  <link href="http://dgstack.com/atom.xml" rel="self"/>
  <link href="http://dgstack.com/"/>
- <updated>2016-09-18T19:19:54+00:00</updated>
+ <updated>2016-10-20T05:08:20+00:00</updated>
  <id>http://dgstack.com</id>
  <author>
    <name>Digvijay</name>
@@ -117,20 +117,288 @@ This wsdl is generally parsed by client programs to build a proxy interface or s
 
 &lt;p&gt;These annotations are used by Spring to guide creation and injection of beans, stereotype classes with regard to the application tier that they belong to. Spring 2.5 makes it easier to create Spring MVC applications with minimal XML configuration and without extending one of the many implementations of the Controller interface.&lt;/p&gt;
 
+&lt;h4 id=&quot;context-configuration-annotations-table&quot;&gt;Context Configuration Annotations [Table]&lt;/h4&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@Autowired&lt;/td&gt;
+&lt;td&gt;Marks a constructor, field, setter method or config method as to be autowired by Spring&amp;#39;s dependency injection facilities.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Configurable&lt;/td&gt;
+&lt;td&gt;Marks a class as being eligible for Spring-driven configuration.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Order&lt;/td&gt;
+&lt;td&gt;Defines ordering, as an alternative to implementing the &lt;code&gt;org.springframework.core.Ordered&lt;/code&gt; interface.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Qualifier&lt;/td&gt;
+&lt;td&gt;Guides autowiring to be performed by means other than by type.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Required&lt;/td&gt;
+&lt;td&gt;Marks a method (typically a JavaBean setter method) as being &amp;#39;required&amp;#39;: that is, the setter method must be configured to be dependency-injected with a value.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Scope&lt;/td&gt;
+&lt;td&gt;When used as a type-level annotation in conjunction with @Component, @Scope indicates the name of a scope to use for instances of the annotated type. When used as a method-level annotation in conjunction with @Bean, @Scope indicates the name of a scope to use for the instance returned from the method.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h4 id=&quot;stereotyping-annotations-table&quot;&gt;Stereotyping Annotations [Table]&lt;/h4&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@Component&lt;/td&gt;
+&lt;td&gt;Indicates that an annotated class is a &amp;quot;component&amp;quot;. Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Controller&lt;/td&gt;
+&lt;td&gt;Stereotypes a component as a Spring MVC controller. Indicates that an annotated class is a &amp;quot;Controller&amp;quot; is like web controller. Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Repository&lt;/td&gt;
+&lt;td&gt;Indicates that an annotated class is a &amp;quot;Repository&amp;quot;, originally defined by Domain-Driven Design (Evans, 2003) as &amp;quot;a mechanism for encapsulating storage, retrieval, and search behavior which emulates a collection of objects&amp;quot;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Service&lt;/td&gt;
+&lt;td&gt;Stereotypes a component as a service. Indicates that an annotated class is a &amp;quot;Service&amp;quot;, originally defined by Domain-Driven Design (Evans, 2003) as &amp;quot;an operation offered as an interface that stands alone in the model, with no encapsulated state.&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h4 id=&quot;spring-mvc-annotations&quot;&gt;Spring MVC Annotations&lt;/h4&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@Controller&lt;/td&gt;
+&lt;td&gt;Stereotypes a component as a Spring MVC controller. Indicates that an annotated class is a &amp;quot;Controller&amp;quot; is like web controller. Such classes are considered as candidates for auto-detection when using annotation-based configuration and classpath scanning.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@InitBinder&lt;/td&gt;
+&lt;td&gt;Annotation that identifies methods which initialize the WebDataBinder which will be used for populating command and form object arguments of annotated handler methods.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ModelAttribute&lt;/td&gt;
+&lt;td&gt;When applied to a method, used to preload the model with the value returned from the method. When applied to a parameter, binds a model attribute to the parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@RequestMapping&lt;/td&gt;
+&lt;td&gt;Maps a URL pattern and/or HTTP method to a method or controller type.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@RequestParam&lt;/td&gt;
+&lt;td&gt;Binds a request parameter to a method parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@SessionAttributes&lt;/td&gt;
+&lt;td&gt;Specifies that a model attribute should be stored in the session.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h4 id=&quot;transaction-annotations&quot;&gt;Transaction Annotations&lt;/h4&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@Transactional&lt;/td&gt;
+&lt;td&gt;Declares transactional boundaries and rules on a bean and/or its methods.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
 &lt;p&gt;The &lt;strong&gt;@Transactional&lt;/strong&gt; annotation is used along with the &lt;code&gt;&amp;lt;tx:annotation-driven&amp;gt;&lt;/code&gt; element to declare transactional boundaries and rules as class and method metadata in Java. Declaring bean methods and properties as MBean operations and attributes is supported under JMX Annotations.&lt;/p&gt;
+
+&lt;h4 id=&quot;jmx-annotations&quot;&gt;JMX Annotations&lt;/h4&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@ManagedAttribute&lt;/td&gt;
+&lt;td&gt;Used on a setter or getter method to indicate that the bean&amp;#39;s property should be exposed as a MBean attribute.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ManagedNotification&lt;/td&gt;
+&lt;td&gt;Indicates a JMX notification emitted by a bean.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ManagedNotifications&lt;/td&gt;
+&lt;td&gt;Indicates the JMX notifications emitted by a bean.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ManagedOperation&lt;/td&gt;
+&lt;td&gt;Specifies that a method should be exposed as a MBean operation.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ManagedOperationParameter&lt;/td&gt;
+&lt;td&gt;Used to provide a description for an operation parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ManagedOperationParameters&lt;/td&gt;
+&lt;td&gt;Provides descriptions for one or more operation parameters.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ManagedResource&lt;/td&gt;
+&lt;td&gt;Specifies that all instances of a class should be exposed a MBeans.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;These annotations, used with the &lt;a href=&quot;context:mbean-export&quot;&gt;context:mbean-export&lt;/a&gt; element, declare bean methods and properties as MBean operations and attributes.&lt;/p&gt;
 
 &lt;h3 id=&quot;aspect-annotations&quot;&gt;Aspect Annotations&lt;/h3&gt;
 
 &lt;p&gt;AOP (Aspect Oriented Programming) in spring leverages the set of annotations provided by AspectJ. 
 AspectJ annotations defined for Spring aspects will be defined in the context of Spring AOP and will not be handled by the AspectJ runtime, rather they get bound by byte code weaving at compile time.&lt;/p&gt;
 
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@Aspect&lt;/td&gt;
+&lt;td&gt;Declares a class to be an aspect.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@After&lt;/td&gt;
+&lt;td&gt;Declares a method to be called after a pointcut completes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@AfterReturning&lt;/td&gt;
+&lt;td&gt;Declares a method to be called after a pointcut returns successfully.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@AfterThrowing&lt;/td&gt;
+&lt;td&gt;Declares a method to be called after a pointcut throws an exception.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Around&lt;/td&gt;
+&lt;td&gt;Declares a method that will wrap the pointcut.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Before&lt;/td&gt;
+&lt;td&gt;Declares a method to be called before proceeding to the pointcut.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@DeclareParents&lt;/td&gt;
+&lt;td&gt;Declares that matching types should be given new parents,that is, it introduces new functionality into matching types.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Pointcut&lt;/td&gt;
+&lt;td&gt;Declares an empty method as a pointcut placeholder method.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
 &lt;h3 id=&quot;jsr-250-annotations&quot;&gt;JSR-250 Annotations&lt;/h3&gt;
 
 &lt;p&gt;Spring&amp;#39;s own set of annotations, Spring also supports a few of the annotations defined by JSR-250, which is the basis for the annotations used in EJB 3`&lt;/p&gt;
 
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@PostConstruct&lt;/td&gt;
+&lt;td&gt;Indicates a method to be invoked after a bean has been created and dependency injection is complete. Used to perform any initialization work necessary.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@PreDestroy&lt;/td&gt;
+&lt;td&gt;Indicates a method to be invoked just before a bean is removed from the Spring context. Used to perform any cleanup work necessary.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Resource&lt;/td&gt;
+&lt;td&gt;Indicates that a method or field should be injected with a named resource (by default, another bean).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
 &lt;h4 id=&quot;testing-annotations&quot;&gt;Testing Annotations&lt;/h4&gt;
 
 &lt;p&gt;These annotations are useful for creating unit tests in the JUnit 4 style that depend on Spring beans and/or require a transactional context.&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Application&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@AfterTransaction&lt;/td&gt;
+&lt;td&gt;Used to identify a method to be invoked after a transaction has completed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@BeforeTransaction&lt;/td&gt;
+&lt;td&gt;Used to identify a method to be invoked before a transaction starts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ContextConfiguration&lt;/td&gt;
+&lt;td&gt;Configures a Spring application context for a test.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@DirtiesContext&lt;/td&gt;
+&lt;td&gt;Indicates that a method dirties the Spring container and thus it must be rebuilt after the test completes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ExpectedException&lt;/td&gt;
+&lt;td&gt;Indicates that the test method is expected to throw a specific exception. The test will fail if the exception is not thrown.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@IfProfileValue&lt;/td&gt;
+&lt;td&gt;Indicates that the test class or method is enabled for a specific profile configuration.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@NotTransactional&lt;/td&gt;
+&lt;td&gt;Indicates that a test method must not execute in a transactional context.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@ProfileValueSourceConfiguration&lt;/td&gt;
+&lt;td&gt;Identifies an implementation of a profile value source. The absence of this annotation will cause profile values to be loaded from system properties.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Repeat&lt;/td&gt;
+&lt;td&gt;Indicates that the test method must be repeated a specific number of times.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Rollback&lt;/td&gt;
+&lt;td&gt;Specifies whether or not the transaction for the annotated method should be rolled back or not.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@TestExecutionListeners&lt;/td&gt;
+&lt;td&gt;Identifies zero or more test execution listeners for a test class.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@Timed&lt;/td&gt;
+&lt;td&gt;Specifies a time limit for the test method. If the test does not complete before the time has expired, the test will fail.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;@TransactionConfiguration&lt;/td&gt;
+&lt;td&gt;Configures test classes for transactions, specifying the transaction manager and/or the default rollback rule for all test methods in a test class.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
 </content>
  </entry>
  
@@ -471,7 +739,39 @@ Thank You
      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;output&quot;&gt;Output&lt;/h3&gt;
+
+&lt;p&gt;The following is output on the console&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;Hi TestName,
+
+Your Account number 123679 mapped with your aardhar card no. 101010-101010-10101-0420
+Is Failed because invalid information. Thank you for your assistance.
+
+
+Sorry !!! Please try agian
+
+
+Thank You
+Test Sender
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;maven&quot;&gt;Maven&lt;/h3&gt;
+
+&lt;p&gt;To download jar for the mustache you vist this link.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/com.github.spullara.mustache.java/compiler/0.9.2&quot; target=&quot;_blank&quot;&gt;
+    https://mvnrepository.com/artifact/com.github.spullara.mustache.java/compiler/0.9.2
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And the maven dependency is followed below.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.github.spullara.mustache.java&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;compiler&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;0.9.2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Please do comment and share the post.&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
