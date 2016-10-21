@@ -23,7 +23,8 @@
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+<link rel="shortcut icon" href="/public/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -88,8 +89,8 @@
       <div class="post">
   <h1 class="post-title" style="text-align: left;">StAX Parser Example</h1>
   <span class="post-date">
-    On 01 Aug 2015 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a>
-    | 
+    On 01 Aug 2015 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a> <sup>**</sup>
+    |
       
         <span class="tagdgs">Java</span>
       
@@ -179,7 +180,7 @@
  */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserVO</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="n">UserVO</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">UserVO</span><span class="o">()</span> <span class="o">{</span>
     <span class="o">}</span>
 
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
@@ -190,50 +191,50 @@
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">location</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">getId</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setId</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">getName</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">getUserid</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUserid</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">userid</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setUserid</span><span class="o">(</span><span class="n">String</span> <span class="n">userid</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUserid</span><span class="o">(</span><span class="n">String</span> <span class="n">userid</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">userid</span> <span class="o">=</span> <span class="n">userid</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">getPassword</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getPassword</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">password</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setPassword</span><span class="o">(</span><span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPassword</span><span class="o">(</span><span class="n">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">password</span> <span class="o">=</span> <span class="n">password</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">getGender</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getGender</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">gender</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setGender</span><span class="o">(</span><span class="n">String</span> <span class="n">gender</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setGender</span><span class="o">(</span><span class="n">String</span> <span class="n">gender</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">gender</span> <span class="o">=</span> <span class="n">gender</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">getAge</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">age</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">getLocation</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getLocation</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">location</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setLocation</span><span class="o">(</span><span class="n">String</span> <span class="n">location</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setLocation</span><span class="o">(</span><span class="n">String</span> <span class="n">location</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">location</span> <span class="o">=</span> <span class="n">location</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">toString</span><span class="o">(){</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">(){</span>
         <span class="n">StringBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">(</span><span class="s">"{ "</span><span class="o">);</span>
         <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"id : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
         <span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"name : "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">name</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">", "</span><span class="o">);</span>
@@ -273,7 +274,7 @@
  */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">StAXReader</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">UserVO</span><span class="o">&gt;</span> <span class="n">getUserList</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">FileNotFoundException</span><span class="o">,</span> <span class="n">XMLStreamException</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">UserVO</span><span class="o">&gt;</span> <span class="nf">getUserList</span><span class="o">(</span><span class="n">String</span> <span class="n">path</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">FileNotFoundException</span><span class="o">,</span> <span class="n">XMLStreamException</span><span class="o">{</span>
         <span class="n">StartElement</span> <span class="n">startElement</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
         <span class="n">EndElement</span> <span class="n">endElement</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
         <span class="n">Attribute</span> <span class="n">attribute</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
@@ -347,7 +348,7 @@
     <span class="cm">/**
      * @param args
      */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">try</span> <span class="o">{</span>
             <span class="n">String</span> <span class="n">path</span> <span class="o">=</span> <span class="s">"/home/digvijayb/App/test/user.xml"</span><span class="o">;</span>
             <span class="n">StAXReader</span> <span class="n">stAXReader</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StAXReader</span><span class="o">();</span>
@@ -377,9 +378,9 @@
 </div>
 <div class="share-page">
     Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text=StAX Parser Example&url=http://dgstack.com/2015/08/01/StAx-Parser-Example/&via=dgstack&related=dgstack" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2015/08/01/StAx-Parser-Example/" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
-    <a href="https://plus.google.com/share?url=http://dgstack.com/2015/08/01/StAx-Parser-Example/" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=StAX Parser Example&url=http://dgstack.com/2015/08/01/StAx-Parser-Example/&via=dgstack&related=dgstack" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2015/08/01/StAx-Parser-Example/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+    <a href="https://plus.google.com/share?url=http://dgstack.com/2015/08/01/StAx-Parser-Example/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
 </div>
 
 
@@ -441,13 +442,14 @@
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
-<sub>** </sub>
 <div id="disclamer">
     <h4>Disclamer</h4>
     <p>
       This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
     </p>
+    <sub>** </sub>
 </div>
+
 
     </div>
 
