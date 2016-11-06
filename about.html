@@ -1,0 +1,27 @@
+---
+layout: about
+title: About
+permalink: /about/
+---
+
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-6">
+            <img class="img-responsive" style="border-radius: 20px;box-shadow: 10px 10px 5px #888888;" src="https://instagram.fhyd2-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/14374202_242191109511266_158141959_n.jpg?ig_cache_key=MTMzOTY2MTkyODg4OTI5MjcyMA%3D%3D.2" alt="Digvijay Bhakuni">
+        </div>
+        <div class="col-lg-6">
+            <h4>About Digvijay Bhakuni</h4>
+            <p>
+                J2EE Developer having 3+ year of exhaustive experience developing enterprise level applications, web API, micro-services with Java Enterprise Edition Platform also experience in developing full-stack web app with Spring Platform. Proficient in Java with agility to learn new technology and natural tendency to implement code with good practices. </p>
+            <p>
+                Role and responsibility handled, creation of low level design documents, logic development and implementation of code, writing unit test cases, code performance analysis, impact analysis, unit testing, bug analysis, communication with service provider, handing integration of 3rd party API, developing mirco-service from scratch, individually handed service project, exploring new technologies, creating POC and documentation of API created.
+            </p>
+            <p>
+                <br/>
+                {% for network in site.social %}
+                 <a href="{{ network.url }}" class="btn btn-theme"><i class="fa fa-{{ network.title }}"></i> {{ network.title }}</a><br/>
+                {% endfor %}
+            </p>
+        </div>
+    </div><! --/row -->
+</div><! --/container -->

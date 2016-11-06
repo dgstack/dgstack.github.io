@@ -1,103 +1,95 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>DGStack.com - Creating Immutable Class</title>
 
-  <title>
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
     
-      Creating Immutable Class &middot; DGStack
-    
-  </title>
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css?_c=20160501.2">
-  <link rel="stylesheet" href="/public/css/syntax.css?_c=20160501.2">
-  <link rel="stylesheet" href="/public/css/hyde.css?_c=20160501.2">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="/public/favicon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-
-  <body class="theme-base-0d">
-
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <div class="dgstack-img">
-        <img class="dg-pic" src="https://docs.google.com/drawings/d/1iteVopyDsyhNklnnkQMupBkq9FmqyHHB2FiLJj15Ms8/pub?w=309&h=296"></img>
-      </div>
-      <h1>
-        <a href="/">
-          DGStack
-        </a>
-      </h1>
-      <p class="lead">This blog is about computer programming tips, trick and some short tutorials</p>
-      <div>
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdgstack&width=450&layout=standard&action=like&show_faces=true&share=true&height=80&appId=978779875510857" width="180" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-      </div>
+    <body>
+        <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=" / ">DGStack.com</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li ><a href=" / ">BLOG</a></li>
+                <li ><a href=" /category/ ">CATEGORY</a></li>
+                <li ><a href=" /about/ ">ABOUT</a></li>
+                <li ><a href=" /contact/ ">CONTACT</a></li>
+            </ul>
+            
+        </div>
+        <!--/.nav-collapse -->
     </div>
-
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <a class="sidebar-nav-item dontshow" target="_blank" href="https://github.com/dgstack//archive/v2.1.0.zip">Download</a>
-      <a class="sidebar-nav-item" target="_blank" href="https://github.com/dgstack/">GitHub project</a>
-      <span class="sidebar-nav-item">Currently v2.1.0</span>
-    </nav>
-
-    <p>&copy; 2016. All rights reserved.</p>
-  </div>
 </div>
 
-    <div class="content container">
-      <div class="post">
-  <h1 class="post-title" style="text-align: left;">Creating Immutable Class</h1>
-  <span class="post-date">
-    On 16 May 2016 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a> <sup>**</sup>
-    |
-      
-        <span class="tagdgs">Java</span>
-      
-        <span class="tagdgs">immutable</span>
-      
-  </span>
-  <h2 id="how-to-create-immutable-class">How to create immutable class</h2>
+            <div id="blue">
+    <div class="container">
+        <div class="row">
+            <a href="/2016/05/16/Creating-Immutable-class/"><h3 class="ctitle">Creating Immutable Class</h3></a>
+            <csmall style="margin-left: 20px;"></csmall>
+            <span style="wrap-post-csmall"> 
+                On May 16, 2016 by digvijayb |
+            </span>
+            <!-- <csmall style="margin-left: 20px;"></csmall> -->
+            <span>
+    <a href="https://twitter.com/intent/tweet?text=Creating Immutable Class&url=http://dgstack.com/2016/05/16/Creating-Immutable-class/&via=DigvijayBhakuni&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i> Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i> Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i> Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i> Google+</a>
+</span>
+            
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+<!-- <h3>Creating Immutable Class</h3> -->
+<div class="container mtb">
+    <div class="row">
+        <! -- SINGLE POST -->
+        <div class="col-lg-9">
+            <! -- Blog Post  -->
+            
+            <!--
+            <a href="/2016/05/16/Creating-Immutable-class/"><h3 class="ctitle">Creating Immutable Class</h3></a>
+            <p><csmall>May 16, 2016. | By: digvijayb</csmall></p>
+            -->  
+            <h2 id="how-to-create-immutable-class">How to create immutable class</h2>
 
 <p>Immutable Classes are those who’s object once created it can’t be change (or value can’t change).
 So to create Immutable Class in java there are some simple that are listed below.</p>
@@ -105,19 +97,22 @@ So to create Immutable Class in java there are some simple that are listed below
 <h3 id="rules-for-immutable-class">Rules for immutable class:</h3>
 
 <ul>
-<li>No setter should provide for the field.</li>
-<li>All field should be final and private.</li>
-<li>Make the class final as an immutable class should not be inherited or an another for this could be to make the constructor private and construct instances in factory methods.</li>
-<li>If there is any field which is a references to mutable objects make sure that it should not be modified : 
-
-<ul>
-<li>Don’t provide methods that modify the mutable objects. </li>
-<li>Don’t share references to the mutable objects. Always create a copy of the object and provide that for any operation.</li>
-</ul></li>
+  <li>No setter should provide for the field.</li>
+  <li>All field should be final and private.</li>
+  <li>Make the class final as an immutable class should not be inherited or an another for this could be to make the constructor private and construct instances in factory methods.</li>
+  <li>If there is any field which is a references to mutable objects make sure that it should not be modified :
+    <ul>
+      <li>Don’t provide methods that modify the mutable objects.</li>
+      <li>Don’t share references to the mutable objects. Always create a copy of the object and provide that for any operation.</li>
+    </ul>
+  </li>
 </ul>
 
+<!--more-->
+
 <h3 id="sample-of-immutable-class">Sample of Immutable Class</h3>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Date</span>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Date</span>
 
 <span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ImmutableSample</span><span class="o">{</span>
 
@@ -125,15 +120,15 @@ So to create Immutable Class in java there are some simple that are listed below
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">;</span><span class="c1">// Is Immutable</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">;</span><span class="c1">// Is mutable</span>
 
-    <span class="kd">private</span> <span class="nf">ImmutableSample</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
+    <span class="kd">private</span> <span class="n">ImmutableSample</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
         <span class="k">this</span><span class="o">.</span><span class="na">intField</span> <span class="o">=</span> <span class="n">intField</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">stringField</span> <span class="o">=</span> <span class="n">stringField</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">dateField</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">(</span><span class="n">dateField</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
     <span class="o">}</span>
 
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ImmutableSample</span> <span class="nf">getInstance</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">ImmutableSample</span><span class="o">(</span><span class="n">fld1</span><span class="o">,</span> <span class="n">fld2</span><span class="o">,</span> <span class="n">date</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ImmutableSample</span> <span class="n">getInstance</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">ImmutableSample</span><span class="o">(</span><span class="n">fld1</span><span class="o">,</span> <span class="n">fld2</span><span class="o">,</span> <span class="n">date</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="c1">//Provide no setter methods</span>
@@ -141,119 +136,298 @@ So to create Immutable Class in java there are some simple that are listed below
     <span class="cm">/**
     * int is value type variable, So the value in intField going change every 
     * */</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIntField</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">getIntField</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">intField</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="cm">/**
     * String class is also immutable so we can return the instance variable as it is
     * */</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getStringField</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">getStringField</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">stringField</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="cm">/**
     * As Date field is mutable so we create a copy of dateField. So that modification will not effect dateField.
     * */</span>
-    <span class="kd">public</span> <span class="n">Date</span> <span class="nf">getDateField</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">Date</span><span class="o">(</span><span class="n">dateField</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
+    <span class="kd">public</span> <span class="n">Date</span> <span class="n">getDateField</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">Date</span><span class="o">(</span><span class="n">dateField</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">toString</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">intField</span> <span class="o">+</span><span class="s">" - "</span><span class="o">+</span> <span class="n">stringField</span> <span class="o">+</span><span class="s">" - "</span><span class="o">+</span> <span class="n">dateField</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="some-advantage-of-immutable-object">Some advantage of Immutable Object</h2>
 
 <ul>
-<li>They are thread-safe so don’t have and synchronization issues.</li>
-<li>They can be best use in Map’s key and Set’s element.</li>
-<li>It easier to parallelize your program as there are no conflicts among immutable objects.</li>
-<li>They have their class invariant established once upon construction, and it never needs to be checked again</li>
+  <li>They are thread-safe so don’t have and synchronization issues.</li>
+  <li>They can be best use in Map’s key and Set’s element.</li>
+  <li>It easier to parallelize your program as there are no conflicts among immutable objects.</li>
+  <li>They have their class invariant established once upon construction, and it never needs to be checked again</li>
 </ul>
 
 <p>Please do comment and suggest</p>
 
-</div>
-<div class="share-page">
-    Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text=Creating Immutable Class&url=http://dgstack.com/2016/05/16/Creating-Immutable-class/&via=dgstack&related=dgstack" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2016/05/16/Creating-Immutable-class/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-    <a href="https://plus.google.com/share?url=http://dgstack.com/2016/05/16/Creating-Immutable-class/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
-</div>
 
-
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2016/09/17/Web-Service-Jargon-JAXWS/">
-            Web Service Jargon (JAX-WS)
-            <small>17 Sep 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/08/15/Spring-Annotation-Ref/">
-            Spring Annotations
-            <small>15 Aug 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/07/15/Python3-Vs-Python2/">
-            Python3 vs Python2
-            <small>15 Jul 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-</div>
-<div class="comment-dgstack">
-  <div id="disqus_thread"></div>
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-         */
-      
-        var disqus_config = function () {
-            this.page.url = "http://dgstack.com/2016/05/16/Creating-Immutable-class/";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = "/2016/05/16/Creating-Immutable-class" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
+            <div class="spacing"></div>
+            <span>Share : <span>
+    <a href="https://twitter.com/intent/tweet?text=Creating Immutable Class&url=http://dgstack.com/2016/05/16/Creating-Immutable-class/&via=DigvijayBhakuni&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i> Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i> Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i> Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i> Google+</a>
+</span></span>
+            <!--
+            <h6>SHARE:</h6>
+            <p class="share">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-tumblr"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>		 		
+            </p>
+            -->
+            
+        </div><! --/col-lg-9 -->
         
-        (function() {  // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            
-            s.src = '//dgstack.disqus.com/embed.js';
-            
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
-<div id="disclamer">
-    <h4>Disclamer</h4>
+        <div class="col-lg-3">
+    
+    <h4>Subscribe &amp; Social</h4>
+    <div class="hline"></div>
     <p>
-      This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
+        <p class="rss-subscribe">Subscribe to this blog <a href="/feed.xml">via RSS</a>.</p>
     </p>
-    <sub>** </sub>
+    <p>
+        <div class="fb-like" data-href="https://www.facebook.com/dgstack" data-width="200" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+    </p>
+    <p>
+        <a class="twitter-follow-button"
+  href="https://twitter.com/DigvijayBhakuni"
+  data-size="large">
+Follow @DigvijayBhakuni</a>
+    </p>
+    <div class="spacing"></div>
+
+    <h4>Recent Posts</h4>
+    <div class="hline"></div>
+    <ul class="popular-posts">
+        
+        <li>
+            <a href="/2016/09/17/Web-Service-Jargon-JAXWS/"><img src="/assets/img/blog/thumbs/java.png" alt="Popular Post"></a>
+            <p><a href="/2016/09/17/Web-Service-Jargon-JAXWS/">Web Service Jargon (JAX-WS)</a></p>
+            <em>Posted on 17 Sep 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/08/15/Spring-Annotation-Ref/"><img src="/assets/img/blog/thumbs/spring-logo.png" alt="Popular Post"></a>
+            <p><a href="/2016/08/15/Spring-Annotation-Ref/">Spring Annotations</a></p>
+            <em>Posted on 15 Aug 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/07/15/Python3-Vs-Python2/"><img src="/assets/img/blog/thumbs/python.png" alt="Popular Post"></a>
+            <p><a href="/2016/07/15/Python3-Vs-Python2/">Python3 vs Python2</a></p>
+            <em>Posted on 15 Jul 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/05/22/JVM-Lang-era/"><img src="/assets/img/blog/thumbs/java-duke.png" alt="Popular Post"></a>
+            <p><a href="/2016/05/22/JVM-Lang-era/">Era of JVM language</a></p>
+            <em>Posted on 22 May 2016</em>
+        </li>
+        
+    </ul>
+
+    <div class="spacing"></div>
+    <h4>Categories</h4>
+    <div class="hline"></div>
+    
+    <p>
+        <a href="/category/#Java"><i class="fa fa-angle-right"></i> Java</a>
+        <span class="badge badge-theme pull-right">10</span>
+    </p>
+    
+    <p>
+        <a href="/category/#Python"><i class="fa fa-angle-right"></i> Python</a>
+        <span class="badge badge-theme pull-right">2</span>
+    </p>
+    
+
+    <div class="spacing"></div>
+
+    <h4>Popular Tags</h4>
+    <div class="hline"></div>
+    <p>
+        
+        <a class="btn btn-theme" href="/category/#Java" role="button">Java (10)</a> 
+        <a class="btn btn-theme" href="/category/#Python" role="button">Python (2)</a> 
+    </p>
+    
 </div>
 
+    </div><! --/row -->
+</div><! --/container -->
 
-    </div>
+        <div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        <a href="https://www.facebook.com/dgstack/" class="btn btn-theme"><i class="fa fa-facebook"></i> facebook</a>
+                    
+                        <a href="https://twitter.com/DigvijayBhakuni/" class="btn btn-theme"><i class="fa fa-twitter"></i> twitter</a>
+                    
+                        <a href="http://digvijayb.tumblr.com/" class="btn btn-theme"><i class="fa fa-tumblr"></i> tumblr</a>
+                    
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Disclamer</h4>
+                <div class="hline-w"></div>
+                <p>
+                    This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/retina-1.1.0.js"></script>
+<script src="/assets/js/jquery.hoverdir.js"></script>
+<script src="/assets/js/jquery.hoverex.min.js"></script>
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/custom.js"></script>
 
-  </body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60953284-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+// Portfolio
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=978779875510857";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+    </body>
 </html>

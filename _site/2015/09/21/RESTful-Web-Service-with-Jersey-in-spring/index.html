@@ -1,233 +1,234 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>DGStack.com - RESTful Web Service With Jersey And Spring</title>
 
-  <title>
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
     
-      RESTful Web Service With Jersey And Spring &middot; DGStack
-    
-  </title>
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css?_c=20160501.2">
-  <link rel="stylesheet" href="/public/css/syntax.css?_c=20160501.2">
-  <link rel="stylesheet" href="/public/css/hyde.css?_c=20160501.2">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="/public/favicon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-
-  <body class="theme-base-0d">
-
-    <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <div class="dgstack-img">
-        <img class="dg-pic" src="https://docs.google.com/drawings/d/1iteVopyDsyhNklnnkQMupBkq9FmqyHHB2FiLJj15Ms8/pub?w=309&h=296"></img>
-      </div>
-      <h1>
-        <a href="/">
-          DGStack
-        </a>
-      </h1>
-      <p class="lead">This blog is about computer programming tips, trick and some short tutorials</p>
-      <div>
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fdgstack&width=450&layout=standard&action=like&show_faces=true&share=true&height=80&appId=978779875510857" width="180" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-      </div>
+    <body>
+        <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=" / ">DGStack.com</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li ><a href=" / ">BLOG</a></li>
+                <li ><a href=" /category/ ">CATEGORY</a></li>
+                <li ><a href=" /about/ ">ABOUT</a></li>
+                <li ><a href=" /contact/ ">CONTACT</a></li>
+            </ul>
+            
+        </div>
+        <!--/.nav-collapse -->
     </div>
-
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-
-      <a class="sidebar-nav-item dontshow" target="_blank" href="https://github.com/dgstack//archive/v2.1.0.zip">Download</a>
-      <a class="sidebar-nav-item" target="_blank" href="https://github.com/dgstack/">GitHub project</a>
-      <span class="sidebar-nav-item">Currently v2.1.0</span>
-    </nav>
-
-    <p>&copy; 2016. All rights reserved.</p>
-  </div>
 </div>
 
-    <div class="content container">
-      <div class="post">
-  <h1 class="post-title" style="text-align: left;">RESTful Web Service With Jersey And Spring</h1>
-  <span class="post-date">
-    On 21 Sep 2015 by <a href="https://github.com/digvijaybhakuni" target="_blank">digvijayb</a> <sup>**</sup>
-    |
-      
-        <span class="tagdgs">Java</span>
-      
-        <span class="tagdgs">REST</span>
-      
-        <span class="tagdgs">Spring</span>
-      
-        <span class="tagdgs">Jersey</span>
-      
-        <span class="tagdgs">JAX-RS</span>
-      
-  </span>
-  <p>Two of the coolest framework in java Jersey and Spring. we are going to integrate together to get best of the both for our restful web service. Jersey provides the JAX-RS API&#39;s implementation to get web service structure ready. And spring logical support to our web service by it unique feature inversion of control (IoC) </p>
+            <div id="blue">
+    <div class="container">
+        <div class="row">
+            <a href="/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/"><h3 class="ctitle">RESTful Web Service With Jersey And Spring</h3></a>
+            <csmall style="margin-left: 20px;"></csmall>
+            <span style="wrap-post-csmall"> 
+                On Sep 21, 2015 by digvijayb |
+            </span>
+            <!-- <csmall style="margin-left: 20px;"></csmall> -->
+            <span>
+    <a href="https://twitter.com/intent/tweet?text=RESTful Web Service With Jersey And Spring&url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/&via=DigvijayBhakuni&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i> Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i> Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i> Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i> Google+</a>
+</span>
+            
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+<!-- <h3>RESTful Web Service With Jersey And Spring</h3> -->
+<div class="container mtb">
+    <div class="row">
+        <! -- SINGLE POST -->
+        <div class="col-lg-9">
+            <! -- Blog Post  -->
+            
+            <!--
+            <a href="/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/"><h3 class="ctitle">RESTful Web Service With Jersey And Spring</h3></a>
+            <p><csmall>Sep 21, 2015. | By: digvijayb</csmall></p>
+            -->  
+            <p>Two of the coolest framework in java Jersey and Spring. we are going to integrate together to get best of the both for our restful web service. Jersey provides the JAX-RS API’s implementation to get web service structure ready. And spring logical support to our web service by it unique feature inversion of control (IoC)</p>
 
 <blockquote>
-<p><a href="https://jersey.java.net/" target="_blank"><strong>Jersey</strong></a> RESTful Web Services framework is open source, production quality, framework for developing <strong>RESTful</strong> Web Services in Java that provides support for JAX-RS APIs and serves as a JAX-RS (<em>JSR 311 &amp; JSR 339</em>) Reference Implementation.</p>
-
-<p>The <a href="http://en.wikipedia.org/wiki/Spring_Framework" target="_blank"><strong>Spring Framework</strong></a> is an open source application framework and inversion of control container for the Java platform.</p>
+  <p><a href="https://jersey.java.net/" target="_blank"><strong>Jersey</strong></a> RESTful Web Services framework is open source, production quality, framework for developing <strong>RESTful</strong> Web Services in Java that provides support for JAX-RS APIs and serves as a JAX-RS (<em>JSR 311 &amp; JSR 339</em>) Reference Implementation.</p>
 </blockquote>
 
-<p><strong>Technology Stack</strong>
-- Spring 3.2.2.RELEASE
-- Jersey 1.8
-- Tomcat 7
-- JDK 1.6</p>
+<blockquote>
+  <p>The <a href="http://en.wikipedia.org/wiki/Spring_Framework" target="_blank"><strong>Spring Framework</strong></a> is an open source application framework and inversion of control container for the Java platform.</p>
 
-<p><img src="https://docs.google.com/drawings/d/1soNcbVH52UpqIV2MPS5P8rfz6C8RCisFYPLcBuEvY_M/pub?w=478&amp;h=314" alt="Flow Diagram Of Web Service Using Jersey And Spring"></p>
+</blockquote>
 
-<h4 id="pom-xml">pom.xml</h4>
+<p><strong>Technology Stack</strong></p>
 
+<ul>
+  <li>Spring 3.2.2.RELEASE</li>
+  <li>Jersey 1.8</li>
+  <li>Tomcat 7</li>
+  <li>JDK 1.6<!--more--></li>
+</ul>
+
+<p><img src="https://docs.google.com/drawings/d/1soNcbVH52UpqIV2MPS5P8rfz6C8RCisFYPLcBuEvY_M/pub?w=478&amp;h=314" alt="Flow Diagram Of Web Service Using Jersey And Spring" /></p>
+
+<h4 id="pomxml">pom.xml</h4>
 <p>This pom xml we have mentioned all the dependencies.</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
-    <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>com.dgstack.dev<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>rs-jersey-spring<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;packaging&gt;</span>war<span class="nt">&lt;/packaging&gt;</span>
-    <span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;name&gt;</span>rs-jersey-spring Maven Webapp<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;url&gt;</span>http://maven.apache.org<span class="nt">&lt;/url&gt;</span>
-    <span class="nt">&lt;properties&gt;</span>
-        <span class="nt">&lt;spring.version&gt;</span>3.2.2.RELEASE<span class="nt">&lt;/spring.version&gt;</span>
-        <span class="nt">&lt;jersey.version&gt;</span>1.8<span class="nt">&lt;/jersey.version&gt;</span>
-    <span class="nt">&lt;/properties&gt;</span>
-    <span class="nt">&lt;dependencies&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-            <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId&gt;</span>spring-core<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-            <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-            <span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId&gt;</span>spring-web<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-            <span class="nt">&lt;groupId&gt;</span>com.sun.jersey<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId&gt;</span>jersey-json<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;version&gt;</span>${jersey.version}<span class="nt">&lt;/version&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-            <span class="nt">&lt;groupId&gt;</span>com.sun.jersey.contribs<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId&gt;</span>jersey-spring<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;version&gt;</span>${jersey.version}<span class="nt">&lt;/version&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-            <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
-            <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
-            <span class="nt">&lt;version&gt;</span>3.8.1<span class="nt">&lt;/version&gt;</span>
-            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
-    <span class="nt">&lt;/dependencies&gt;</span>
-    <span class="nt">&lt;build&gt;</span>
-        <span class="nt">&lt;finalName&gt;</span>rs-jersey-spring<span class="nt">&lt;/finalName&gt;</span>
-    <span class="nt">&lt;/build&gt;</span>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+	<span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+	<span class="nt">&lt;groupId&gt;</span>com.dgstack.dev<span class="nt">&lt;/groupId&gt;</span>
+	<span class="nt">&lt;artifactId&gt;</span>rs-jersey-spring<span class="nt">&lt;/artifactId&gt;</span>
+	<span class="nt">&lt;packaging&gt;</span>war<span class="nt">&lt;/packaging&gt;</span>
+	<span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+	<span class="nt">&lt;name&gt;</span>rs-jersey-spring Maven Webapp<span class="nt">&lt;/name&gt;</span>
+	<span class="nt">&lt;url&gt;</span>http://maven.apache.org<span class="nt">&lt;/url&gt;</span>
+	<span class="nt">&lt;properties&gt;</span>
+		<span class="nt">&lt;spring.version&gt;</span>3.2.2.RELEASE<span class="nt">&lt;/spring.version&gt;</span>
+		<span class="nt">&lt;jersey.version&gt;</span>1.8<span class="nt">&lt;/jersey.version&gt;</span>
+	<span class="nt">&lt;/properties&gt;</span>
+	<span class="nt">&lt;dependencies&gt;</span>
+		<span class="nt">&lt;dependency&gt;</span>
+			<span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+			<span class="nt">&lt;artifactId&gt;</span>spring-core<span class="nt">&lt;/artifactId&gt;</span>
+			<span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+		<span class="nt">&lt;/dependency&gt;</span>
+		<span class="nt">&lt;dependency&gt;</span>
+			<span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+			<span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
+			<span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+		<span class="nt">&lt;/dependency&gt;</span>
+		<span class="nt">&lt;dependency&gt;</span>
+			<span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+			<span class="nt">&lt;artifactId&gt;</span>spring-web<span class="nt">&lt;/artifactId&gt;</span>
+			<span class="nt">&lt;version&gt;</span>${spring.version}<span class="nt">&lt;/version&gt;</span>
+		<span class="nt">&lt;/dependency&gt;</span>
+		<span class="nt">&lt;dependency&gt;</span>
+			<span class="nt">&lt;groupId&gt;</span>com.sun.jersey<span class="nt">&lt;/groupId&gt;</span>
+			<span class="nt">&lt;artifactId&gt;</span>jersey-json<span class="nt">&lt;/artifactId&gt;</span>
+			<span class="nt">&lt;version&gt;</span>${jersey.version}<span class="nt">&lt;/version&gt;</span>
+		<span class="nt">&lt;/dependency&gt;</span>
+		<span class="nt">&lt;dependency&gt;</span>
+			<span class="nt">&lt;groupId&gt;</span>com.sun.jersey.contribs<span class="nt">&lt;/groupId&gt;</span>
+			<span class="nt">&lt;artifactId&gt;</span>jersey-spring<span class="nt">&lt;/artifactId&gt;</span>
+			<span class="nt">&lt;version&gt;</span>${jersey.version}<span class="nt">&lt;/version&gt;</span>
+		<span class="nt">&lt;/dependency&gt;</span>
+		<span class="nt">&lt;dependency&gt;</span>
+			<span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+			<span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+			<span class="nt">&lt;version&gt;</span>3.8.1<span class="nt">&lt;/version&gt;</span>
+			<span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+		<span class="nt">&lt;/dependency&gt;</span>
+	<span class="nt">&lt;/dependencies&gt;</span>
+	<span class="nt">&lt;build&gt;</span>
+		<span class="nt">&lt;finalName&gt;</span>rs-jersey-spring<span class="nt">&lt;/finalName&gt;</span>
+	<span class="nt">&lt;/build&gt;</span>
 <span class="nt">&lt;/project&gt;</span>
-</code></pre></div>
-<h4 id="web-xml">web.xml</h4>
+</code></pre>
+</div>
 
-<p>This is the web xml where make instance of <code>com.sun.jersey.spi.spring.container.servlet.SpringServlet</code>  jersey-serlvet and map it with <code>*/api/**</code>  and set init-param <code>&lt;param-name&gt;com.sun.jersey.config.property.packages&lt;/param-name&gt;</code> as the package where we the all the resource class <code>&lt;param-value&gt;com.dgstack.dev.ws&lt;/param-value&gt;</code></p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<h4 id="webxml">web.xml</h4>
+
+<p>This is the web xml where make instance of <code class="highlighter-rouge">com.sun.jersey.spi.spring.container.servlet.SpringServlet</code>  jersey-serlvet and map it with <code class="highlighter-rouge">*/api/**</code>  and set init-param <code class="highlighter-rouge">&lt;param-name&gt;com.sun.jersey.config.property.packages&lt;/param-name&gt;</code> as the package where we the all the resource class <code class="highlighter-rouge">&lt;param-value&gt;com.dgstack.dev.ws&lt;/param-value&gt;</code></p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;web-app</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
-    <span class="na">xmlns=</span><span class="s">"http://java.sun.com/xml/ns/javaee"</span>
-    <span class="na">xsi:schemaLocation=</span><span class="s">"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"</span>
-    <span class="na">version=</span><span class="s">"2.5"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;display-name&gt;</span>Archetype Created Web Application<span class="nt">&lt;/display-name&gt;</span>
-    <span class="nt">&lt;welcome-file-list&gt;</span>
-        <span class="nt">&lt;welcome-file&gt;</span>index.jsp<span class="nt">&lt;/welcome-file&gt;</span>
-    <span class="nt">&lt;/welcome-file-list&gt;</span>
-    <span class="nt">&lt;context-param&gt;</span>
-        <span class="nt">&lt;param-name&gt;</span>contextConfigLocation<span class="nt">&lt;/param-name&gt;</span>
-        <span class="nt">&lt;param-value&gt;</span>classpath:AppContext.xml<span class="nt">&lt;/param-value&gt;</span>
-    <span class="nt">&lt;/context-param&gt;</span>
-    <span class="nt">&lt;listener&gt;</span>
-        <span class="nt">&lt;listener-class&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="nt">&lt;/listener-class&gt;</span>
-    <span class="nt">&lt;/listener&gt;</span>
-    <span class="nt">&lt;servlet&gt;</span>
-        <span class="nt">&lt;servlet-name&gt;</span>jersey-serlvet<span class="nt">&lt;/servlet-name&gt;</span>
-        <span class="nt">&lt;servlet-class&gt;</span>com.sun.jersey.spi.spring.container.servlet.SpringServlet<span class="nt">&lt;/servlet-class&gt;</span>
-        <span class="nt">&lt;init-param&gt;</span>
-            <span class="nt">&lt;param-name&gt;</span>com.sun.jersey.config.property.packages<span class="nt">&lt;/param-name&gt;</span>
-            <span class="nt">&lt;param-value&gt;</span>com.dgstack.dev.ws<span class="nt">&lt;/param-value&gt;</span>
-        <span class="nt">&lt;/init-param&gt;</span>
-        <span class="nt">&lt;init-param&gt;</span>
-            <span class="nt">&lt;param-name&gt;</span>com.sun.jersey.api.json.POJOMappingFeature<span class="nt">&lt;/param-name&gt;</span>
-            <span class="nt">&lt;param-value&gt;</span>true<span class="nt">&lt;/param-value&gt;</span>
-        <span class="nt">&lt;/init-param&gt;</span>
-        <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
-    <span class="nt">&lt;/servlet&gt;</span>
-    <span class="nt">&lt;servlet-mapping&gt;</span>
-        <span class="nt">&lt;servlet-name&gt;</span>jersey-serlvet<span class="nt">&lt;/servlet-name&gt;</span>
-        <span class="nt">&lt;url-pattern&gt;</span>/api/*<span class="nt">&lt;/url-pattern&gt;</span>
-    <span class="nt">&lt;/servlet-mapping&gt;</span>
+	<span class="na">xmlns=</span><span class="s">"http://java.sun.com/xml/ns/javaee"</span>
+	<span class="na">xsi:schemaLocation=</span><span class="s">"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"</span>
+	<span class="na">version=</span><span class="s">"2.5"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;display-name&gt;</span>Archetype Created Web Application<span class="nt">&lt;/display-name&gt;</span>
+	<span class="nt">&lt;welcome-file-list&gt;</span>
+		<span class="nt">&lt;welcome-file&gt;</span>index.jsp<span class="nt">&lt;/welcome-file&gt;</span>
+	<span class="nt">&lt;/welcome-file-list&gt;</span>
+	<span class="nt">&lt;context-param&gt;</span>
+		<span class="nt">&lt;param-name&gt;</span>contextConfigLocation<span class="nt">&lt;/param-name&gt;</span>
+		<span class="nt">&lt;param-value&gt;</span>classpath:AppContext.xml<span class="nt">&lt;/param-value&gt;</span>
+	<span class="nt">&lt;/context-param&gt;</span>
+	<span class="nt">&lt;listener&gt;</span>
+		<span class="nt">&lt;listener-class&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="nt">&lt;/listener-class&gt;</span>
+	<span class="nt">&lt;/listener&gt;</span>
+	<span class="nt">&lt;servlet&gt;</span>
+		<span class="nt">&lt;servlet-name&gt;</span>jersey-serlvet<span class="nt">&lt;/servlet-name&gt;</span>
+		<span class="nt">&lt;servlet-class&gt;</span>com.sun.jersey.spi.spring.container.servlet.SpringServlet<span class="nt">&lt;/servlet-class&gt;</span>
+		<span class="nt">&lt;init-param&gt;</span>
+			<span class="nt">&lt;param-name&gt;</span>com.sun.jersey.config.property.packages<span class="nt">&lt;/param-name&gt;</span>
+			<span class="nt">&lt;param-value&gt;</span>com.dgstack.dev.ws<span class="nt">&lt;/param-value&gt;</span>
+		<span class="nt">&lt;/init-param&gt;</span>
+		<span class="nt">&lt;init-param&gt;</span>
+			<span class="nt">&lt;param-name&gt;</span>com.sun.jersey.api.json.POJOMappingFeature<span class="nt">&lt;/param-name&gt;</span>
+			<span class="nt">&lt;param-value&gt;</span>true<span class="nt">&lt;/param-value&gt;</span>
+		<span class="nt">&lt;/init-param&gt;</span>
+		<span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+	<span class="nt">&lt;/servlet&gt;</span>
+	<span class="nt">&lt;servlet-mapping&gt;</span>
+		<span class="nt">&lt;servlet-name&gt;</span>jersey-serlvet<span class="nt">&lt;/servlet-name&gt;</span>
+		<span class="nt">&lt;url-pattern&gt;</span>/api/*<span class="nt">&lt;/url-pattern&gt;</span>
+	<span class="nt">&lt;/servlet-mapping&gt;</span>
 <span class="nt">&lt;/web-app&gt;</span>
-</code></pre></div>
-<h4 id="appcontext-xml">AppContext.xml</h4>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+</code></pre>
+</div>
+
+<h4 id="appcontextxml">AppContext.xml</h4>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
-    <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
-    <span class="na">xmlns:context=</span><span class="s">"http://www.springframework.org/schema/context"</span>
-    <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans</span> <span class="err">http://www.springframework.org/schema/beans/spring-beans.xsd</span>
-        <span class="err">http://www.springframework.org/schema/context</span> <span class="err">http://www.springframework.org/schema/context/spring-context.xsd"</span><span class="nt">&gt;</span>
+	<span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+	<span class="na">xmlns:context=</span><span class="s">"http://www.springframework.org/schema/context"</span>
+	<span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans</span> <span class="err">http://www.springframework.org/schema/beans/spring-beans.xsd</span>
+		<span class="err">http://www.springframework.org/schema/context</span> <span class="err">http://www.springframework.org/schema/context/spring-context.xsd"</span><span class="nt">&gt;</span>
 
-    <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.dgstack.dev.ws"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;context:annotation-config/&gt;</span>
-
-    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"movieRepo"</span> <span class="na">class=</span><span class="s">"com.dgstack.dev.repo.MovieRepoImpl"</span> <span class="na">scope=</span><span class="s">"singleton"</span><span class="nt">&gt;&lt;/bean&gt;</span>
-
+	<span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.dgstack.dev.ws"</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;context:annotation-config/&gt;</span>
+	
+	<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"movieRepo"</span> <span class="na">class=</span><span class="s">"com.dgstack.dev.repo.MovieRepoImpl"</span> <span class="na">scope=</span><span class="s">"singleton"</span><span class="nt">&gt;&lt;/bean&gt;</span>
+	
 <span class="nt">&lt;/beans&gt;</span>
-</code></pre></div>
-<h4 id="moviesws-java">MoviesWS.java</h4>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">ws</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<h4 id="movieswsjava">MoviesWS.java</h4>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">ws</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.Collection</span><span class="o">;</span>
 
@@ -255,39 +256,42 @@
 <span class="nd">@Component</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MoviesWS</span> <span class="o">{</span>
 
-    <span class="nd">@Autowired</span>
-    <span class="kd">private</span> <span class="n">MovieRepo</span> <span class="n">movieRepo</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="nf">MoviesWS</span><span class="o">()</span> <span class="o">{</span>
-    <span class="o">}</span>
+	<span class="nd">@Autowired</span>
+	<span class="kd">private</span> <span class="n">MovieRepo</span> <span class="n">movieRepo</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="n">MoviesWS</span><span class="o">()</span> <span class="o">{</span>
+	<span class="o">}</span>
 
-    <span class="nd">@GET</span> <span class="nd">@Path</span><span class="o">(</span><span class="s">"/all"</span><span class="o">)</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">Response</span> <span class="nf">getAllMovies</span><span class="o">(){</span>
-        <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">movies</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">allMovie</span><span class="o">();</span>
-        <span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movies</span><span class="o">.</span><span class="na">toArray</span><span class="o">()).</span><span class="na">build</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="nd">@POST</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span> <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">Response</span> <span class="nf">addMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
-        <span class="n">MovieVO</span> <span class="n">movieNew</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">addMovie</span><span class="o">(</span><span class="n">movie</span><span class="o">);</span>
-        <span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movieNew</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="nd">@PUT</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span> <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">Response</span> <span class="nf">updateMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
-        <span class="n">MovieVO</span> <span class="n">movieNew</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">movie</span><span class="o">);</span>
-        <span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movieNew</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="nd">@GET</span> <span class="nd">@Path</span><span class="o">(</span><span class="s">"{id}"</span><span class="o">)</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-    <span class="kd">public</span> <span class="n">Response</span> <span class="nf">getMovies</span><span class="o">(</span><span class="nd">@PathParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span><span class="kd">final</span> <span class="n">String</span> <span class="n">id</span><span class="o">){</span>
-        <span class="n">MovieVO</span> <span class="n">movie</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">getMovieById</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-        <span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movie</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
-    <span class="o">}</span>
-
+	<span class="nd">@GET</span> <span class="nd">@Path</span><span class="o">(</span><span class="s">"/all"</span><span class="o">)</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="n">getAllMovies</span><span class="o">(){</span>
+		<span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">movies</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">allMovie</span><span class="o">();</span>
+		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movies</span><span class="o">.</span><span class="na">toArray</span><span class="o">()).</span><span class="na">build</span><span class="o">();</span>
+	<span class="o">}</span>
+	
+	<span class="nd">@POST</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span> <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="n">addMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
+		<span class="n">MovieVO</span> <span class="n">movieNew</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">addMovie</span><span class="o">(</span><span class="n">movie</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movieNew</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+	<span class="o">}</span>
+	
+	<span class="nd">@PUT</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span> <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="n">updateMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
+		<span class="n">MovieVO</span> <span class="n">movieNew</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">movie</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movieNew</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+	<span class="o">}</span>
+	
+	<span class="nd">@GET</span> <span class="nd">@Path</span><span class="o">(</span><span class="s">"{id}"</span><span class="o">)</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="n">getMovies</span><span class="o">(</span><span class="nd">@PathParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span><span class="kd">final</span> <span class="n">String</span> <span class="n">id</span><span class="o">){</span>
+		<span class="n">MovieVO</span> <span class="n">movie</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">getMovieById</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movie</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+	<span class="o">}</span>
+	
 <span class="o">}</span>
-</code></pre></div>
-<h4 id="movievo-java">MovieVO.java</h4>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">vo</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<h4 id="movievojava">MovieVO.java</h4>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">vo</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.io.Serializable</span><span class="o">;</span>
 
@@ -297,79 +301,82 @@
  */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MovieVO</span> <span class="kd">implements</span> <span class="n">Serializable</span><span class="o">{</span>
 
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1082165539433738004L</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1082165539433738004L</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="nf">MovieVO</span><span class="o">()</span> <span class="o">{</span>
-    <span class="o">}</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span><span class="o">()</span> <span class="o">{</span>
+	<span class="o">}</span>
+	
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">id</span><span class="o">;</span>
+	
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+	
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">year</span><span class="o">;</span>
+	
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">rating</span><span class="o">;</span>
 
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">id</span><span class="o">;</span>
+	<span class="cm">/**
+	 * @return the id
+	 */</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="n">getId</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+	<span class="cm">/**
+	 * @param id the id to set
+	 */</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setId</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">year</span><span class="o">;</span>
+	<span class="cm">/**
+	 * @return the name
+	 */</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="n">getName</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">rating</span><span class="o">;</span>
+	<span class="cm">/**
+	 * @param name the name to set
+	 */</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="cm">/**
-     * @return the id
-     */</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
-    <span class="o">}</span>
+	<span class="cm">/**
+	 * @return the year
+	 */</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="n">getYear</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">year</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="cm">/**
-     * @param id the id to set
-     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
-    <span class="o">}</span>
+	<span class="cm">/**
+	 * @param year the year to set
+	 */</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setYear</span><span class="o">(</span><span class="n">String</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="cm">/**
-     * @return the name
-     */</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
-    <span class="o">}</span>
+	<span class="cm">/**
+	 * @return the rating
+	 */</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="n">getRating</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">rating</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="cm">/**
-     * @param name the name to set
-     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**
-     * @return the year
-     */</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getYear</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">year</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**
-     * @param year the year to set
-     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setYear</span><span class="o">(</span><span class="n">String</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**
-     * @return the rating
-     */</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getRating</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">rating</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**
-     * @param rating the rating to set
-     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setRating</span><span class="o">(</span><span class="n">String</span> <span class="n">rating</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">rating</span> <span class="o">=</span> <span class="n">rating</span><span class="o">;</span>
-    <span class="o">}</span>   
+	<span class="cm">/**
+	 * @param rating the rating to set
+	 */</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setRating</span><span class="o">(</span><span class="n">String</span> <span class="n">rating</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">rating</span> <span class="o">=</span> <span class="n">rating</span><span class="o">;</span>
+	<span class="o">}</span>	
 <span class="o">}</span>
 
-</code></pre></div>
-<h4 id="movierepo-java">MovieRepo.java</h4>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">repo</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<h4 id="movierepojava">MovieRepo.java</h4>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">repo</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.Collection</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
@@ -382,17 +389,19 @@
  */</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MovieRepo</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">Id</span><span class="o">);</span>
-
-    <span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span>
-
-    <span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="nf">allMovie</span><span class="o">();</span>
-
-    <span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span> 
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">Id</span><span class="o">);</span>
+	
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span>
+	
+	<span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">allMovie</span><span class="o">();</span>
+	
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span> 
 <span class="o">}</span>
-</code></pre></div>
-<h4 id="movierepoimpl-java">MovieRepoImpl.java</h4>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">repo</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<h4 id="movierepoimpljava">MovieRepoImpl.java</h4>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">dgstack</span><span class="o">.</span><span class="na">dev</span><span class="o">.</span><span class="na">repo</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.Collection</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
@@ -408,122 +417,301 @@
  */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MovieRepoImpl</span> <span class="kd">implements</span> <span class="n">MovieRepo</span><span class="o">{</span>
 
-    <span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">repoMap</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">repoMap</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="nf">MovieRepoImpl</span><span class="o">()</span> <span class="o">{</span>
-    <span class="o">}</span>
+	<span class="kd">public</span> <span class="n">MovieRepoImpl</span><span class="o">()</span> <span class="o">{</span>
+	<span class="o">}</span>
 
-    <span class="nd">@PostConstruct</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(){</span>
-        <span class="n">repoMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">MovieVO</span><span class="o">&gt;();</span>
-        <span class="n">MovieVO</span> <span class="n">movieVO</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MovieVO</span><span class="o">();</span>
-        <span class="n">movieVO</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()));</span>
-        <span class="n">movieVO</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"The Martin"</span><span class="o">);</span>
-        <span class="n">movieVO</span><span class="o">.</span><span class="na">setYear</span><span class="o">(</span><span class="s">"2015"</span><span class="o">);</span>
-        <span class="n">movieVO</span><span class="o">.</span><span class="na">setRating</span><span class="o">(</span><span class="s">"5"</span><span class="o">);</span>
-        <span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movieVO</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movieVO</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">repoMap</span><span class="o">);</span>
-    <span class="o">}</span>
+	<span class="nd">@PostConstruct</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="n">init</span><span class="o">(){</span>
+		<span class="n">repoMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">MovieVO</span><span class="o">&gt;();</span>
+		<span class="n">MovieVO</span> <span class="n">movieVO</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MovieVO</span><span class="o">();</span>
+		<span class="n">movieVO</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()));</span>
+		<span class="n">movieVO</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"The Martin"</span><span class="o">);</span>
+		<span class="n">movieVO</span><span class="o">.</span><span class="na">setYear</span><span class="o">(</span><span class="s">"2015"</span><span class="o">);</span>
+		<span class="n">movieVO</span><span class="o">.</span><span class="na">setRating</span><span class="o">(</span><span class="s">"5"</span><span class="o">);</span>
+		<span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movieVO</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movieVO</span><span class="o">);</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">repoMap</span><span class="o">);</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+	<span class="o">}</span>
 
-    <span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-    <span class="o">}</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">movie</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()));</span>
+		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movie</span><span class="o">);</span>
+	<span class="o">}</span>
 
-    <span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">movie</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()));</span>
-        <span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movie</span><span class="o">);</span>
-    <span class="o">}</span>
+	<span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">allMovie</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">values</span><span class="o">();</span>
+	<span class="o">}</span>
 
-    <span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="nf">allMovie</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">values</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movie</span><span class="o">);</span>
-    <span class="o">}</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movie</span><span class="o">);</span>
+	<span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <blockquote>
-<p>Please Do Comment and click here to get <a href="https://github.com/dgstack/WebServiceProj/archive/master.zip" title="Get Code Zip">code</a></p>
+  <p>Please Do Comment and click here to get <a href="https://github.com/dgstack/WebServiceProj/archive/master.zip" title="Get Code Zip">code</a></p>
 </blockquote>
 
-</div>
-<div class="share-page">
-    Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text=RESTful Web Service With Jersey And Spring&url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/&via=dgstack&related=dgstack" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-    <a href="https://plus.google.com/share?url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
-</div>
 
-
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2016/09/17/Web-Service-Jargon-JAXWS/">
-            Web Service Jargon (JAX-WS)
-            <small>17 Sep 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/08/15/Spring-Annotation-Ref/">
-            Spring Annotations
-            <small>15 Aug 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/07/15/Python3-Vs-Python2/">
-            Python3 vs Python2
-            <small>15 Jul 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-</div>
-<div class="comment-dgstack">
-  <div id="disqus_thread"></div>
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-         */
-      
-        var disqus_config = function () {
-            this.page.url = "http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = "/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
+            <div class="spacing"></div>
+            <span>Share : <span>
+    <a href="https://twitter.com/intent/tweet?text=RESTful Web Service With Jersey And Spring&url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/&via=DigvijayBhakuni&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i> Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i> Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i> Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i> Google+</a>
+</span></span>
+            <!--
+            <h6>SHARE:</h6>
+            <p class="share">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-tumblr"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>		 		
+            </p>
+            -->
+            
+        </div><! --/col-lg-9 -->
         
-        (function() {  // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            
-            s.src = '//dgstack.disqus.com/embed.js';
-            
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-
-<div id="disclamer">
-    <h4>Disclamer</h4>
+        <div class="col-lg-3">
+    
+    <h4>Subscribe &amp; Social</h4>
+    <div class="hline"></div>
     <p>
-      This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
+        <p class="rss-subscribe">Subscribe to this blog <a href="/feed.xml">via RSS</a>.</p>
     </p>
-    <sub>** </sub>
+    <p>
+        <div class="fb-like" data-href="https://www.facebook.com/dgstack" data-width="200" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+    </p>
+    <p>
+        <a class="twitter-follow-button"
+  href="https://twitter.com/DigvijayBhakuni"
+  data-size="large">
+Follow @DigvijayBhakuni</a>
+    </p>
+    <div class="spacing"></div>
+
+    <h4>Recent Posts</h4>
+    <div class="hline"></div>
+    <ul class="popular-posts">
+        
+        <li>
+            <a href="/2016/09/17/Web-Service-Jargon-JAXWS/"><img src="/assets/img/blog/thumbs/java.png" alt="Popular Post"></a>
+            <p><a href="/2016/09/17/Web-Service-Jargon-JAXWS/">Web Service Jargon (JAX-WS)</a></p>
+            <em>Posted on 17 Sep 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/08/15/Spring-Annotation-Ref/"><img src="/assets/img/blog/thumbs/spring-logo.png" alt="Popular Post"></a>
+            <p><a href="/2016/08/15/Spring-Annotation-Ref/">Spring Annotations</a></p>
+            <em>Posted on 15 Aug 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/07/15/Python3-Vs-Python2/"><img src="/assets/img/blog/thumbs/python.png" alt="Popular Post"></a>
+            <p><a href="/2016/07/15/Python3-Vs-Python2/">Python3 vs Python2</a></p>
+            <em>Posted on 15 Jul 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/05/22/JVM-Lang-era/"><img src="/assets/img/blog/thumbs/java-duke.png" alt="Popular Post"></a>
+            <p><a href="/2016/05/22/JVM-Lang-era/">Era of JVM language</a></p>
+            <em>Posted on 22 May 2016</em>
+        </li>
+        
+    </ul>
+
+    <div class="spacing"></div>
+    <h4>Categories</h4>
+    <div class="hline"></div>
+    
+    <p>
+        <a href="/category/#Java"><i class="fa fa-angle-right"></i> Java</a>
+        <span class="badge badge-theme pull-right">10</span>
+    </p>
+    
+    <p>
+        <a href="/category/#Python"><i class="fa fa-angle-right"></i> Python</a>
+        <span class="badge badge-theme pull-right">2</span>
+    </p>
+    
+
+    <div class="spacing"></div>
+
+    <h4>Popular Tags</h4>
+    <div class="hline"></div>
+    <p>
+        
+        <a class="btn btn-theme" href="/category/#Java" role="button">Java (10)</a> 
+        <a class="btn btn-theme" href="/category/#Python" role="button">Python (2)</a> 
+    </p>
+    
 </div>
 
+    </div><! --/row -->
+</div><! --/container -->
 
-    </div>
+        <div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        <a href="https://www.facebook.com/dgstack/" class="btn btn-theme"><i class="fa fa-facebook"></i> facebook</a>
+                    
+                        <a href="https://twitter.com/DigvijayBhakuni/" class="btn btn-theme"><i class="fa fa-twitter"></i> twitter</a>
+                    
+                        <a href="http://digvijayb.tumblr.com/" class="btn btn-theme"><i class="fa fa-tumblr"></i> tumblr</a>
+                    
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Disclamer</h4>
+                <div class="hline-w"></div>
+                <p>
+                    This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/retina-1.1.0.js"></script>
+<script src="/assets/js/jquery.hoverdir.js"></script>
+<script src="/assets/js/jquery.hoverex.min.js"></script>
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/custom.js"></script>
 
-  </body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60953284-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+// Portfolio
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=978779875510857";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+    </body>
 </html>

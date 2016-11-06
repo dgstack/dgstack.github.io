@@ -1,37 +1,112 @@
-# Dependencies
-markdown:         redcarpet
-#highlighter:      pygments
-highlighter:      rouge
+### GENERAL SETTINGS ###
 
-# Permalinks
-permalink:        pretty
-#relative_permalinks: true
+# Site settings
+title: DGStack.com
+description: "This blog is about computer programming tips, trick and some short tutorials, some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc"
+analytics: UA-60953284-1 #Google analytics code in the format XX-nnnnnnnn-n
+baseurl: "" #important: start with /
+url: "http://dgstack.com"
 
-# Setup
-title:            'DGStack'
-tagline:          'Stack Up the Code'
-desc:             'This blog is about computer programming tips, trick and some short tutorials'
-description:      'DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc'
-url:              http://dgstack.com
-baseurl:          /
-sitecache:        20160501.2
-twitter_username: dgstack
+# Build settings
+markdown: kramdown
+highlighter: rouge
+#markdown: redcarpet
+permalink: /:categories/:title
+excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
 
-author:
-  name:           'Digvijay'
-  url:            https://twitter.com/dgstack
-
-paginate:         5
-paginate_path: "page:num"
-
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/dgstack/
+colors:  #in hex code if not noted else
+  primary: "#78909C" #"#F70031" 
+  primary_rgb: "0,150,136" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.  
+  secondary: "#37474F" #"#33004D"
+  link: "#01b2fe"
+  link_hover: "#01b2fe"
+  footer_heading: "#ffffff"
+  footer_content: "#bfc9d3"
   
-  
-gems: [jekyll-paginate]
+twitter:
+    username: DigvijayBhakuni
+    site: DGStack
+    related: DGStack
+ 
+### CONTACT SETTINGS ###
 
-redcarpet:
-  extensions: ["tables", "with_toc_data"]
+# Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
+social:
+  - title: facebook
+    url: https://www.facebook.com/dgstack/
+  - title: twitter
+    url: https://twitter.com/DigvijayBhakuni/
+  - title: tumblr
+    url: http://digvijayb.tumblr.com/
+    
+# Postal address (add as many lines as necessary). Shown in footer and on Contact page.
+address:
+  - lines: 
+    - Some Ave, 987,
+    - 23890, New York,
+    - United States.
+email: hello@solidtheme.com
+tel: +34 8493-4893
+
+disclamer: This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
+
+
+### GENERAL DATA FOR VARIOUS LOCATIONS ###
+    
+# Members information. Shown on About page.
+members:
+  - name: Mark Webber
+    position: CEO
+    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    img: team01.jpg
+    social:
+      - title: envelope #use for email address
+        url: mailto:name@domain.com
+      - title: twitter
+        url: http://twitter.com/handle
+  - name: Paul Jameson
+    position: Lead Designer
+    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    img: team02.jpg
+    social:
+      - title: envelope #use for email address
+        url: mailto:name@domain.com
+      - title: twitter
+        url: http://twitter.com/handle
+  - name: Laura Sommers
+    position: Lead Developer
+    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    img: team03.jpg
+    social:
+      - title: envelope #use for email address
+        url: mailto:name@domain.com
+      - title: twitter
+        url: http://twitter.com/handle
+  - name: Martin Blunt
+    position: Marketing
+    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    img: team04.jpg
+    social:
+      - title: envelope #use for email address
+        url: mailto:name@domain.com
+      - title: twitter
+        url: http://twitter.com/handle
+    
+# Clients information. Shown on Home and About pages.
+badges:
+  - name: Big Data Foundation L2
+    img: big-data-foundations-level-2.png
+  - name: Hadoop Foundation L2
+    img: hadoop-foundations-level-2.png
+  - name: Spark Fundamental L1
+    img: spark-level-1.png
+
+    
+# Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
+about: "DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc"
+
+# Testimonial content. Shown on Home and About page. 
+testimonial:
+    message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    author: Marcel Newman
+    position: WEB DESIGNER - BLACKTIE.CO

@@ -1,0 +1,15 @@
+<div id="blue">
+    <div class="container">
+        <div class="row">
+            <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
+            <csmall style="margin-left: 20px;"></csmall>
+            <span style="wrap-post-csmall"> 
+                On {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }} |
+            </span>
+            <!-- <csmall style="margin-left: 20px;"></csmall> -->
+            {% include share_this.html %}
+            
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+<!-- <h3>{% if page.wrap_title %}{{ page.wrap_title }}{% else %}{{ page.title }}{% endif %}</h3> -->
