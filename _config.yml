@@ -24,20 +24,26 @@ colors:  #in hex code if not noted else
   footer_content: "#bfc9d3"
   
 twitter:
-    username: DigvijayBhakuni
+    username: DGStack
     site: DGStack
     related: DGStack
- 
+
 ### CONTACT SETTINGS ###
 
 # Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
 social:
   - title: facebook
+    ico: facebook
     url: https://www.facebook.com/dgstack/
   - title: twitter
+    ico: twitter
     url: https://twitter.com/DigvijayBhakuni/
   - title: tumblr
+    ico: tumblr
     url: http://digvijayb.tumblr.com/
+  - title: email
+    ico: envelope-o
+    url: mailto:digvijayb@outlook.com
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
