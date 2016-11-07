@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <title>DGStack.com - 7 Easy Steps to Moving Wordpress site to live server from Local</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+    <body>
+        <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=" / ">DGStack.com</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li ><a href=" / ">BLOG</a></li>
+                <li ><a href=" /category/ ">CATEGORY</a></li>
+                <li ><a href=" /about/ ">ABOUT</a></li>
+                <li ><a href=" /contact/ ">CONTACT</a></li>
+            </ul>
+            
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+            <div id="blue">
+    <div class="container">
+        <div class="row">
+            <a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local"><h3 class="ctitle">7 Easy Steps to Moving Wordpress site to live server from Local</h3></a>
+            <csmall style="margin-left: 20px;"></csmall>
+            <span style="wrap-post-csmall"> 
+                On Jul 15, 2016 by digvijayb |
+            </span>
+            <!-- <csmall style="margin-left: 20px;"></csmall> -->
+            <span>
+    <a href="https://twitter.com/intent/tweet?text=7 Easy Steps to Moving Wordpress site to live server from Local&url=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
+</span>
+            
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+<!-- <h3>7 Easy Steps to Moving Wordpress site to live server from Local</h3> -->
+<div class="container mtb">
+    <div class="row">
+        <! -- SINGLE POST -->
+        <div class="col-lg-9">
+            <! -- Blog Post  -->
+            
+            <!--
+            <a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local"><h3 class="ctitle">7 Easy Steps to Moving Wordpress site to live server from Local</h3></a>
+            <p><csmall>Jul 15, 2016. | By: digvijayb</csmall></p>
+            -->  
+            <h3 id="how-to-move-a-wordpress-blog-from-localhost-to-live-server-or-web-server">How to move a wordpress blog from localhost to live server (or web server).</h3>
+<p><strong>Install or Move your wordpress blog to live host in 7 Easy Step</strong></p>
+
+<p>It always had been a pain for a developer to migrate project from one environment to another and with php and static web site which can’t be bundle it like war, dll and exe.</p>
+
+<blockquote>
+  <p>3 years back I use to be a freelance web developer, primarily working with wordpress. When I use complete project and hand it over to client I have sit long hour and support them over remote and phone to make there site live and client don’t want to share there live credential with a freelance(why would they anyway). Then wrote this post and use to give them this doc.</p>
+</blockquote>
+
+<p>Now there are better way to do this like docker and other. But with small business manually migrating website is the only way.</p>
+
+<p><strong>Step 1.</strong> At your hosting server install wordpress. I am using my cpanel godady.</p>
+
+<p><img src="http://4.bp.blogspot.com/-r2oW-oHPnZE/U8DATkxFmPI/AAAAAAAAAVs/5KZ18fFDtsM/s1600/web_host_wp.png" alt="Click on wordpress and follow simple steps to installs" /></p>
+
+<blockquote>
+  <p>Now wordpress ready with default theme and with Hello Post.<!--more--></p>
+</blockquote>
+
+<p><strong>Step 2.</strong> Go to your local database or database client in my case I am using <strong>phpMyAdmin</strong> to connect my database. Then Select your wordpress database and select export option. And you will get a SQL script file like <strong>your_database_name.sql</strong></p>
+
+<p><img src="http://2.bp.blogspot.com/-lPjT3eGDxYw/U8DNUyos54I/AAAAAAAAAWY/3Ej2KHjvD4k/s1600/local_db_Export.png" alt="Click on export tab select Quick option and hit go." /></p>
+
+<p><strong>Step 3.</strong> Now open the sql file in any of your preferred text editor I am using <strong>SciTE</strong> but even Notepad will work then open <strong>find and replace</strong> and replace all localhost address to your site address.
+Like in this case <strong>http://localhost/sam</strong> to <strong>http://www.get24sevensupport.com</strong></p>
+
+<p><img src="http://4.bp.blogspot.com/-wKgkq6jNh1Q/U8DNUUh1MHI/AAAAAAAAAWU/Uh3_-I-3RjM/s1600/db_url_replace.png" alt="Click Replace All" /></p>
+
+<p><strong>Step 4.</strong> Go to hosting database and select all wordpress table by Check All checkbox then select Drop option from the dropdown menu.</p>
+
+<p><img src="http://2.bp.blogspot.com/-YMvl-k8-8eY/U8DNV8NCDuI/AAAAAAAAAWs/kYizWre9jAs/s1600/prod_db.png" alt="Check all the wordpress table and select drop." /></p>
+
+<p><strong>Step 5.</strong> A confirmation screen will appear onto your with name (or drop table sql) of all the table to drop. then press Yes</p>
+
+<p><img src="http://2.bp.blogspot.com/-BfK_bp94h6A/U8DNWKctT1I/AAAAAAAAAWw/4AHOsEG708A/s1600/prod_db_drop.png" alt="Click Yes" /></p>
+
+<blockquote>
+  <p><strong>All of your wordpress data is moved. Now it’s time to move all of media and themes content to live server.</strong></p>
+</blockquote>
+
+<p><strong>Step 6.</strong> Now connect to your FTP Account via a FTP Client your can use any client you like I am using <strong>FileZila.</strong> You can even access your FTP via cpanel’s file manger (if your got one in your cpanel). Open the folder <strong>www</strong> or <strong>public_html</strong> and their you will get a folder name wp-content. Now delete that folder and upload your local <strong>wp-content</strong> folder to web host.</p>
+
+<blockquote>
+  <p><strong>Note: With FileZila delete wp-content on the right and drag and drop wp-content from left to right.</strong></p>
+</blockquote>
+
+<p><img src="http://3.bp.blogspot.com/-1NV-moJ6pIQ/U8DNUmnGEiI/AAAAAAAAAWc/b49-zBvEK2A/s1600/fillzila_wp.png" alt="Delete wp-content on the right and drag and drop wp-content from left to right." /></p>
+
+<p><strong>Step 7.</strong> Now got to your browser and open your web site and your are done.</p>
+
+<p><img src="http://3.bp.blogspot.com/-FS9z70ts3lk/U8DNZVcX3fI/AAAAAAAAAXI/9d5bRyemwzk/s1600/wp_site_prod.png" alt="Your are gone live" /></p>
+
+<blockquote>
+  <p>For any concern and queries comment below</p>
+</blockquote>
+
+
+            <div class="spacing"></div>
+            <span>Share : <span>
+    <a href="https://twitter.com/intent/tweet?text=7 Easy Steps to Moving Wordpress site to live server from Local&url=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
+</span></span>
+            <!--
+            <h6>SHARE:</h6>
+            <p class="share">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-tumblr"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>		 		
+            </p>
+            -->
+            
+            <div class="comment-dgstack">
+  <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+      
+        var disqus_config = function () {
+            this.page.url = "http://localhost:4000/blog/wordpress/Moving-Wordpress-to-live-server-from-Local";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "/blog/wordpress/Moving-Wordpress-to-live-server-from-Local" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            
+            s.src = '//dgstack.disqus.com/embed.js';
+            
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+        </div><! --/col-lg-9 -->
+        
+        <div class="col-lg-3">
+    
+    <h4>Subscribe &amp; Social</h4>
+    <div class="hline"></div>
+    <p>
+        <p class="rss-subscribe">Subscribe to this blog <a href="/feed.xml">via RSS</a>.</p>
+    </p>
+    <p>
+        <div class="fb-like" data-href="https://www.facebook.com/dgstack" data-width="200" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+    </p>
+    <p>
+        <a class="twitter-follow-button"
+  href="https://twitter.com/DigvijayBhakuni"
+  data-size="large">
+Follow @DigvijayBhakuni</a>
+    </p>
+    <div class="spacing"></div>
+
+    <h4>Recent Posts</h4>
+    <div class="hline"></div>
+    <ul class="popular-posts">
+        
+        <li>
+            <a href="/blog/ops/Increase-JVM-Size-In-WebSphere-Application-Server"><img src="/assets/img/blog/thumbs/logo.png" alt="Popular Post"></a>
+            <p><a href="/blog/ops/Increase-JVM-Size-In-WebSphere-Application-Server">Increase JVM Size In WebSphere Application Server (WAS)</a></p>
+            <em>Posted on 06 Nov 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/09/17/Web-Service-Jargon-JAXWS/"><img src="/assets/img/blog/thumbs/java.png" alt="Popular Post"></a>
+            <p><a href="/2016/09/17/Web-Service-Jargon-JAXWS/">Web Service Jargon (JAX-WS)</a></p>
+            <em>Posted on 17 Sep 2016</em>
+        </li>
+        
+        <li>
+            <a href="/2016/08/15/Spring-Annotation-Ref/"><img src="/assets/img/blog/thumbs/spring-logo.png" alt="Popular Post"></a>
+            <p><a href="/2016/08/15/Spring-Annotation-Ref/">Spring Annotations</a></p>
+            <em>Posted on 15 Aug 2016</em>
+        </li>
+        
+        <li>
+            <a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local"><img src="/assets/img/blog/thumbs/wordpress.png" alt="Popular Post"></a>
+            <p><a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local">7 Easy Steps to Moving Wordpress site to live server from Local</a></p>
+            <em>Posted on 15 Jul 2016</em>
+        </li>
+        
+    </ul>
+
+    <div class="spacing"></div>
+    <h4>Categories</h4>
+    <div class="hline"></div>
+    
+    <p>
+        <a href="/category/#Java"><i class="fa fa-angle-right"></i> Java</a>
+        <span class="badge badge-theme pull-right">10</span>
+    </p>
+    
+    <p>
+        <a href="/category/#Python"><i class="fa fa-angle-right"></i> Python</a>
+        <span class="badge badge-theme pull-right">2</span>
+    </p>
+    
+    <p>
+        <a href="/category/#Wordpress"><i class="fa fa-angle-right"></i> Wordpress</a>
+        <span class="badge badge-theme pull-right">1</span>
+    </p>
+    
+    <p>
+        <a href="/category/#Ops"><i class="fa fa-angle-right"></i> Ops</a>
+        <span class="badge badge-theme pull-right">1</span>
+    </p>
+    
+
+    <div class="spacing"></div>
+
+    <h4>Popular Tags</h4>
+    <div class="hline"></div>
+    <p>
+        
+        <a class="btn btn-theme" href="/category/#Java" role="button">Java (10)</a> 
+        <a class="btn btn-theme" href="/category/#Python" role="button">Python (2)</a> 
+        <a class="btn btn-theme" href="/category/#Wordpress" role="button">Wordpress (1)</a> 
+        <a class="btn btn-theme" href="/category/#Ops" role="button">Ops (1)</a> 
+    </p>
+    
+</div>
+
+    </div><! --/row -->
+</div><! --/container -->
+
+        <div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        <a href="https://www.facebook.com/dgstack/" class="btn btn-theme" target="_blank"><i class="fa fa-facebook"></i> facebook</a>
+                    
+                        <a href="https://twitter.com/DigvijayBhakuni/" class="btn btn-theme" target="_blank"><i class="fa fa-twitter"></i> twitter</a>
+                    
+                        <a href="http://digvijayb.tumblr.com/" class="btn btn-theme" target="_blank"><i class="fa fa-tumblr"></i> tumblr</a>
+                    
+                        <a href="mailto:digvijayb@outlook.com" class="btn btn-theme" target="_blank"><i class="fa fa-envelope-o"></i> email</a>
+                    
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Disclamer</h4>
+                <div class="hline-w"></div>
+                <p>
+                    This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/retina-1.1.0.js"></script>
+<script src="/assets/js/jquery.hoverdir.js"></script>
+<script src="/assets/js/jquery.hoverex.min.js"></script>
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60953284-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+// Portfolio
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=978779875510857";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+    </body>
+</html>

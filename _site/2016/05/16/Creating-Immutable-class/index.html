@@ -69,10 +69,10 @@
             </span>
             <!-- <csmall style="margin-left: 20px;"></csmall> -->
             <span>
-    <a href="https://twitter.com/intent/tweet?text=Creating Immutable Class&url=http://dgstack.com/2016/05/16/Creating-Immutable-class/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
-    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
-    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
-    <a href="https://plus.google.com/share?url=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=Creating Immutable Class&url=http://localhost:4000/2016/05/16/Creating-Immutable-class/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
 </span>
             
         </div><!-- /row -->
@@ -120,15 +120,15 @@ So to create Immutable Class in java there are some simple that are listed below
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">;</span><span class="c1">// Is Immutable</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">;</span><span class="c1">// Is mutable</span>
 
-    <span class="kd">private</span> <span class="n">ImmutableSample</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
+    <span class="kd">private</span> <span class="nf">ImmutableSample</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
         <span class="k">this</span><span class="o">.</span><span class="na">intField</span> <span class="o">=</span> <span class="n">intField</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">stringField</span> <span class="o">=</span> <span class="n">stringField</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">dateField</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">(</span><span class="n">dateField</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
     <span class="o">}</span>
 
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ImmutableSample</span> <span class="n">getInstance</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">ImmutableSample</span><span class="o">(</span><span class="n">fld1</span><span class="o">,</span> <span class="n">fld2</span><span class="o">,</span> <span class="n">date</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ImmutableSample</span> <span class="nf">getInstance</span><span class="o">(</span><span class="kt">int</span> <span class="n">intField</span><span class="o">,</span> <span class="n">String</span> <span class="n">stringField</span><span class="o">,</span> <span class="n">Date</span> <span class="n">dateField</span><span class="o">){</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">ImmutableSample</span><span class="o">(</span><span class="n">fld1</span><span class="o">,</span> <span class="n">fld2</span><span class="o">,</span> <span class="n">date</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="c1">//Provide no setter methods</span>
@@ -136,26 +136,26 @@ So to create Immutable Class in java there are some simple that are listed below
     <span class="cm">/**
     * int is value type variable, So the value in intField going change every 
     * */</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">getIntField</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIntField</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">intField</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="cm">/**
     * String class is also immutable so we can return the instance variable as it is
     * */</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">getStringField</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getStringField</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">stringField</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="cm">/**
     * As Date field is mutable so we create a copy of dateField. So that modification will not effect dateField.
     * */</span>
-    <span class="kd">public</span> <span class="n">Date</span> <span class="n">getDateField</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">Date</span><span class="o">(</span><span class="n">dateField</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
+    <span class="kd">public</span> <span class="n">Date</span> <span class="nf">getDateField</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">Date</span><span class="o">(</span><span class="n">dateField</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="n">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">intField</span> <span class="o">+</span><span class="s">" - "</span><span class="o">+</span> <span class="n">stringField</span> <span class="o">+</span><span class="s">" - "</span><span class="o">+</span> <span class="n">dateField</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -177,10 +177,10 @@ So to create Immutable Class in java there are some simple that are listed below
 
             <div class="spacing"></div>
             <span>Share : <span>
-    <a href="https://twitter.com/intent/tweet?text=Creating Immutable Class&url=http://dgstack.com/2016/05/16/Creating-Immutable-class/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
-    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
-    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
-    <a href="https://plus.google.com/share?url=http://dgstack.com/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=Creating Immutable Class&url=http://localhost:4000/2016/05/16/Creating-Immutable-class/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/2016/05/16/Creating-Immutable-class/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
 </span></span>
             <!--
             <h6>SHARE:</h6>
@@ -201,7 +201,7 @@ So to create Immutable Class in java there are some simple that are listed below
          */
       
         var disqus_config = function () {
-            this.page.url = "http://dgstack.com/2016/05/16/Creating-Immutable-class/";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = "http://localhost:4000/2016/05/16/Creating-Immutable-class/";  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = "/2016/05/16/Creating-Immutable-class" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
@@ -259,8 +259,8 @@ Follow @DigvijayBhakuni</a>
         </li>
         
         <li>
-            <a href="/2016/07/15/Python3-Vs-Python2/"><img src="/assets/img/blog/thumbs/python.png" alt="Popular Post"></a>
-            <p><a href="/2016/07/15/Python3-Vs-Python2/">Python3 vs Python2</a></p>
+            <a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local"><img src="/assets/img/blog/thumbs/wordpress.png" alt="Popular Post"></a>
+            <p><a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local">7 Easy Steps to Moving Wordpress site to live server from Local</a></p>
             <em>Posted on 15 Jul 2016</em>
         </li>
         
@@ -281,6 +281,11 @@ Follow @DigvijayBhakuni</a>
     </p>
     
     <p>
+        <a href="/category/#Wordpress"><i class="fa fa-angle-right"></i> Wordpress</a>
+        <span class="badge badge-theme pull-right">1</span>
+    </p>
+    
+    <p>
         <a href="/category/#Ops"><i class="fa fa-angle-right"></i> Ops</a>
         <span class="badge badge-theme pull-right">1</span>
     </p>
@@ -294,6 +299,7 @@ Follow @DigvijayBhakuni</a>
         
         <a class="btn btn-theme" href="/category/#Java" role="button">Java (10)</a> 
         <a class="btn btn-theme" href="/category/#Python" role="button">Python (2)</a> 
+        <a class="btn btn-theme" href="/category/#Wordpress" role="button">Wordpress (1)</a> 
         <a class="btn btn-theme" href="/category/#Ops" role="button">Ops (1)</a> 
     </p>
     

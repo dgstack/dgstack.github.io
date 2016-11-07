@@ -69,10 +69,10 @@
             </span>
             <!-- <csmall style="margin-left: 20px;"></csmall> -->
             <span>
-    <a href="https://twitter.com/intent/tweet?text=RESTful Web Service With Jersey And Spring&url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
-    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
-    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
-    <a href="https://plus.google.com/share?url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=RESTful Web Service With Jersey And Spring&url=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
 </span>
             
         </div><!-- /row -->
@@ -258,29 +258,29 @@
 
 	<span class="nd">@Autowired</span>
 	<span class="kd">private</span> <span class="n">MovieRepo</span> <span class="n">movieRepo</span><span class="o">;</span>
-	<span class="kd">public</span> <span class="n">MoviesWS</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="nf">MoviesWS</span><span class="o">()</span> <span class="o">{</span>
 	<span class="o">}</span>
 
 	<span class="nd">@GET</span> <span class="nd">@Path</span><span class="o">(</span><span class="s">"/all"</span><span class="o">)</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-	<span class="kd">public</span> <span class="n">Response</span> <span class="n">getAllMovies</span><span class="o">(){</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="nf">getAllMovies</span><span class="o">(){</span>
 		<span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">movies</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">allMovie</span><span class="o">();</span>
 		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movies</span><span class="o">.</span><span class="na">toArray</span><span class="o">()).</span><span class="na">build</span><span class="o">();</span>
 	<span class="o">}</span>
 	
 	<span class="nd">@POST</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span> <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-	<span class="kd">public</span> <span class="n">Response</span> <span class="n">addMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="nf">addMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
 		<span class="n">MovieVO</span> <span class="n">movieNew</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">addMovie</span><span class="o">(</span><span class="n">movie</span><span class="o">);</span>
 		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movieNew</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
 	<span class="o">}</span>
 	
 	<span class="nd">@PUT</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span> <span class="nd">@Consumes</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-	<span class="kd">public</span> <span class="n">Response</span> <span class="n">updateMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="nf">updateMovies</span><span class="o">(</span><span class="kd">final</span> <span class="n">MovieVO</span> <span class="n">movie</span><span class="o">){</span>
 		<span class="n">MovieVO</span> <span class="n">movieNew</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">movie</span><span class="o">);</span>
 		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movieNew</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
 	<span class="o">}</span>
 	
 	<span class="nd">@GET</span> <span class="nd">@Path</span><span class="o">(</span><span class="s">"{id}"</span><span class="o">)</span> <span class="nd">@Produces</span><span class="o">(</span><span class="n">MediaType</span><span class="o">.</span><span class="na">APPLICATION_JSON</span><span class="o">)</span>
-	<span class="kd">public</span> <span class="n">Response</span> <span class="n">getMovies</span><span class="o">(</span><span class="nd">@PathParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span><span class="kd">final</span> <span class="n">String</span> <span class="n">id</span><span class="o">){</span>
+	<span class="kd">public</span> <span class="n">Response</span> <span class="nf">getMovies</span><span class="o">(</span><span class="nd">@PathParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span><span class="kd">final</span> <span class="n">String</span> <span class="n">id</span><span class="o">){</span>
 		<span class="n">MovieVO</span> <span class="n">movie</span> <span class="o">=</span> <span class="n">movieRepo</span><span class="o">.</span><span class="na">getMovieById</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
 		<span class="k">return</span> <span class="n">Response</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">movie</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
 	<span class="o">}</span>
@@ -303,7 +303,7 @@
 
 	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1082165539433738004L</span><span class="o">;</span>
 
-	<span class="kd">public</span> <span class="n">MovieVO</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="nf">MovieVO</span><span class="o">()</span> <span class="o">{</span>
 	<span class="o">}</span>
 	
 	<span class="kd">private</span> <span class="n">String</span> <span class="n">id</span><span class="o">;</span>
@@ -317,56 +317,56 @@
 	<span class="cm">/**
 	 * @return the id
 	 */</span>
-	<span class="kd">public</span> <span class="n">String</span> <span class="n">getId</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">id</span><span class="o">;</span>
 	<span class="o">}</span>
 
 	<span class="cm">/**
 	 * @param id the id to set
 	 */</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setId</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
 	<span class="o">}</span>
 
 	<span class="cm">/**
 	 * @return the name
 	 */</span>
-	<span class="kd">public</span> <span class="n">String</span> <span class="n">getName</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">name</span><span class="o">;</span>
 	<span class="o">}</span>
 
 	<span class="cm">/**
 	 * @param name the name to set
 	 */</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
 	<span class="o">}</span>
 
 	<span class="cm">/**
 	 * @return the year
 	 */</span>
-	<span class="kd">public</span> <span class="n">String</span> <span class="n">getYear</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getYear</span><span class="o">()</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">year</span><span class="o">;</span>
 	<span class="o">}</span>
 
 	<span class="cm">/**
 	 * @param year the year to set
 	 */</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setYear</span><span class="o">(</span><span class="n">String</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setYear</span><span class="o">(</span><span class="n">String</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">this</span><span class="o">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="o">;</span>
 	<span class="o">}</span>
 
 	<span class="cm">/**
 	 * @return the rating
 	 */</span>
-	<span class="kd">public</span> <span class="n">String</span> <span class="n">getRating</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getRating</span><span class="o">()</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">rating</span><span class="o">;</span>
 	<span class="o">}</span>
 
 	<span class="cm">/**
 	 * @param rating the rating to set
 	 */</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="n">setRating</span><span class="o">(</span><span class="n">String</span> <span class="n">rating</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setRating</span><span class="o">(</span><span class="n">String</span> <span class="n">rating</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">this</span><span class="o">.</span><span class="na">rating</span> <span class="o">=</span> <span class="n">rating</span><span class="o">;</span>
 	<span class="o">}</span>	
 <span class="o">}</span>
@@ -389,13 +389,13 @@
  */</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MovieRepo</span> <span class="o">{</span>
 
-	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">Id</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">Id</span><span class="o">);</span>
 	
-	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span>
 	
-	<span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">allMovie</span><span class="o">();</span>
+	<span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="nf">allMovie</span><span class="o">();</span>
 	
-	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span> 
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">);</span> 
 <span class="o">}</span>
 </code></pre>
 </div>
@@ -419,11 +419,11 @@
 
 	<span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">repoMap</span><span class="o">;</span>
 
-	<span class="kd">public</span> <span class="n">MovieRepoImpl</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="nf">MovieRepoImpl</span><span class="o">()</span> <span class="o">{</span>
 	<span class="o">}</span>
 
 	<span class="nd">@PostConstruct</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="n">init</span><span class="o">(){</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(){</span>
 		<span class="n">repoMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">MovieVO</span><span class="o">&gt;();</span>
 		<span class="n">MovieVO</span> <span class="n">movieVO</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MovieVO</span><span class="o">();</span>
 		<span class="n">movieVO</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()));</span>
@@ -434,20 +434,20 @@
 		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">repoMap</span><span class="o">);</span>
 	<span class="o">}</span>
 	
-	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">getMovieById</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
 	<span class="o">}</span>
 
-	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">addMovie</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
 		<span class="n">movie</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()));</span>
 		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movie</span><span class="o">);</span>
 	<span class="o">}</span>
 
-	<span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="n">allMovie</span><span class="o">()</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">MovieVO</span><span class="o">&gt;</span> <span class="nf">allMovie</span><span class="o">()</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">values</span><span class="o">();</span>
 	<span class="o">}</span>
 
-	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="n">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">MovieVO</span> <span class="nf">update</span><span class="o">(</span><span class="n">MovieVO</span> <span class="n">movie</span><span class="o">)</span> <span class="o">{</span>
 		<span class="k">return</span> <span class="n">repoMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">movie</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">movie</span><span class="o">);</span>
 	<span class="o">}</span>
 <span class="o">}</span>
@@ -461,10 +461,10 @@
 
             <div class="spacing"></div>
             <span>Share : <span>
-    <a href="https://twitter.com/intent/tweet?text=RESTful Web Service With Jersey And Spring&url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
-    <a href="https://facebook.com/sharer.php?u=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
-    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
-    <a href="https://plus.google.com/share?url=http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=RESTful Web Service With Jersey And Spring&url=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/&via=DGStack&related=DGStack" class="share" rel="nofollow" target="_blank" title="Share On Twitter"><i class="fa fa-twitter"></i>Twitter</a> 
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Facebok"><i class="fa fa-facebook"></i>Facebook</a>
+    <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Tumblr"><i class="fa fa-tumblr"></i>Tumblr</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/" class="share" rel="nofollow" target="_blank" title="Share On Google+"><i class="fa fa-google-plus"></i>Google+</a>
 </span></span>
             <!--
             <h6>SHARE:</h6>
@@ -485,7 +485,7 @@
          */
       
         var disqus_config = function () {
-            this.page.url = "http://dgstack.com/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/";  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = "http://localhost:4000/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring/";  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = "/2015/09/21/RESTful-Web-Service-with-Jersey-in-spring" ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
@@ -543,8 +543,8 @@ Follow @DigvijayBhakuni</a>
         </li>
         
         <li>
-            <a href="/2016/07/15/Python3-Vs-Python2/"><img src="/assets/img/blog/thumbs/python.png" alt="Popular Post"></a>
-            <p><a href="/2016/07/15/Python3-Vs-Python2/">Python3 vs Python2</a></p>
+            <a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local"><img src="/assets/img/blog/thumbs/wordpress.png" alt="Popular Post"></a>
+            <p><a href="/blog/wordpress/Moving-Wordpress-to-live-server-from-Local">7 Easy Steps to Moving Wordpress site to live server from Local</a></p>
             <em>Posted on 15 Jul 2016</em>
         </li>
         
@@ -565,6 +565,11 @@ Follow @DigvijayBhakuni</a>
     </p>
     
     <p>
+        <a href="/category/#Wordpress"><i class="fa fa-angle-right"></i> Wordpress</a>
+        <span class="badge badge-theme pull-right">1</span>
+    </p>
+    
+    <p>
         <a href="/category/#Ops"><i class="fa fa-angle-right"></i> Ops</a>
         <span class="badge badge-theme pull-right">1</span>
     </p>
@@ -578,6 +583,7 @@ Follow @DigvijayBhakuni</a>
         
         <a class="btn btn-theme" href="/category/#Java" role="button">Java (10)</a> 
         <a class="btn btn-theme" href="/category/#Python" role="button">Python (2)</a> 
+        <a class="btn btn-theme" href="/category/#Wordpress" role="button">Wordpress (1)</a> 
         <a class="btn btn-theme" href="/category/#Ops" role="button">Ops (1)</a> 
     </p>
     
