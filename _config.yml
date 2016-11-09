@@ -13,16 +13,17 @@ highlighter: rouge
 #markdown: redcarpet
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
-
+gems:
+  - jekyll-sitemap
 colors:  #in hex code if not noted else
-  primary: "#78909C" #"#F70031" 
-  primary_rgb: "0,150,136" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.  
+  primary: "#78909C" #"#F70031"
+  primary_rgb: "0,150,136" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.
   secondary: "#37474F" #"#33004D"
   link: "#01b2fe"
   link_hover: "#01b2fe"
   footer_heading: "#ffffff"
   footer_content: "#bfc9d3"
-  
+
 twitter:
     username: DGStack
     site: DGStack
@@ -44,10 +45,14 @@ social:
   - title: email
     ico: envelope-o
     url: mailto:digvijayb@outlook.com
-    
+  - title: Github
+    ico: github
+    url: https://github.com/DigvijayBhakuni
+
+
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
-  - lines: 
+  - lines:
     - Some Ave, 987,
     - 23890, New York,
     - United States.
@@ -56,9 +61,8 @@ tel: +34 8493-4893
 
 disclamer: This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
 
-
 ### GENERAL DATA FOR VARIOUS LOCATIONS ###
-    
+
 # Members information. Shown on About page.
 members:
   - name: Mark Webber
@@ -97,7 +101,7 @@ members:
         url: mailto:name@domain.com
       - title: twitter
         url: http://twitter.com/handle
-    
+
 # Clients information. Shown on Home and About pages.
 badges:
   - name: Big Data Foundation L2
@@ -107,11 +111,11 @@ badges:
   - name: Spark Fundamental L1
     img: spark-level-1.png
 
-    
+
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
 about: "DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc"
 
-# Testimonial content. Shown on Home and About page. 
+# Testimonial content. Shown on Home and About page.
 testimonial:
     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     author: Marcel Newman
