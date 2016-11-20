@@ -554,3 +554,34 @@ tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
+
+.p-caption-container {
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    padding: 4px;
+}
+
+.nav-shade{
+    border: 1px solid rgba(128, 134, 138, 0.52);
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+
+.logo-img{
+    float: left;
+    margin-right: 20px;
+}
+
+
+blockquote{
+    border-left: 10px solid #eee;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-radius: 5px;
+}

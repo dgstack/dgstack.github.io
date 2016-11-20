@@ -31,7 +31,9 @@ layout: default
             {% if page.postDisclaimmer != "NA" %}
             <hr/> <csmall><strong>Note : </strong>{{page.postDisclaimmer}}</csmall>
             {% endif %}
+            {% if page.title != "404: Page not found" %}
             {% include commenting.html %}
+            {% endif %}
         </div><! --/col-lg-9 -->
         
         {% include sidebar.html %}

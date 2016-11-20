@@ -3,7 +3,6 @@ layout: blog
 title: Blog
 permalink: /
 ---
-
 <div class="container mtb">
     <div class="row">
 
@@ -17,6 +16,11 @@ permalink: /
                     <img class="img-responsive" src="{{ "/assets/img/blog/" | prepend: site.baseurl }}{{ post.img }}">
                 </a>
                 {% endif %}
+                {% if post.thumb != "NA" %}
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <img class="logo-img" style="float:left;" src="{{ "/assets/img/blog/thumbs/" | prepend: site.baseurl }}{{ post.thumb }}">
+                    </a>
+                {% endif %}
                 <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                 <p><csmall>{{ post.date | date: "%b %-d, %Y" }}. | By: {{ post.author }}</csmall></p>
                 {{ post.excerpt }}
@@ -26,7 +30,7 @@ permalink: /
                 <div class="spacing"></div>
             {% endfor %}
 
-        </div><! --/col-lg-9 -->
+        </div><!--/col-lg-9 -->
 
         {% include sidebar.html %}
 
