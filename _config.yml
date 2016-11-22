@@ -1,7 +1,7 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: DGStack.com
+title: DGStack.COM
 description: "This blog is about computer programming tips, trick and some short tutorials, some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc"
 analytics: UA-60953284-1 #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
