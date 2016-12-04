@@ -10,8 +10,8 @@ tags: ['Spring', 'Java', 'Stormpath', 'REST']
 img: NA
 thumb: spring-logo.png
 ---
-User or Identity management in any most important and critical part of an application and any minor loophole can be exploited by Hacker.
-And its big challenge and hassle for a developer to secure his and maintain the application. Stormpath provides an ecosystem for user management, authentication and authorization for your application. As their tagline says **"Never Build Auth Again"** that mean developer don't have to worry about build auth system and to secure and maintain. 
+User or Identity management is most important and critical part of an application any minor loophole can be exploited by Hacker.
+Its big challenge and hassle for a developer to secure and maintain his application. Stormpath provides an ecosystem for user management, authentication and authorization for your application. As their tagline says **"Never Build Auth Again"** that mean developer don't have to worry to build auth system to secure and maintain. 
 
 This post shows you how to use Stormpath Auth system with Spring Boot app. To get started we need put all the following dependency in our pom.xml<!--more-->
 
@@ -83,7 +83,7 @@ This post shows you how to use Stormpath Auth system with Spring Boot app. To ge
 ```
 
 ### RestSecurityWebAppConfig.java 
-This Adapter class main class where we are going to configure our secure route or URI. In below code, we configuring that all URL except `/` root has to go through the security check by stormpath.
+This Adapter class is main class where we are going to configure our secure route or URI. In below code, we are configuring all URL except `/` root which hae to go through the security check by stormpath.
 
 ```java
 @Configuration
@@ -100,7 +100,7 @@ public class RestSecurityWebAppConfig extends WebSecurityConfigurerAdapter{
 
 ### IndexController.java
 
-This rest controller or rest API free to use or we can say it a public API and user dont need to authenticated by stormpath.
+This rest controller or rest API free to use or we can say it a public API and user don't need to be authenticated by stormpath.
 
 ```java
 @RestController
@@ -165,7 +165,7 @@ stormpath.client.apiKey.secret = L/ZtZUHrYWKDm6FP6/OCHAP6TdlmyvliT/77Ea+F+7s
 
 ```
 
-The values of above properties will be diffrent in you case as you need to create an account at <a target="_blank" href="https://stormpath.com/">Stormpath</a>.
+The values of above properties will be diffrent in your case as you need to create an account at <a target="_blank" href="https://stormpath.com/">Stormpath</a>.
 
 ### Stormpath
 
@@ -191,17 +191,17 @@ Click on user account and scroll right to the bottom of screen under details you
 
 Now we are good to go navigate to project root in terminal then enter `mvn spring-boot:run`
 
-> This account thing is similar what we have as Login Google. Suppose if we want add login via Google in our app then we need have a google developer account which provides an `apiKey.id` and `apiKey.secret`. This is basic concept of OAuth where "Internet users to authorise websites or applications to access their information on other websites but without giving them the passwords" therefore we don't need to manage user management stormpath will do it for us.
+> This account is similar what we have as Login as Google Account. Suppose if we want add login via Google in our app then we need to have a google developer account which provides an `apiKey.id` and `apiKey.secret`. This is basic concept of OAuth where "Internet users to authorise websites or applications to access their information on other websites but without giving them the passwords" therefore we don't need to manage user account, stormpath will do it for us.
 
 ### Running App
 
-Now open your browser and open the app you will be able to access root as it is not secure by stormpath and when navigate to `http://localhost:8080/superhero/1` and this is secure URL you will be redirected to login page.
+Now open your browser and open the app you will be able to access root as it is not secure by stormpath. But when navigate to `http://localhost:8080/superhero/1` and this is secure URL you will be redirected to login page.
 
 You can login with any account you have created in stormpath dashboard or you will even find Sign Up button.
 
 ### Doing Rest OAuth
 
-To doing login rest style if we create rest API then client is not going to use web UI to authenticate and consume you API therefore. I have done this with javascript client in the underlying screenshot.
+To login rest style if we create rest API then client is not going to use web UI to authenticate and consume your API. Therefore I have done this with javascript client in the underlying screenshot.
 
 ![Javascript Oauth Client](/assets/img/blog/stormpath_ajax.PNG)
 
