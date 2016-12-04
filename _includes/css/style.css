@@ -521,21 +521,24 @@ a.share{
     border-radius: 5px;
 }
 
-@media only screen and (max-width: 500px) {
-    a.share span{
-        display: none;
-    }
+@media only screen and (min-width: 500px) {
 }
 
 @media only screen and (max-width: 1199px) {
     *{
-        word-break: break-all;
+        word-break: break-word;
     }
     a.share span{
         display: inline;
     }
 }
 
+
+@media only screen and (max-device-width: 524px) {
+    .hide-less-md{
+        display: none !important;
+    }
+}
 
 
 /* Tables */
