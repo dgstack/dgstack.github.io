@@ -15,6 +15,8 @@ And its big challenge and hassle for a developer to secure his and maintain the 
 
 This post shows you how to use Stormpath Auth system with Spring Boot app. To get started we need put all the following dependency in our pom.xml<!--more-->
 
+> Get the source code for this demo. Download <a href="https://github.com/digvijaybhakuni/spring-stormpath-oauth/archive/demo.post.zip">ZIP</a> or <a href="https://github.com/digvijaybhakuni/spring-stormpath-oauth/archive/demo.post.tar.gz">Tar</a>
+
 ### POM.xml
 
 ```xml     
