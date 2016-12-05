@@ -201,13 +201,15 @@ You can login with any account you have created in stormpath dashboard or you wi
 
 ### Doing Rest OAuth
 
-To login rest style if we create rest API then client is not going to use web UI to authenticate and consume your API. Therefore I have done this with javascript client in the underlying screenshot.
+To login rest style if we create rest API then client is not going to use web UI to authenticate and consume your API. Therefore I have create this with javascript client in the underlying screenshot.
 
 ![Javascript Oauth Client](/assets/img/blog/stormpath_ajax.PNG)
 
 >This is the probable way you are going to use it in SPA (Single Page App).
 
 Now you got the token in response JSON as access_token you can pass it under **Authorization** header like `bearer <token_value>` to access secure API.
+
+![Accessing Secure API with token](/assets/img/blog/stormpath-ajax_result.PNG)
 
 ### Decoding Token
 

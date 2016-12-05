@@ -51,6 +51,13 @@
         {% for category in site.categories %}{% unless category.first == "blog" or category.first == "project" or category.first == "question" %}
         <a class="btn btn-theme" href="{{ '/category/#'  | prepend: site.baseurl  }}{{ category | first }}" role="button">{{ category | first | capitalize }} ({{ category | last | size }})</a> {% endunless %}{% endfor %}
     </p>
+    
+    <h4>Hit Counter</h4>
+    <div class="hline"></div>
+    <p>
+        <div align='center'><a href='http://www.hit-counts.com'><img src='http://www.hit-counts.com/counter.php?t=MTQwMDE4Nw==' border='0' alt='Free Hit Counter'></a><BR><a href='http://www.hit-counts.com'>Free Hit Counter</a></div>
+    </p>
+    
     {% comment %}
     <h4>Twitter Feed</h4>
     <div class="hline"></div>
