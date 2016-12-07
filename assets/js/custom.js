@@ -15,5 +15,17 @@
 
     });
     
+    $(".col-lg-9 p>a>img").each(function(e){
+
+        var caption = "<br/><span>"+this.getAttribute("alt")+"</span>";
+        $(this).parent().parent().addClass("p-caption-container").append(caption);
+
+    });
+
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    });
+
 		
 })(jQuery);

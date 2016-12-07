@@ -15,7 +15,9 @@
                 <li {% if page.title=="Blog" %}class="active" {% endif %}><a href="{{" / " | prepend: site.baseurl }}">BLOG</a></li>
                 <li {% if page.title=="Categories" %}class="active" {% endif %}><a href="{{" /category/ " | prepend: site.baseurl }}">CATEGORY</a></li>
                 <li {% if page.title=="About" %}class="active" {% endif %}><a href="{{" /about/ " | prepend: site.baseurl }}">ABOUT</a></li>
+                {% comment %}
                 <li {% if page.title=="Contact" %}class="active" {% endif %}><a href="{{" /contact/ " | prepend: site.baseurl }}">CONTACT</a></li>
+                {% endcomment %}
             </ul>
             {% comment %}
             <form class="navbar-form navbar-right">

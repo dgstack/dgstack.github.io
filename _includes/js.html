@@ -1,4 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{{ "/assets/js/lightbox.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/retina-1.1.0.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/jquery.hoverdir.js" | prepend: site.baseurl }}"></script>
@@ -6,7 +7,7 @@
 <script src="{{ "/assets/js/jquery.prettyPhoto.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/jquery.isotope.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/custom.js" | prepend: site.baseurl }}"></script>
-{% if site.analytics %}
+{% if site.analytics and site.prodMode %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,7 +56,7 @@
 				$(this).addClass('active');
 				return false;
 		});
-		
+
 		function getColumnNumber() { 
 			var winWidth = $(window).width(), 
 			columnNumber = 1;
@@ -100,6 +101,7 @@
 	});
 })(jQuery);
 </script>
+{% if site.prodMode %}
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -124,3 +126,4 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
+{% endif %}

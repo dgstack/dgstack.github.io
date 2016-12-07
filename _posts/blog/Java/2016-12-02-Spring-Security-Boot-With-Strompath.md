@@ -171,23 +171,23 @@ The values of above properties will be diffrent in your case as you need to crea
 
 First we need to create an account at <a target="_blank" href="https://stormpath.com/">Stormpath</a> after that you landup at following screen (dashboard).
 
-![Dashboard Page at Stormpath.com](/assets/img/blog/Stormpath_Dashboard.PNG)
+<a href="/assets/img/blog/Stormpath_Dashboard.PNG" data-lightbox="image-lb" data-title="Dashboard Page at Stormpath.com">![Dashboard Page at Stormpath.com](/assets/img/blog/Stormpath_Dashboard.PNG)</a>
 
 Then click on the Application Tab on that screen click on **Create Application** button then a form will appear to fill the required information and submit.
 
-![Application tab at Stormpath.com](/assets/img/blog/stormpath_application.png)
+<a href="/assets/img/blog/stormpath_application.png" data-lightbox="image-lb" data-title="Application tab at Stormpath.com">![Application tab at Stormpath.com](/assets/img/blog/stormpath_application.png)</a>
 
 After create our app you will get `stormpath.application.href` properties value. Now we need an account to access this app via `apiKey.id` and `apiKey.secret` as we make OAuth authentication for this app.
 
-![Application Detials at Stormpath.com](/assets/img/blog/stormpath_app_href.png)
+<a href="/assets/img/blog/stormpath_app_href.png" data-lightbox="image-lb" data-title="Application Detials at Stormpath.com">![Application Detials at Stormpath.com](/assets/img/blog/stormpath_app_href.png)</a>
 
 Now click on the account tabs you see there an account would already create that is an account you logged into stormpath.com. As you can see in below screenshot I have also created some other account to test as we going to use some of these accounts to login to our own app. But we will create `apiKey.id` and `apiKey.secret` from our stormpath login account in my case it is Digvijay Bhakuni it is also a Stormpath Admin account.
 
-![Account tab at Stormpath.com](/assets/img/blog/stormpath_account.png)
+<a href="/assets/img/blog/stormpath_account.png" data-lightbox="image-lb" data-title="Account tab at Stormpath.com">![Account tab at Stormpath.com](/assets/img/blog/stormpath_account.png)</a>
 
 Click on user account and scroll right to the bottom of screen under details you will find a button **Create API Key** as you click on that button a properties file will download to your system having you `apiKey.id` and `apiKey.secret` copy and paste the values to your `application.properties` file.
 
-![User Account at Stormpath.com](/assets/img/blog/stormpath_user_account.png)
+<a href="/assets/img/blog/stormpath_user_account.png" data-lightbox="image-lb" data-title="User Account at Stormpath.com">![User Account at Stormpath.com](/assets/img/blog/stormpath_user_account.png)</a>
 
 Now we are good to go navigate to project root in terminal then enter `mvn spring-boot:run`
 
@@ -203,16 +203,16 @@ You can login with any account you have created in stormpath dashboard or you wi
 
 To login rest style if we create rest API then client is not going to use web UI to authenticate and consume your API. Therefore I have create this with javascript client in the underlying screenshot.
 
-![Javascript Oauth Client](/assets/img/blog/stormpath_ajax.PNG)
+<a href="/assets/img/blog/stormpath_ajax.PNG" data-lightbox="image-lb" data-title="Javascript Oauth Client">![Javascript Oauth Client](/assets/img/blog/stormpath_ajax.PNG)</a>
 
 >This is the probable way you are going to use it in SPA (Single Page App).
 
 Now you got the token in response JSON as access_token you can pass it under **Authorization** header like `bearer <token_value>` to access secure API.
 
-![Accessing Secure API with token](/assets/img/blog/stormpath-ajax_result.PNG)
+<a href="/assets/img/blog/stormpath-ajax_result.PNG" data-lightbox="image-lb" data-title="Accessing Secure API with token">![Accessing Secure API with token](/assets/img/blog/stormpath-ajax_result.PNG)</a>
 
 ### Decoding Token
 
 With Stormpath we are using JWT (JSON Web Tokens) therefore we can decode it at *jwt.io*.
 
-![Javascript Oauth Client](/assets/img/blog/stormpath_decode.PNG)
+<a href="/assets/img/blog/stormpath_decode.PNG" data-lightbox="image-lb" data-title="Decode JWT">![Decode JWT](/assets/img/blog/stormpath_decode.PNG)</a>
