@@ -9,17 +9,20 @@
 	}); 
     
     $(".col-lg-9 p>img").each(function(e){
-
-        var caption = "<br/><span>"+this.getAttribute("alt")+"</span>";
-        $(this).parent().addClass("p-caption-container").append(caption);
-
+        console.log("$(e).hasClass(\"postImg\")", $(this).hasClass('postImg'));
+        console.log("e", this);
+        if(!$(this).hasClass('postImg')){
+            console.log("THEN WHY");
+            var caption = "<br/><span>"+this.getAttribute("alt")+"</span>";
+            $(this).parent().addClass("p-caption-container").append(caption);
+        }
     });
     
     $(".col-lg-9 p>a>img").each(function(e){
-
-        var caption = "<br/><span>"+this.getAttribute("alt")+"</span>";
-        $(this).parent().parent().addClass("p-caption-container").append(caption);
-
+        if(!$(this).hasClass('postImg')){
+            var caption = "<br/><span>"+this.getAttribute("alt")+"</span>";
+            $(this).parent().parent().addClass("p-caption-container").append(caption);
+        }
     });
 
     lightbox.option({

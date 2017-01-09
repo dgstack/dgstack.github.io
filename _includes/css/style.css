@@ -588,3 +588,8 @@ blockquote{
     border-right: 1px solid #eee;
     border-radius: 5px;
 }
+
+
+.postImg{
+    margin: auto;
+}
