@@ -6,6 +6,7 @@ description: "This blog is about computer programming tips, trick and some short
 analytics: UA-60953284-1 #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
 url: "http://dgstack.com"
+theme: none
 
 # Build settings
 markdown: kramdown
@@ -16,7 +17,7 @@ excerpt_separator: <!--more--> #use this in posts to define how long the excerpt
 gems:
   - jekyll-sitemap
   
-prodMode: true
+prodMode: false
 
 colors:  #in hex code if not noted else
   primary: "#78909C" #"#F70031"
@@ -117,9 +118,3 @@ badges:
 
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
 about: "DGStack is web blog by digvijay bhakuni. This blog is about computer programming tips and trick. And some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc"
-
-# Testimonial content. Shown on Home and About page.
-testimonial:
-    message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-    author: Marcel Newman
-    position: WEB DESIGNER - BLACKTIE.CO
