@@ -7,7 +7,7 @@ categories:
 - shared
 tags: ['Java', 'Angular2', 'GWT', 'SpingBoot']
 img: gwtcon.jpg
-thumb: gwtcon.jpg
+thumb: gwtcon.png
 postDisclaimmer : This presentation is presented by Arnaud Tournier at GWTcon2016 - Firenze 14-15th November 2016. This blog does not hold any right on this slide and it content.
 ---
 Building A new RIA paradigm for Java : programming Angular2 with Java 8. **The coolest Java 8 RIA framework in the place** by Integrating Angular2 and GWT 2.8
