@@ -14,7 +14,8 @@ postDisclaimmer : NA
 
 Jetty is java servlet container developed by Eclipse Foundation and it has such small footprint that you can embedded it in you java app or can use as test server alternative to any web server like tomcat. All by writting small main class of just over of 10 line.
 
->Jetty is used in a wide variety of projects and products, both in development and production. Jetty can be easily embedded in devices, tools, frameworks, application servers, and clusters.
+> Jetty is used in a wide variety of projects and products, both in development and production. Jetty can be easily embedded in devices, tools, frameworks, application servers, and clusters.
+
 <!--more-->
 
 ### JettyServer.java
