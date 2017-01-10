@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog
-permalink: /
+permalink: page/2
 ---
 <div class="container mtb">
     <div class="row">
@@ -9,7 +9,7 @@ permalink: /
         <! -- BLOG POSTS LIST -->
         <div class="col-lg-9">
 
-            {% for post in site.categories['blog'] limit:10 %}
+            {% for post in site.categories['blog'] offset:10 limit:10 %}
                 <! -- Blog Post -->
                 {% comment %}
                 {% if post.img != "NA" %}
@@ -30,8 +30,8 @@ permalink: /
                 <p><a href="{{ post.url | prepend: site.baseurl }}">[Read More]</a></p>
                 <div class="hline"></div>
                 <ul class="pager">
-                    <li class="previous"><a href="#">Previous</a></li>
-                    <li class="next"><a href="/page/2">Next</a></li>
+                    <li class="previous"><a href="/">Previous</a></li>
+                    <li class="next"><a href="#">Next</a></li>
                 </ul>
                 <div class="spacing"></div>
             {% endfor %}
