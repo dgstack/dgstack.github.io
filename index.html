@@ -29,13 +29,13 @@ permalink: /
                 {{ post.excerpt }}
                 <p><a href="{{ post.url | prepend: site.baseurl }}">[Read More]</a></p>
                 <div class="hline"></div>
-                <ul class="pager">
-                    <li class="previous"><a href="#">Previous</a></li>
-                    <li class="next"><a href="/page/2">Next</a></li>
-                </ul>
+                
                 <div class="spacing"></div>
             {% endfor %}
-
+            <ul class="pager">
+                <li class="previous"><a href="#">Previous</a></li>
+                <li class="next"><a href="/page/2">Next</a></li>
+            </ul>
         </div><!--/col-lg-9 -->
 
         {% include sidebar.html %}
