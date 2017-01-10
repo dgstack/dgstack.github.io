@@ -593,3 +593,11 @@ blockquote{
 .postImg{
     margin: auto;
 }
+
+p {
+    font-size: 16px;
+}
+
+pre.highlight{
+   background-color: #f8f8ff; 
+}
