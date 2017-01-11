@@ -6,7 +6,7 @@ date: 2017-01-09 00:00:00
 categories:
 - blog
 - Ops
-tags: ['Java', 'IBM', 'Config']
+tags: ['Java', 'Eclipse', 'Server']
 img: jetty-big.png
 thumb: jettylogo.png
 postDisclaimmer : NA

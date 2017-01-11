@@ -9,10 +9,7 @@
 	}); 
     
     $(".col-lg-9 p>img").each(function(e){
-        console.log("$(e).hasClass(\"postImg\")", $(this).hasClass('postImg'));
-        console.log("e", this);
         if(!$(this).hasClass('postImg')){
-            console.log("THEN WHY");
             var caption = "<br/><span>"+this.getAttribute("alt")+"</span>";
             $(this).parent().addClass("p-caption-container").append(caption);
         }
