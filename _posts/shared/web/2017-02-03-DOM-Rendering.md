@@ -26,11 +26,13 @@ For example, creating 1,000 rows in a table takes 126 milliseconds with vanilla 
 
 ### Check out more post that compare js framework.
 
-#### <a href="https://www.codementor.io/reactjs/tutorial/reactjs-vs-angular-js-performance-comparison-knockout" target="_blank">React vs AngularJS vs KnockoutJS: a Performance Comparison</a>
+#### <a href="https://www.codementor.io/reactjs/tutorial/reactjs-vs-angular-js-performance-comparison-knockout" target="_blank">React vs AngularJS 1.0 vs KnockoutJS: a Performance Comparison</a>
 
 List of 1000 items that get rendered into a `ul` tag
 
 ![Test ran 10 on chrome -by codementor.com](/assets/img/shared/perfromance-chrome-codementor.PNG)
+
+> Note that AngularJs is version 1 not 2. Angular2 perform mush better then AngularJs 1.
 
 On average, React is the fastest at rendering a list of 1000 items. It’s a surprising result, because I would have expected raw DOM manipulation to be the fastest, as there’s nothing too hook up and so on. There’s an interesting outlier in the Chrome test in that the second run of the React test takes a very long time to run: almost 600ms. It happens every time the second test is run in Chrome after a fresh reload and I’m not sure why. Raw DOM manipulation comes in second, which doesn’t surprise me, as it’s obviously much lighter than either Angular or Knockout, with nothing else to hook up or take care of behind the scenes
 
