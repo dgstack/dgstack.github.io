@@ -11,6 +11,8 @@ img: NA
 thumb: java-duke.png
 postDisclaimmer: NA
 ---
+**JCache** is a common API for using caching in Java. Specifies API and semantics for temporary, in memory caching of Java objects, including object creation, shared access, spooling, invalidation, and consistency across JVM's.
+
 Caching is something that everyone has implemented in there app. There are *n* numbers of services and system available from just a simple Concurrent Map implementation to all the way to caching servers like Redis and memcache. Each cache provider have distinct api to use. JCache provide a standard set of API to implement caching in your app. JCache is based on JSR-107, JSR was submitted in year 2001 and finally released on 18 Mar 2014.
 
 > JCache is just like Jdbc but for caching provider rather then database.
@@ -24,12 +26,13 @@ Caching is something that everyone has implemented in there app. There are *n* n
 - Caffeine
 - Coherence
 - Ehcache
+<!--more-->
 - Hazelcast
 - Infinispan
 - Redisson
 - Triava Cache
 - WebSphere eXtreme Scale
-<!--more-->
+
 
 ## Dependencies
 
