@@ -14,8 +14,6 @@ postDisclaimmer : This gist Belong to Mikael Gueck
 ---
 Benchmark of Hazelcast vs. Infinispan, to find the best.
 
-> The following sample gist code is written by Mikael Gueck
-
 ### POM.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
