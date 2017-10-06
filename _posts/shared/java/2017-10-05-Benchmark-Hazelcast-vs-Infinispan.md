@@ -14,6 +14,72 @@ postDisclaimmer : This gist Belong to Mikael Gueck
 ---
 Benchmark of Hazelcast vs. Infinispan, to find the best.
 
+## Jboss Infinispan
+
+Infinispan is a distributed in-memory key/value data store with optional schema. The In-Memory Data Grid (IMDG) by Red Hat.
+
+### Feature
+
+- Multi-user System with Apache 2 License
+- Full text search 
+- ORM Join Support
+- Corruption Resistant
+- Transactions
+  - Concurrency control based on optimistic and pessimistic locks and total order
+  - Integration with JTA/JTS
+- Cloud and Virtualization Support
+  - EC2, Openshift, Azure, Docker
+- JCache (JSR-107) Provider
+- Cluster Management : JMX
+- Storage : On-Heap (JVM)
+- Integrated Clustering 
+  - Hibernate L2 Cache
+  - WildFly
+  - Spring Session
+- Server Protocols
+  - Memcached
+  - HotRod
+  - WebSocket
+
+## Hazelcast
+
+Infinispan is a open source In-Memory Data Grid (IMDG) by Hazelcast.
+
+### Feature
+
+- Multi-user System with Apache 2 License
+- Real time analytics 
+- Spring Data Support
+- Data Encryption
+- CEP Streaming
+- Distributed Caching (Support Java Concurrency)
+- Integrated Clustering 
+  - Hibernate L2 Cache
+  - Tomcat/Jetty/Grails Clustered Web Sessions
+- JCache (JSR-107) Provider
+- Cloud and Virtualization Support
+  - AWS, Azure, Docker, Eureka, Kubernetes, Zookeeper Discovery
+- Storage : On-Heap (JVM)
+- Cluster Management : JMX API
+- Server Protocols
+  - Memcached
+  - REST
+  - Open Binary Client Protocol and Client Implementation Guide
+
+
+
+### Result
+
+| Feature                                  | Hazelcast | Infinispan |
+| ---------------------------------------- | --------- | ---------- |
+| Support for Distributed Hash Table architecture in peer-to-peer mode. | YES       | YES        |
+| Support for Fully Replicated architecture in peer-to-peer mode. | NO        | YES        |
+| Guarantee that the cache does never become inconsistent when atomic operations are called in peer-to-peer mode, even when cache is misconfigured? | YES       | NO         |
+| Elastic deployments in client-server mode (grow automatically with the number of servers) | YES       | YES        |
+| Guarantee that the cache does never become inconsistent when atomic operations are called in client-server mode, even when cache is misconfigured? | YES       | NO         |
+
+
+
 ### POM.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,7 +158,7 @@ public class InfiniTest {
 }
 ```
 > InfiniTest.testInfinispan: [measured 1000000 out of 1100000 rounds, threads: 1 (sequential)]
- round: 0.00 [+- 0.00], round.block: 0.00 [+- 0.00], round.gc: 0.00 [+- 0.00], GC.calls: 10, GC.time: 4.30, time.total: 14.48, time.warmup: 1.70, time.bench: 12.78
+>  round: 0.00 [+- 0.00], round.block: 0.00 [+- 0.00], round.gc: 0.00 [+- 0.00], GC.calls: 10, GC.time: 4.30, time.total: 14.48, time.warmup: 1.70, time.bench: 12.78
 
 
 ### HazelTest.java
@@ -142,8 +208,14 @@ public class HazelTest {
 ```
 
 > HazelTest.testHazelcast: [measured 1000000 out of 1100000 rounds, threads: 1 (sequential)]
- round: 0.00 [+- 0.00], round.block: 0.00 [+- 0.00], round.gc: 0.00 [+- 0.00], GC.calls: 11, GC.time: 4.56, time.total: 32.52, time.warmup: 4.26, time.bench: 28.27
+>  round: 0.00 [+- 0.00], round.block: 0.00 [+- 0.00], round.gc: 0.00 [+- 0.00], GC.calls: 11, GC.time: 4.56, time.total: 32.52, time.warmup: 4.26, time.bench: 28.27
 
 
+
+#### Ref. Link
+
+
+- <a href="http://infinispan.org/features/" target="_blank">Infinispan Features</a>
+- <a href="https://hazelcast.org/features" target="_blank">Hazelcast Features</a>
 - <a href="http://vschart.com/compare/jboss-infinispan/vs/hazelcast" target="_blank">Feature Comparison @ VsChart</a>
 - <a href="https://labs.consol.de/java-caches/index.html" target="_blank">Java Caches: Ehcache, Hazelcast, Infinispan @ consol</a>
