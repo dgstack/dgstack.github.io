@@ -6,7 +6,6 @@ tags: ['Java', 'Struts', 'Spring', 'Hibernate']
 date: 2018-07-19 16:54:46
 author: digvijayb
 categories:
-- draftblog
 - Java
 img: NA
 thumb: logo.png
@@ -184,4 +183,39 @@ pom.xml
 
 	</dependencies>
 </project>
+```
+
+## ApplicationContext.xml
+
+`ApplicationContext.xml` is spring appilcation context file.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>WEB-INF/app.properties</value>
+		</property>
+	</bean>
+
+	<import resource="spring-hibernate-config.xml" />
+
+	<bean id="projectDAO" class="com.dgstack.dev.examples.dao.impl.ProjectDAOImpl" scope="prototype">
+		<property name="hibernateTemplate" ref="hTemplate" />
+	</bean>
+
+	<bean id="service" class="com.dgstack.dev.examples.service.impl.ProjectServiceImpl" scope="singleton">
+		<lookup-method name="createProjectDao" bean="projectDAO" />
+	</bean>
+
+	<bean name="/project" class="com.dgstack.dev.examples.action.ProjectAction">
+		<property name="service" ref="service" />
+	</bean>
+
+</beans>
 ```
