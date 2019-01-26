@@ -7,6 +7,7 @@ date: 2018-07-19 16:54:46
 author: digvijayb
 categories:
 - Java
+- blog
 img: NA
 thumb: logo.png
 permalink: /draft/java/20180719/Struts-Spring-Hibernate-Intregration-With-Easy
