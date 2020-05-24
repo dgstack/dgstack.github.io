@@ -8,6 +8,7 @@ collections:
     folder: '_posts/'
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: name
     fields:
       - { name: Title }
       - {label: "Tags", name: "tag", widget: "list"}
