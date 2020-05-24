@@ -1,7 +1,7 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: DGStack.com
+title: dgstack.github.io
 description: "This blog is about computer programming tips, trick and some short tutorials, some short tutorial and gettings started post about the framework, libriay, api and much more. The blog target mostly open source stuff like java, j2ee, nodeJs, angularJs, spring, struts, mongodb, mean, etc"
 analytics: UA-60953284-1 #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
@@ -14,11 +14,11 @@ highlighter: rouge
 #markdown: redcarpet
 permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
-gems:
-  - jekyll-sitemap
+#gems:
+#  - jekyll-sitemap
   
 prodMode: true
-theme: none
+# theme: none
 
 colors:  #in hex code if not noted else
   primary: "#78909C" #"#F70031"
