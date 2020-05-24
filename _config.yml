@@ -18,7 +18,7 @@ excerpt_separator: <!--more--> #use this in posts to define how long the excerpt
 #  - jekyll-sitemap
   
 prodMode: true
-# theme: none
+theme: none
 
 colors:  #in hex code if not noted else
   primary: "#78909C" #"#F70031"
