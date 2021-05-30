@@ -18,7 +18,7 @@ excerpt_separator: <!--more--> #use this in posts to define how long the excerpt
 #  - jekyll-sitemap
   
 prodMode: true
-# theme: none
+theme: none
 
 colors:  #in hex code if not noted else
   primary: "#78909C" #"#F70031"
@@ -56,65 +56,65 @@ social:
 
 
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
-address:
-  - lines:
-    - Some Ave, 987,
-    - 23890, New York,
-    - United States.
-email: hello@solidtheme.com
-tel: +34 8493-4893
+# address:
+#   - lines:
+#     - Some Ave, 987,
+#     - 23890, New York,
+#     - United States.
+# email: hello@solidtheme.com
+# tel: +34 8493-4893
 
 disclamer: This website claims no credit for any images posted on this site unless otherwise noted. Images on this blog are copyright to its respectful owners. If there is an image appearing on this blog that belongs to you and do not wish for it appear on this site, please E-mail with a link to said image and it will be promptly removed. And the information is best of my knowledge one can always write comment or mail regarding information is this blog.
 
 ### GENERAL DATA FOR VARIOUS LOCATIONS ###
 
-# Members information. Shown on About page.
-members:
-  - name: Mark Webber
-    position: CEO
-    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    img: team01.jpg
-    social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
-      - title: twitter
-        url: http://twitter.com/handle
-  - name: Paul Jameson
-    position: Lead Designer
-    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    img: team02.jpg
-    social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
-      - title: twitter
-        url: http://twitter.com/handle
-  - name: Laura Sommers
-    position: Lead Developer
-    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    img: team03.jpg
-    social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
-      - title: twitter
-        url: http://twitter.com/handle
-  - name: Martin Blunt
-    position: Marketing
-    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    img: team04.jpg
-    social:
-      - title: envelope #use for email address
-        url: mailto:name@domain.com
-      - title: twitter
-        url: http://twitter.com/handle
+# # Members information. Shown on About page.
+# members:
+#   - name: Mark Webber
+#     position: CEO
+#     text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+#     img: team01.jpg
+#     social:
+#       - title: envelope #use for email address
+#         url: mailto:name@domain.com
+#       - title: twitter
+#         url: http://twitter.com/handle
+#   - name: Paul Jameson
+#     position: Lead Designer
+#     text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+#     img: team02.jpg
+#     social:
+#       - title: envelope #use for email address
+#         url: mailto:name@domain.com
+#       - title: twitter
+#         url: http://twitter.com/handle
+#   - name: Laura Sommers
+#     position: Lead Developer
+#     text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+#     img: team03.jpg
+#     social:
+#       - title: envelope #use for email address
+#         url: mailto:name@domain.com
+#       - title: twitter
+#         url: http://twitter.com/handle
+#   - name: Martin Blunt
+#     position: Marketing
+#     text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+#     img: team04.jpg
+#     social:
+#       - title: envelope #use for email address
+#         url: mailto:name@domain.com
+#       - title: twitter
+#         url: http://twitter.com/handle
 
 # Clients information. Shown on Home and About pages.
-badges:
-  - name: Big Data Foundation L2
-    img: big-data-foundations-level-2.png
-  - name: Hadoop Foundation L2
-    img: hadoop-foundations-level-2.png
-  - name: Spark Fundamental L1
-    img: spark-level-1.png
+# badges:
+#   - name: Big Data Foundation L2
+#     img: big-data-foundations-level-2.png
+#   - name: Hadoop Foundation L2
+#     img: hadoop-foundations-level-2.png
+#   - name: Spark Fundamental L1
+#     img: spark-level-1.png
 
 
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
